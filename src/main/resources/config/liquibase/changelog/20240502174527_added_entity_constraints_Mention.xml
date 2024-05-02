@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <!--
+        Added the constraints for entity Mention.
+    -->
+    <changeSet id="20240502174527-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="mention_id"
+                                 baseTableName="rel_mention__tweet"
+                                 constraintName="fk_rel_mention__tweet__mention_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="mention"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="tweet_id"
+                                 baseTableName="rel_mention__tweet"
+                                 constraintName="fk_rel_mention__tweet__tweet_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tweet"
+                                 />
+    </changeSet>
+</databaseChangeLog>

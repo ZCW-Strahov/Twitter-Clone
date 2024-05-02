@@ -1,0 +1,40 @@
+{
+  "annotations": {
+    "changelogDate": "20240502174524"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "fname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "handle",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "following",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "followers",
+      "fieldType": "String"
+    }
+  ],
+  "name": "UserProfile",
+  "relationships": [
+    {
+      "otherEntityField": "login",
+      "otherEntityName": "user",
+      "relationshipName": "user",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one",
+      "relationshipWithBuiltInEntity": true
+    }
+  ],
+  "searchEngine": "no"
+}

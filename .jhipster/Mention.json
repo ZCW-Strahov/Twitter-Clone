@@ -1,0 +1,38 @@
+{
+  "annotations": {
+    "changelogDate": "20240502174527"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "content",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "picture",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    }
+  ],
+  "name": "Mention",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityField": "content",
+      "otherEntityName": "tweet",
+      "otherEntityRelationshipName": "mention",
+      "relationshipName": "tweet",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "hashTag",
+      "otherEntityRelationshipName": "mention",
+      "relationshipName": "hashtag",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

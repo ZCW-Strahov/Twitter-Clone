@@ -1,0 +1,55 @@
+{
+  "annotations": {
+    "changelogDate": "20240502174525"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "content",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "picture",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    },
+    {
+      "fieldName": "createdOn",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "hashtag",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Tweet",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "userProfile",
+      "relationshipName": "userProfile",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one",
+      "relationshipWithBuiltInEntity": true
+    },
+    {
+      "otherEntityField": "description",
+      "otherEntityName": "hashTag",
+      "otherEntityRelationshipName": "tweet",
+      "relationshipName": "hashtag",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityField": "content",
+      "otherEntityName": "mention",
+      "otherEntityRelationshipName": "tweet",
+      "relationshipName": "mention",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

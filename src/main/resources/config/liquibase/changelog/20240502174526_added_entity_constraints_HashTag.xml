@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <!--
+        Added the constraints for entity HashTag.
+    -->
+    <changeSet id="20240502174526-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="hash_tag_id"
+                                 baseTableName="rel_hash_tag__tweet"
+                                 constraintName="fk_rel_hash_tag__tweet__hash_tag_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="hash_tag"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="tweet_id"
+                                 baseTableName="rel_hash_tag__tweet"
+                                 constraintName="fk_rel_hash_tag__tweet__tweet_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tweet"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="hash_tag_id"
+                                 baseTableName="rel_hash_tag__mention"
+                                 constraintName="fk_rel_hash_tag__mention__hash_tag_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="hash_tag"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="mention_id"
+                                 baseTableName="rel_hash_tag__mention"
+                                 constraintName="fk_rel_hash_tag__mention__mention_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="mention"
+                                 />
+    </changeSet>
+</databaseChangeLog>

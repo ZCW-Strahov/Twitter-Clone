@@ -1,0 +1,22 @@
+{
+  "annotations": {
+    "changelogDate": "20240503143539"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "since",
+      "fieldType": "Instant"
+    }
+  ],
+  "name": "Followers",
+  "relationships": [
+    {
+      "otherEntityName": "userProfile",
+      "relationshipName": "follower",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}

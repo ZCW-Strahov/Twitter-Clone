@@ -7,6 +7,8 @@ import UserProfile from './user-profile';
 import Tweet from './tweet';
 import HashTag from './hash-tag';
 import Mention from './mention';
+import Following from './following';
+import Followers from './followers';
 /* jhipster-needle-add-route-import - JHipster will add routes here */
 
 export default () => {
@@ -18,6 +20,8 @@ export default () => {
         <Route path="tweet/*" element={<Tweet />} />
         <Route path="hash-tag/*" element={<HashTag />} />
         <Route path="mention/*" element={<Mention />} />
+        <Route path="following/*" element={<Following />} />
+        <Route path="followers/*" element={<Followers />} />
         {/* jhipster-needle-add-route-path - JHipster will add routes here */}
       </ErrorBoundaryRoutes>
     </div>

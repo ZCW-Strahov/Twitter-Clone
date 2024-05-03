@@ -93,8 +93,6 @@ export const UserProfileUpdate = () => {
               <ValidatedField label="Fname" id="user-profile-fname" name="fname" data-cy="fname" type="text" />
               <ValidatedField label="Lname" id="user-profile-lname" name="lname" data-cy="lname" type="text" />
               <ValidatedField label="Handle" id="user-profile-handle" name="handle" data-cy="handle" type="text" />
-              <ValidatedField label="Following" id="user-profile-following" name="following" data-cy="following" type="text" />
-              <ValidatedField label="Followers" id="user-profile-followers" name="followers" data-cy="followers" type="text" />
               <ValidatedField id="user-profile-user" name="user" data-cy="user" label="User" type="select">
                 <option value="" key="0" />
                 {users

@@ -48,12 +48,6 @@ class UserProfileResourceIT {
     private static final String DEFAULT_HANDLE = "AAAAAAAAAA";
     private static final String UPDATED_HANDLE = "BBBBBBBBBB";
 
-    private static final String DEFAULT_FOLLOWING = "AAAAAAAAAA";
-    private static final String UPDATED_FOLLOWING = "BBBBBBBBBB";
-
-    private static final String DEFAULT_FOLLOWERS = "AAAAAAAAAA";
-    private static final String UPDATED_FOLLOWERS = "BBBBBBBBBB";
-
     private static final String ENTITY_API_URL = "/api/user-profiles";
     private static final String ENTITY_API_URL_ID = ENTITY_API_URL + "/{id}";
 
@@ -84,12 +78,7 @@ class UserProfileResourceIT {
      * if they test an entity which requires the current entity.
      */
     public static UserProfile createEntity(EntityManager em) {
-        UserProfile userProfile = new UserProfile()
-            .fname(DEFAULT_FNAME)
-            .lname(DEFAULT_LNAME)
-            .handle(DEFAULT_HANDLE)
-            .following(DEFAULT_FOLLOWING)
-            .followers(DEFAULT_FOLLOWERS);
+        UserProfile userProfile = new UserProfile().fname(DEFAULT_FNAME).lname(DEFAULT_LNAME).handle(DEFAULT_HANDLE);
         return userProfile;
     }
 
@@ -100,12 +89,7 @@ class UserProfileResourceIT {
      * if they test an entity which requires the current entity.
      */
     public static UserProfile createUpdatedEntity(EntityManager em) {
-        UserProfile userProfile = new UserProfile()
-            .fname(UPDATED_FNAME)
-            .lname(UPDATED_LNAME)
-            .handle(UPDATED_HANDLE)
-            .following(UPDATED_FOLLOWING)
-            .followers(UPDATED_FOLLOWERS);
+        UserProfile userProfile = new UserProfile().fname(UPDATED_FNAME).lname(UPDATED_LNAME).handle(UPDATED_HANDLE);
         return userProfile;
     }
 
@@ -165,9 +149,7 @@ class UserProfileResourceIT {
             .andExpect(jsonPath("$.[*].id").value(hasItem(userProfile.getId().intValue())))
             .andExpect(jsonPath("$.[*].fname").value(hasItem(DEFAULT_FNAME)))
             .andExpect(jsonPath("$.[*].lname").value(hasItem(DEFAULT_LNAME)))
-            .andExpect(jsonPath("$.[*].handle").value(hasItem(DEFAULT_HANDLE)))
-            .andExpect(jsonPath("$.[*].following").value(hasItem(DEFAULT_FOLLOWING)))
-            .andExpect(jsonPath("$.[*].followers").value(hasItem(DEFAULT_FOLLOWERS)));
+            .andExpect(jsonPath("$.[*].handle").value(hasItem(DEFAULT_HANDLE)));
     }
 
     @SuppressWarnings({ "unchecked" })
@@ -201,9 +183,7 @@ class UserProfileResourceIT {
             .andExpect(jsonPath("$.id").value(userProfile.getId().intValue()))
             .andExpect(jsonPath("$.fname").value(DEFAULT_FNAME))
             .andExpect(jsonPath("$.lname").value(DEFAULT_LNAME))
-            .andExpect(jsonPath("$.handle").value(DEFAULT_HANDLE))
-            .andExpect(jsonPath("$.following").value(DEFAULT_FOLLOWING))
-            .andExpect(jsonPath("$.followers").value(DEFAULT_FOLLOWERS));
+            .andExpect(jsonPath("$.handle").value(DEFAULT_HANDLE));
     }
 
     @Test
@@ -225,12 +205,7 @@ class UserProfileResourceIT {
         UserProfile updatedUserProfile = userProfileRepository.findById(userProfile.getId()).orElseThrow();
         // Disconnect from session so that the updates on updatedUserProfile are not directly saved in db
         em.detach(updatedUserProfile);
-        updatedUserProfile
-            .fname(UPDATED_FNAME)
-            .lname(UPDATED_LNAME)
-            .handle(UPDATED_HANDLE)
-            .following(UPDATED_FOLLOWING)
-            .followers(UPDATED_FOLLOWERS);
+        updatedUserProfile.fname(UPDATED_FNAME).lname(UPDATED_LNAME).handle(UPDATED_HANDLE);
 
         restUserProfileMockMvc
             .perform(
@@ -310,7 +285,7 @@ class UserProfileResourceIT {
         UserProfile partialUpdatedUserProfile = new UserProfile();
         partialUpdatedUserProfile.setId(userProfile.getId());
 
-        partialUpdatedUserProfile.fname(UPDATED_FNAME).lname(UPDATED_LNAME).handle(UPDATED_HANDLE);
+        partialUpdatedUserProfile.fname(UPDATED_FNAME);
 
         restUserProfileMockMvc
             .perform(
@@ -341,12 +316,7 @@ class UserProfileResourceIT {
         UserProfile partialUpdatedUserProfile = new UserProfile();
         partialUpdatedUserProfile.setId(userProfile.getId());
 
-        partialUpdatedUserProfile
-            .fname(UPDATED_FNAME)
-            .lname(UPDATED_LNAME)
-            .handle(UPDATED_HANDLE)
-            .following(UPDATED_FOLLOWING)
-            .followers(UPDATED_FOLLOWERS);
+        partialUpdatedUserProfile.fname(UPDATED_FNAME).lname(UPDATED_LNAME).handle(UPDATED_HANDLE);
 
         restUserProfileMockMvc
             .perform(

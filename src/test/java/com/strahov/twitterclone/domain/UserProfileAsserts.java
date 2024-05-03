@@ -49,9 +49,7 @@ public class UserProfileAsserts {
             .as("Verify UserProfile relevant properties")
             .satisfies(e -> assertThat(e.getFname()).as("check fname").isEqualTo(actual.getFname()))
             .satisfies(e -> assertThat(e.getLname()).as("check lname").isEqualTo(actual.getLname()))
-            .satisfies(e -> assertThat(e.getHandle()).as("check handle").isEqualTo(actual.getHandle()))
-            .satisfies(e -> assertThat(e.getFollowing()).as("check following").isEqualTo(actual.getFollowing()))
-            .satisfies(e -> assertThat(e.getFollowers()).as("check followers").isEqualTo(actual.getFollowers()));
+            .satisfies(e -> assertThat(e.getHandle()).as("check handle").isEqualTo(actual.getHandle()));
     }
 
     /**

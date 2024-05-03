@@ -60,6 +60,10 @@ public class CacheConfiguration {
             createCache(cm, com.strahov.twitterclone.domain.Mention.class.getName());
             createCache(cm, com.strahov.twitterclone.domain.Mention.class.getName() + ".tweets");
             createCache(cm, com.strahov.twitterclone.domain.Mention.class.getName() + ".hashtags");
+            createCache(cm, com.strahov.twitterclone.domain.UserProfile.class.getName() + ".followings");
+            createCache(cm, com.strahov.twitterclone.domain.UserProfile.class.getName() + ".followers");
+            createCache(cm, com.strahov.twitterclone.domain.Following.class.getName());
+            createCache(cm, com.strahov.twitterclone.domain.Followers.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

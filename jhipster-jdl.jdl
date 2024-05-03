@@ -2,10 +2,17 @@
 entity UserProfile {
 fname String,
 lname String,
-handle String,
-following String,
-followers String
+handle String
 }
+
+entity Following {
+    since Instant
+}
+
+entity Followers {
+    since Instant
+}
+
 
 entity Tweet {
 content TextBlob required,
@@ -27,9 +34,17 @@ relationship OneToOne {
 //One user can have one userProfile
 UserProfile{user(login)} to User with builtInEntity
 }
+
+relationship OneToMany {
+UserProfile{following} to Following,
+UserProfile{followers} to Followers,
+}
+
 relationship ManyToOne {
 //One userProfile have have many tweets
 Tweet{UserProfile} to UserProfile with builtInEntity
+Following{followed} to UserProfile,
+Followers{follower} to UserProfile
 }
 
 relationship ManyToMany {

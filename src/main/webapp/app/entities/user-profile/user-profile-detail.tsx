@@ -39,14 +39,6 @@ export const UserProfileDetail = () => {
             <span id="handle">Handle</span>
           </dt>
           <dd>{userProfileEntity.handle}</dd>
-          <dt>
-            <span id="following">Following</span>
-          </dt>
-          <dd>{userProfileEntity.following}</dd>
-          <dt>
-            <span id="followers">Followers</span>
-          </dt>
-          <dd>{userProfileEntity.followers}</dd>
           <dt>User</dt>
           <dd>{userProfileEntity.user ? userProfileEntity.user.login : ''}</dd>
         </dl>

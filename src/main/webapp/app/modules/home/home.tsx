@@ -16,7 +16,7 @@ export const Home = () => {
         <span className="hipster rounded" />
       </Col>
       <Col md="9">
-        <h1 className="display-4">Welcome, Java Hipster!</h1>
+        <h1 className="display-4">Welcome, Asan Page!</h1>
         <p className="lead">This is your homepage</p>
         {account?.login ? (
           <div>

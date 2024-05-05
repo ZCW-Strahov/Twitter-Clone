@@ -1,3 +1,4 @@
+//this change footer
 import './footer.scss';
 
 import React from 'react';

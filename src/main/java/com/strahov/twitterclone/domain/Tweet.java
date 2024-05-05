@@ -44,7 +44,7 @@ public class Tweet implements Serializable {
     private String hashtag;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JsonIgnoreProperties(value = { "user" }, allowSetters = true)
+    @JsonIgnoreProperties(value = { "user", "followings", "followers" }, allowSetters = true)
     private UserProfile userProfile;
 
     @ManyToMany(fetch = FetchType.LAZY, mappedBy = "tweets")

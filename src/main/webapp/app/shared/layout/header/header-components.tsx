@@ -1,3 +1,4 @@
+//This page change part of header
 import React from 'react';
 
 import { NavItem, NavLink, NavbarBrand } from 'reactstrap';
@@ -6,15 +7,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const BrandIcon = props => (
   <div {...props} className="brand-icon">
-    <img src="content/images/logo-jhipster.png" alt="Logo" />
+    <img src="content/images/EchoLogo.png" alt="Logo" />
   </div>
 );
 
 export const Brand = () => (
   <NavbarBrand tag={Link} to="/" className="brand-logo">
     <BrandIcon />
-    <span className="brand-title">TwitterClone</span>
-    <span className="navbar-version">{VERSION.toLowerCase().startsWith('v') ? VERSION : `v${VERSION}`}</span>
+    <span className="brand-title">ECHO</span>
+    {/* <span className="navbar-version">{VERSION.toLowerCase().startsWith('v') ? VERSION : `v${VERSION}`}</span> */}
   </NavbarBrand>
 );
 

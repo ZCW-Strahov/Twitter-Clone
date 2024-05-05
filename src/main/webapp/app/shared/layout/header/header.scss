@@ -1,5 +1,6 @@
+//this change title color
 $header-color: #fff;
-$header-color-secondary: #bbb;
+$header-color-secondary: rgb(4, 182, 182);
 $header-color-hover: darken($header-color, 20%);
 
 /* ==========================================================================
@@ -22,7 +23,7 @@ Development Ribbon
   pointer-events: none;
   opacity: 0.75;
   a {
-    color: #fff;
+    color: #cd0707;
     display: block;
     font-weight: 400;
     margin: 1px 0;
@@ -67,9 +68,10 @@ Navbar styles
 }
 
 .brand-title {
+  //this change the nav size
   font-size: 1.25rem;
   margin-left: 0.25rem;
-  color: $header-color;
+  color: #fff; /* Change the color property to white */
   &:hover {
     color: $header-color-hover;
     text-decoration: none;

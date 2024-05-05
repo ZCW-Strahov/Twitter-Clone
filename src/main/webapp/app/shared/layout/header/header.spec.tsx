@@ -3,7 +3,8 @@ import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
 
-import initStore from 'app/config/store';
+import initStore from '/Users/abukar/Desktop/FinalProject/Twitter-Clone/src/main/webapp/app/config/store.ts';
+
 import Header from './header';
 
 describe('Header', () => {

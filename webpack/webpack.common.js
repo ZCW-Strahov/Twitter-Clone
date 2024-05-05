@@ -31,7 +31,7 @@ const getTsLoaderRule = env => {
 };
 
 module.exports = async options => {
-  const development = options.env === 'development';
+  const development = options.env === 'developmenta';
   return merge(
     {
       cache: {

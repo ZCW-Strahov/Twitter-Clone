@@ -1,7 +1,10 @@
 package com.strahov.twitterclone.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -30,15 +33,19 @@ public class UserProfile implements Serializable {
     @Column(name = "handle")
     private String handle;
 
-    @Column(name = "following")
-    private String following;
-
-    @Column(name = "followers")
-    private String followers;
-
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(unique = true)
     private User user;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "userProfile")
+    @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+    @JsonIgnoreProperties(value = { "followed", "userProfile" }, allowSetters = true)
+    private Set<Following> followings = new HashSet<>();
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "userProfile")
+    @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+    @JsonIgnoreProperties(value = { "follower", "userProfile" }, allowSetters = true)
+    private Set<Followers> followers = new HashSet<>();
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
 
@@ -94,32 +101,6 @@ public class UserProfile implements Serializable {
         this.handle = handle;
     }
 
-    public String getFollowing() {
-        return this.following;
-    }
-
-    public UserProfile following(String following) {
-        this.setFollowing(following);
-        return this;
-    }
-
-    public void setFollowing(String following) {
-        this.following = following;
-    }
-
-    public String getFollowers() {
-        return this.followers;
-    }
-
-    public UserProfile followers(String followers) {
-        this.setFollowers(followers);
-        return this;
-    }
-
-    public void setFollowers(String followers) {
-        this.followers = followers;
-    }
-
     public User getUser() {
         return this.user;
     }
@@ -130,6 +111,68 @@ public class UserProfile implements Serializable {
 
     public UserProfile user(User user) {
         this.setUser(user);
+        return this;
+    }
+
+    public Set<Following> getFollowings() {
+        return this.followings;
+    }
+
+    public void setFollowings(Set<Following> followings) {
+        if (this.followings != null) {
+            this.followings.forEach(i -> i.setUserProfile(null));
+        }
+        if (followings != null) {
+            followings.forEach(i -> i.setUserProfile(this));
+        }
+        this.followings = followings;
+    }
+
+    public UserProfile followings(Set<Following> followings) {
+        this.setFollowings(followings);
+        return this;
+    }
+
+    public UserProfile addFollowing(Following following) {
+        this.followings.add(following);
+        following.setUserProfile(this);
+        return this;
+    }
+
+    public UserProfile removeFollowing(Following following) {
+        this.followings.remove(following);
+        following.setUserProfile(null);
+        return this;
+    }
+
+    public Set<Followers> getFollowers() {
+        return this.followers;
+    }
+
+    public void setFollowers(Set<Followers> followers) {
+        if (this.followers != null) {
+            this.followers.forEach(i -> i.setUserProfile(null));
+        }
+        if (followers != null) {
+            followers.forEach(i -> i.setUserProfile(this));
+        }
+        this.followers = followers;
+    }
+
+    public UserProfile followers(Set<Followers> followers) {
+        this.setFollowers(followers);
+        return this;
+    }
+
+    public UserProfile addFollowers(Followers followers) {
+        this.followers.add(followers);
+        followers.setUserProfile(this);
+        return this;
+    }
+
+    public UserProfile removeFollowers(Followers followers) {
+        this.followers.remove(followers);
+        followers.setUserProfile(null);
         return this;
     }
 
@@ -160,8 +203,6 @@ public class UserProfile implements Serializable {
             ", fname='" + getFname() + "'" +
             ", lname='" + getLname() + "'" +
             ", handle='" + getHandle() + "'" +
-            ", following='" + getFollowing() + "'" +
-            ", followers='" + getFollowers() + "'" +
             "}";
     }
 }

@@ -23,12 +23,6 @@
             <column name="handle" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            <column name="following" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-            <column name="followers" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
             <column name="user_id" type="bigint">
                 <constraints nullable="true" unique="true" uniqueConstraintName="ux_user_profile__user_id" />
             </column>
@@ -56,8 +50,6 @@
             <column name="fname" type="string"/>
             <column name="lname" type="string"/>
             <column name="handle" type="string"/>
-            <column name="following" type="string"/>
-            <column name="followers" type="string"/>
             <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
         </loadData>
     </changeSet>

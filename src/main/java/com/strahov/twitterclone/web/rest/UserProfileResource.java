@@ -130,12 +130,6 @@ public class UserProfileResource {
                 if (userProfile.getHandle() != null) {
                     existingUserProfile.setHandle(userProfile.getHandle());
                 }
-                if (userProfile.getFollowing() != null) {
-                    existingUserProfile.setFollowing(userProfile.getFollowing());
-                }
-                if (userProfile.getFollowers() != null) {
-                    existingUserProfile.setFollowers(userProfile.getFollowers());
-                }
 
                 return existingUserProfile;
             })

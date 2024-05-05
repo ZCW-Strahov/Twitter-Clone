@@ -15,14 +15,6 @@
     {
       "fieldName": "handle",
       "fieldType": "String"
-    },
-    {
-      "fieldName": "following",
-      "fieldType": "String"
-    },
-    {
-      "fieldName": "followers",
-      "fieldType": "String"
     }
   ],
   "name": "UserProfile",
@@ -34,6 +26,18 @@
       "relationshipSide": "left",
       "relationshipType": "one-to-one",
       "relationshipWithBuiltInEntity": true
+    },
+    {
+      "otherEntityName": "following",
+      "relationshipName": "following",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "followers",
+      "relationshipName": "followers",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
     }
   ],
   "searchEngine": "no"

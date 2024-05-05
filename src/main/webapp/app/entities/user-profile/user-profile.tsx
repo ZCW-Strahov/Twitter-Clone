@@ -94,12 +94,6 @@ export const UserProfile = () => {
                 <th className="hand" onClick={sort('handle')}>
                   Handle <FontAwesomeIcon icon={getSortIconByFieldName('handle')} />
                 </th>
-                <th className="hand" onClick={sort('following')}>
-                  Following <FontAwesomeIcon icon={getSortIconByFieldName('following')} />
-                </th>
-                <th className="hand" onClick={sort('followers')}>
-                  Followers <FontAwesomeIcon icon={getSortIconByFieldName('followers')} />
-                </th>
                 <th>
                   User <FontAwesomeIcon icon="sort" />
                 </th>
@@ -117,8 +111,6 @@ export const UserProfile = () => {
                   <td>{userProfile.fname}</td>
                   <td>{userProfile.lname}</td>
                   <td>{userProfile.handle}</td>
-                  <td>{userProfile.following}</td>
-                  <td>{userProfile.followers}</td>
                   <td>{userProfile.user ? userProfile.user.login : ''}</td>
                   <td className="text-end">
                     <div className="btn-group flex-btn-group-container">

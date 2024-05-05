@@ -281,7 +281,7 @@ class MentionResourceIT {
         Mention partialUpdatedMention = new Mention();
         partialUpdatedMention.setId(mention.getId());
 
-        partialUpdatedMention.content(UPDATED_CONTENT);
+        partialUpdatedMention.content(UPDATED_CONTENT).picture(UPDATED_PICTURE).pictureContentType(UPDATED_PICTURE_CONTENT_TYPE);
 
         restMentionMockMvc
             .perform(

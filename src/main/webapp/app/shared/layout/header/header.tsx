@@ -20,11 +20,7 @@ const Header = (props: IHeaderProps) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const renderDevRibbon = () =>
-    props.isInProduction === false ? (
-      <div className="ribbon dev">
-        <a href="">Development</a>
-      </div>
-    ) : null;
+    props.isInProduction === false ? <div className="ribbon dev">{/* <a href="">Developments</a> */}</div> : null;
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
 

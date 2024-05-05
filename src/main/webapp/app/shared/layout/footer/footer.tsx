@@ -1,4 +1,7 @@
-//this change footer
+
+
+//This change footer
+
 import './footer.scss';
 
 import React from 'react';
@@ -9,7 +12,7 @@ const Footer = () => (
   <div className="footer page-content">
     <Row>
       <Col md="12">
-        <p>Hello World</p>
+        <p>Welcome to Twitter </p>
       </Col>
     </Row>
   </div>

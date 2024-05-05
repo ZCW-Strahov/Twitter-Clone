@@ -1,3 +1,4 @@
+//this page change the header
 import './header.scss';
 
 import React, { useState } from 'react';
@@ -21,6 +22,9 @@ const Header = (props: IHeaderProps) => {
 
   const renderDevRibbon = () =>
     props.isInProduction === false ? <div className="ribbon dev">{/* <a href="">Developments</a> */}</div> : null;
+
+  const renderDevRibbon = () => (props.isInProduction === false ? <div className="ribbon dev"></div> : null);
+
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
 

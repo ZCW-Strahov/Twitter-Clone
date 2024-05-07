@@ -32,7 +32,7 @@ import tech.jhipster.web.util.ResponseUtil;
 @Transactional
 public class TweetResource {
 
-    private final Logger log = LoggerFactory.getLogger(TweetResource.class);
+    private final Logger log = LoggerFactory.getLogger(TweetController.class);
 
     private static final String ENTITY_NAME = "tweet";
 

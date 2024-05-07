@@ -1,3 +1,4 @@
+//logout page
 import React, { useLayoutEffect } from 'react';
 
 import { useAppDispatch, useAppSelector } from 'app/config/store';

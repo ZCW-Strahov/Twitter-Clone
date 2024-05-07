@@ -271,8 +271,6 @@ class HashTagResourceIT {
         HashTag partialUpdatedHashTag = new HashTag();
         partialUpdatedHashTag.setId(hashTag.getId());
 
-        partialUpdatedHashTag.description(UPDATED_DESCRIPTION);
-
         restHashTagMockMvc
             .perform(
                 patch(ENTITY_API_URL_ID, partialUpdatedHashTag.getId())

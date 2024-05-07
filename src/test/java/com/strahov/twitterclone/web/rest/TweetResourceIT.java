@@ -27,7 +27,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Integration tests for the {@link TweetResource} REST controller.
+ * Integration tests for the {@link TweetController} REST controller.
  */
 @IntegrationTest
 @AutoConfigureMockMvc
@@ -280,11 +280,7 @@ class TweetResourceIT {
         Tweet partialUpdatedTweet = new Tweet();
         partialUpdatedTweet.setId(tweet.getId());
 
-        partialUpdatedTweet
-            .content(UPDATED_CONTENT)
-            .picture(UPDATED_PICTURE)
-            .pictureContentType(UPDATED_PICTURE_CONTENT_TYPE)
-            .createdOn(UPDATED_CREATED_ON);
+        partialUpdatedTweet.picture(UPDATED_PICTURE).pictureContentType(UPDATED_PICTURE_CONTENT_TYPE).createdOn(UPDATED_CREATED_ON);
 
         restTweetMockMvc
             .perform(

@@ -1,7 +1,7 @@
-package com.strahov.twitterclone.controller;
+package com.strahov.twitterclone.web.rest;
 
-import com.strahov.twitterclone.domain.Tweet;
 import com.strahov.twitterclone.service.TweetService;
+import com.strahov.twitterclone.service.dto.TweetDTO;
 import java.util.List;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,8 +17,8 @@ public class TweetController {
     }
 
     @GetMapping("/tweets/by-username/{username}")
-    public ResponseEntity<List<Tweet>> getTweetsByUsername(@PathVariable String username) {
-        List<Tweet> tweets = tweetService.findTweetsByUsername(username);
+    public ResponseEntity<List<TweetDTO>> getTweetsByUsername(@PathVariable String username) {
+        List<TweetDTO> tweets = tweetService.findTweetsByUsername(username);
         return ResponseEntity.ok(tweets);
     }
 }

@@ -1,20 +1,51 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Login from './Components/Signup/Signup';
-import Signup from './Components/Login/Login';
-import Home from './Components/HomePage/Home';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { useEffect } from 'react';
+import { Routes, Route, useNavigationType, useLocation } from 'react-router-dom';
+import HomeFeedPage from './pages/HomeFeedPage';
+import Login from './asan/Login/Login';
+import Signup from './asan/Signup/Signup';
+import EchoLandingPage from './pages/EchoLandingPage';
 
 function App() {
+  const action = useNavigationType();
+  const location = useLocation();
+  const pathname = location.pathname;
+
+  useEffect(() => {
+    if (action !== 'POP') {
+      window.scrollTo(0, 0);
+    }
+  }, [action, pathname]);
+
+  useEffect(() => {
+    let title = '';
+    let metaDescription = '';
+
+    switch (pathname) {
+      case '/':
+        title = '';
+        metaDescription = '';
+        break;
+    }
+
+    if (title) {
+      document.title = title;
+    }
+
+    if (metaDescription) {
+      const metaDescriptionTag: HTMLMetaElement | null = document.querySelector('head > meta[name="description"]');
+      if (metaDescriptionTag) {
+        metaDescriptionTag.content = metaDescription;
+      }
+    }
+  }, [pathname]);
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/home" element={<Home />} />
-        <Route path="/" element={<Signup />} />
-        <Route path="/signup" element={<Login />} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/homepage" element={<HomeFeedPage />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/" element={<EchoLandingPage />} />
+    </Routes>
   );
 }
-
 export default App;

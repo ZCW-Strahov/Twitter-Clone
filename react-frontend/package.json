@@ -1,5 +1,5 @@
 {
-  "name": "react-frontend",
+  "name": "echo_feed_page",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -21,26 +21,26 @@
     ]
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "root": true
   },
   "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.97",
-    "@types/react": "^18.3.1",
-    "@types/react-dom": "^18.3.0",
-    "axios": "^1.6.8",
-    "bootstrap": "^5.3.3",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^6.23.0",
+    "@types/jest": "^29.5.0",
+    "@types/node": "^16.11.14",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.1",
-    "typescript": "^4.9.5",
+    "typescript": "^4.5.4",
     "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.8",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8"
   }
 }

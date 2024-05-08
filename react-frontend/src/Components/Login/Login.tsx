@@ -4,11 +4,11 @@ import { Link, useNavigate } from 'react-router-dom';
 
 function Login() {
   const navigate = useNavigate();
-  const [username, setUserName] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleUserNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setUserName(e.target.value);
+  const handleUsernameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setUsername(e.target.value);
   };
 
   const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -20,7 +20,7 @@ function Login() {
       // Call your login functionality here
       loginLink(username, password);
     } else {
-      alert('Please fill in both username and password fields.');
+      alert('Please fill in both email and password fields.');
     }
   };
 
@@ -65,13 +65,13 @@ function Login() {
         <form>
           <h3 className="text-center">Log in to Echo</h3>
           <div className="mb-2">
-            <label htmlFor="email">Username</label>
+            <label htmlFor="username">Username</label>
             <input
-              type="username"
-              placeholder="Enter username"
+              type="email"
+              placeholder="Enter Username"
               className="form-control"
               value={username}
-              onChange={handleUserNameChange}
+              onChange={handleUsernameChange}
               required={true}
             />
           </div>
@@ -94,9 +94,6 @@ function Login() {
           </div>
           <div className="d-grid">
             <button className="btn btn-primary" onClick={handleLogin} disabled={!username || !password}>
-              <Link to="/home" className="ms-2">
-                {' '}
-              </Link>
               Log in
             </button>
           </div>

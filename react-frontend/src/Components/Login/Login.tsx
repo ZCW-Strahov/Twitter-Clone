@@ -4,11 +4,11 @@ import { Link, useNavigate } from 'react-router-dom';
 
 function Login() {
   const navigate = useNavigate();
-  const [email, setEmail] = useState('');
+  const [username, setUserName] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value);
+  const handleUserNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setUserName(e.target.value);
   };
 
   const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -16,26 +16,62 @@ function Login() {
   };
 
   const handleLogin = () => {
-    if (email && password) {
-      navigate('home');
+    if (username && password) {
+      // Call your login functionality here
+      loginLink(username, password);
     } else {
-      alert('Please fill in both email and password fields.');
+      alert('Please fill in both username and password fields.');
     }
+  };
+
+  const loginLink = (username: string, password: string) => {
+    fetch('http://localhost:8080/api/authenticate', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        username: username,
+        password: password,
+      }),
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log(data);
+
+        if (data.id_token) {
+          localStorage.setItem('token', data.token);
+
+          // Redirect the user upon successful login
+          navigate('/home');
+        } else {
+          alert('Invalid username or password');
+        }
+      })
+      .catch(error => {
+        console.error('Login problem:', error);
+        alert('Failed to login. Please try again.');
+      });
   };
 
   return (
     <div className="login template d-flex justify-content-center align-items-center 100-w 100-vh bg-primary">
       <div className="40-w p-5 rounded bg-white">
         <form>
-          <h3 className="text-center">Login in to Echo</h3>
+          <h3 className="text-center">Log in to Echo</h3>
           <div className="mb-2">
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email">Username</label>
             <input
-              type="email"
-              placeholder="Enter Email"
+              type="username"
+              placeholder="Enter username"
               className="form-control"
-              value={email}
-              onChange={handleEmailChange}
+              value={username}
+              onChange={handleUserNameChange}
               required={true}
             />
           </div>
@@ -57,7 +93,10 @@ function Login() {
             </label>
           </div>
           <div className="d-grid">
-            <button className="btn btn-primary" onClick={handleLogin} disabled={!email || !password}>
+            <button className="btn btn-primary" onClick={handleLogin} disabled={!username || !password}>
+              <Link to="/home" className="ms-2">
+                {' '}
+              </Link>
               Log in
             </button>
           </div>

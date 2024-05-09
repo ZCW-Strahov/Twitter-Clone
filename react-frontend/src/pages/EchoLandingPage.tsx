@@ -90,7 +90,9 @@ const EchoLandingPage: FunctionComponent = () => {
                   <div className="flex flex-row items-start justify-start py-0 px-[9px] text-base">
                     <div className="relative cursor-pointer" onClick={onAlreadyHaveAnClick}>
                       <span>{`Already have an account? `}</span>
-                      <LogIn />
+                      <a href="../components/LogInLanding" style={{ color: 'black' }}>
+                        LogIn
+                      </a>
                     </div>
                   </div>
                 </div>

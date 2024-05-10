@@ -1126,7 +1126,8 @@ const Profile: FunctionComponent = () => {
                             gap: '7px',
                           }}
                         >
-                          {/* <div
+                          {/* icone user*/}
+                          <div
                             style={{
                               position: 'relative',
                               display: 'inline-block',
@@ -1134,7 +1135,7 @@ const Profile: FunctionComponent = () => {
                             }}
                           >
                             Danny
-                          </div> */}
+                          </div>
                           <div
                             style={{
                               position: 'relative',
@@ -1191,32 +1192,7 @@ const Profile: FunctionComponent = () => {
                         minWidth: '591px',
                         maxWidth: '100%',
                       }}
-                    >
-                      <TweetCard
-                        may1=" · May 1"
-                        dudeICantWaitToGoFISHING="Dude I can’t wait to go FISHING!!"
-                        retweet="/retweet.svg"
-                        prop="1"
-                        like="/like.svg"
-                        prop1="8"
-                        showDiv
-                      />
-                      <TweetCard
-                        may1=" · Apr 17"
-                        dudeICantWaitToGoFISHING="Hello, World! Hello, World! Hello, World! Hello, World! Hello, World! Hello, World! Hello, World! "
-                        retweet="/retweet-1.svg"
-                        prop="5"
-                        like="/like-fill.svg"
-                        prop1="9"
-                        showDiv={false}
-                        propWidth="558px"
-                        propMinWidth="unset"
-                        propWidth1="15px"
-                        propColor="#0cb345"
-                        propOverflow="hidden"
-                        propColor1="#ef1c5c"
-                      />
-                    </div>
+                    ></div>
                   </div>
                 </div>
               </div>

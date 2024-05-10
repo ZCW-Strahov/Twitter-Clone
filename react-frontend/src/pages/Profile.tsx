@@ -4,6 +4,7 @@ import GroupComponent2 from '../components/GroupComponent2';
 import GroupComponent from '../components/GroupComponent';
 import Parentheses from '../components/Parentheses';
 import NavigationBar from '../components/NavigationBar';
+import PaginatedTweets from '../pages/timelinefeed';
 
 const Profile: FunctionComponent = () => {
   return (
@@ -955,7 +956,7 @@ const Profile: FunctionComponent = () => {
                             gap: '20px',
                           }}
                         >
-                          <div
+                          {/* <div
                             style={{
                               position: 'relative',
                               display: 'inline-block',
@@ -963,7 +964,7 @@ const Profile: FunctionComponent = () => {
                             }}
                           >
                             Tweets
-                          </div>
+                          </div> */}
                           {/* <div style={{ position: 'relative' }}>{`Tweets & replies`}</div> */}
                           {/* <div
                             style={{
@@ -985,6 +986,12 @@ const Profile: FunctionComponent = () => {
                           </div> */}
                         </div>
                       </div>
+
+                      {/*All code must go here for profile tweets*/}
+                      <div style={{ position: 'absolute', left: '17.3%', top: '33%', width: '80%', margin: '0 auto' }}>
+                        <PaginatedTweets />
+                      </div>
+
                       <div
                         style={{
                           width: '1px',
@@ -1096,7 +1103,7 @@ const Profile: FunctionComponent = () => {
                         gap: '10px',
                       }}
                     >
-                      <img
+                      {/* <img
                         style={{
                           height: '50px',
                           width: '50px',
@@ -1107,7 +1114,7 @@ const Profile: FunctionComponent = () => {
                         loading="lazy"
                         alt=""
                         src="/ellipse-3@2x.png"
-                      />
+                      /> */}
                       <div
                         style={{
                           display: 'flex',
@@ -1127,7 +1134,7 @@ const Profile: FunctionComponent = () => {
                           }}
                         >
                           {/* icone user*/}
-                          <div
+                          {/* <div
                             style={{
                               position: 'relative',
                               display: 'inline-block',
@@ -1135,7 +1142,7 @@ const Profile: FunctionComponent = () => {
                             }}
                           >
                             Danny
-                          </div>
+                          </div> */}
                           <div
                             style={{
                               position: 'relative',
@@ -1145,7 +1152,7 @@ const Profile: FunctionComponent = () => {
                             }}
                           >
                             {/*here*/}
-                            @DannyCao
+                            {/* @DannyCao */}
                           </div>
                         </div>
                       </div>
@@ -1171,7 +1178,7 @@ const Profile: FunctionComponent = () => {
                         justifyContent: 'flex-start',
                       }}
                     >
-                      <img
+                      {/* <img
                         style={{
                           width: '17px',
                           height: '4px',
@@ -1180,7 +1187,7 @@ const Profile: FunctionComponent = () => {
                         loading="lazy"
                         alt=""
                         src="/vector.svg"
-                      />
+                      /> */}
                     </div>
                     <div
                       style={{

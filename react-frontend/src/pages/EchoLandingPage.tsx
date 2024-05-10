@@ -40,7 +40,7 @@ const EchoLandingPage: FunctionComponent = () => {
                   <div className="flex flex-row items-start justify-start py-0 pr-0 pl-[9px] box-border max-w-full text-xl">
                     <div className="flex flex-col items-start justify-start gap-[23px] max-w-full">
                       <div className="w-[403px] overflow-x-auto flex flex-col items-start justify-start gap-[14px] max-w-full">
-                        <button className="cursor-pointer [border:none] p-0 bg-[transparent] w-[403px] overflow-hidden flex flex-row items-start justify-start">
+                        {/* <button className="cursor-pointer [border:none] p-0 bg-[transparent] w-[403px] overflow-hidden flex flex-row items-start justify-start">
                           <div className="flex-1 flex flex-row items-start justify-center pt-3.5 pb-4 pr-5 pl-[42px] box-border relative gap-[3px] max-w-full">
                             <img className="h-8 w-[31px] relative object-cover min-h-[32px]" alt="" src="/googleicon-1@2x.png" />
                             <div className="w-[197px] flex flex-col items-start justify-start pt-[7px] px-0 pb-0 box-border">
@@ -50,14 +50,16 @@ const EchoLandingPage: FunctionComponent = () => {
                             </div>
                             <div className="h-full w-full absolute !m-[0] top-[0px] right-[0px] bottom-[0px] left-[0px] rounded-23xl bg-silver box-border opacity-[0.8] z-[1] border-[1px] border-solid border-black" />
                           </div>
-                        </button>
+                        </button> */}
                         <div className="w-[403px] flex flex-row items-start justify-start">
                           <div className="flex-1 flex flex-row items-start justify-start pt-[18px] pb-3 pr-[69px] pl-[100px] box-border relative gap-[6px] max-w-full">
                             <div className="h-full w-full absolute !m-[0] top-[0px] right-[0px] bottom-[0px] left-[0px] rounded-23xl bg-silver box-border opacity-[0.78] border-[1px] border-solid border-black" />
-                            <img className="h-8 w-[31px] relative object-cover min-h-[32px] z-[1]" alt="" src="/logoapple-1@2x.png" />
+                            {/* <img className="h-8 w-[31px] relative object-cover min-h-[32px] z-[1]" alt="" src="/logoapple-1@2x.png" /> */}
                             <div className="flex-1 flex flex-col items-start justify-start pt-1 px-0 pb-0 box-border min-w-[128px]">
                               <h3 className="m-0 self-stretch relative text-inherit font-medium font-inherit z-[1] mq450:text-base">
-                                Sign up with Apple
+                                <a href="/login" style={{ color: 'black', textDecoration: 'none', fontSize: '30px' }}>
+                                  Log in
+                                </a>
                               </h3>
                             </div>
                           </div>
@@ -70,29 +72,33 @@ const EchoLandingPage: FunctionComponent = () => {
                         </div>
                       </div>
                       <div className="w-[373px] relative text-[14px] leading-[20px] inline-block max-w-full text-red-100">
-                        <span className="text-darkslategray">{`By singing up you agree to the `}</span>
-                        <span>Terms of Service</span>
+                        <span className="text-darkslategray" style={{ color: 'black' }}>{`By singing up you agree to the `}</span>
+                        <span style={{ color: 'black' }}>Terms of Service</span>
                         <span className="text-black">{` `}</span>
-                        <span className="text-darkslategray">and</span>
+                        <span className="text-darkslategray" style={{ color: 'black' }}>
+                          and
+                        </span>
                         <span className="text-black">{` `}</span>
-                        <span>Privacy</span>
+                        <span style={{ color: 'black' }}>Privacy</span>
                         <span className="text-cornflowerblue">{` `}</span>
-                        <span>Policy</span>
-                        <span className="text-darkslategray">, including</span>
+                        <span style={{ color: 'black' }}>Policy</span>
+                        <span className="text-darkslategray" style={{ color: 'black' }}>
+                          , including
+                        </span>
                         <span className="text-black">{` `}</span>
-                        <span>Cookie</span>
+                        <span style={{ color: 'black' }}>Cookie</span>
                         <span className="text-cornflowerblue">{` `}</span>
-                        <span>Use</span>
+                        <span style={{ color: 'black' }}>Use</span>
                         <span className="text-black">.</span>
                       </div>
                     </div>
                   </div>
                   <div className="flex flex-row items-start justify-start py-0 px-[9px] text-base">
                     <div className="relative cursor-pointer" onClick={onAlreadyHaveAnClick}>
-                      <span>{`Already have an account? `}</span>
+                      {/* <span>{`Already have an account? `}</span>
                       <a href="../components/LogInLanding" style={{ color: 'black' }}>
                         LogIn
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                 </div>
@@ -103,9 +109,9 @@ const EchoLandingPage: FunctionComponent = () => {
       </main>
       <div className="w-[1501px] flex flex-row items-start justify-start py-0 pr-0 pl-5 box-border gap-[19px] max-w-full lg:hidden">
         <div className="flex flex-col items-start justify-start pt-px px-0 pb-0">
-          <div className="relative inline-block min-w-[40px]">About</div>
+          {/* <div className="relative inline-block min-w-[40px]">About</div> */}
         </div>
-        <div className="flex flex-col items-start justify-start pt-px px-0 pb-0">
+        {/* <div className="flex flex-col items-start justify-start pt-px px-0 pb-0">
           <div className="relative inline-block min-w-[70px] whitespace-nowrap">Help Center</div>
         </div>
         <div className="flex flex-col items-start justify-start pt-px px-0 pb-0">
@@ -148,7 +154,7 @@ const EchoLandingPage: FunctionComponent = () => {
         </div>
         <div className="flex-1 flex flex-col items-start justify-start pt-px px-0 pb-0">
           <div className="self-stretch relative whitespace-nowrap">© 2024 Echo, Inc.</div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

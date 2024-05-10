@@ -54,7 +54,7 @@ const Parentheses: FunctionComponent = () => {
               maxWidth: '100%',
             }}
           >
-            <img
+            {/* <img
               style={{
                 height: '60px',
                 width: '60px',
@@ -68,8 +68,8 @@ const Parentheses: FunctionComponent = () => {
               loading="lazy"
               alt=""
               src="/ellipse-6@2x.png"
-            />
-            <img
+            /> */}
+            {/* <img
               style={{
                 height: '4px',
                 width: '17px',
@@ -81,7 +81,7 @@ const Parentheses: FunctionComponent = () => {
               loading="lazy"
               alt=""
               src="/vector.svg"
-            />
+            /> */}
             <div
               style={{
                 width: '747px',
@@ -113,7 +113,7 @@ const Parentheses: FunctionComponent = () => {
                     gap: '5px',
                   }}
                 >
-                  <div
+                  {/* <div
                     style={{
                       position: 'relative',
                       display: 'inline-block',
@@ -121,8 +121,8 @@ const Parentheses: FunctionComponent = () => {
                     }}
                   >
                     Danny
-                  </div>
-                  <div
+                  </div> */}
+                  {/* <div
                     style={{
                       position: 'relative',
                       fontSize: '18px',
@@ -131,7 +131,7 @@ const Parentheses: FunctionComponent = () => {
                     }}
                   >
                     @DannyCao · Apr 1
-                  </div>
+                  </div> */}
                 </div>
                 <div
                   style={{
@@ -145,8 +145,8 @@ const Parentheses: FunctionComponent = () => {
                     fontSize: '18px',
                   }}
                 >
-                  <div style={{ alignSelf: 'stretch', position: 'relative' }}>A Day in the Life of a ZipCode Student</div>
-                  <img
+                  {/* <div style={{ alignSelf: 'stretch', position: 'relative' }}>A Day in the Life of a ZipCode Student</div> */}
+                  {/* <img
                     style={{
                       width: '679px',
                       position: 'relative',
@@ -158,9 +158,9 @@ const Parentheses: FunctionComponent = () => {
                     loading="lazy"
                     alt=""
                     src="/image-8@2x.png"
-                  />
+                  /> */}
                 </div>
-              </div>
+                {/* </div>
               <div
                 style={{
                   width: '579px',
@@ -202,8 +202,8 @@ const Parentheses: FunctionComponent = () => {
                   >
                     10
                   </div>
-                </div>
-                <div
+                </div> */}
+                {/* <div
                   style={{
                     display: 'flex',
                     flexDirection: 'row',
@@ -231,8 +231,8 @@ const Parentheses: FunctionComponent = () => {
                   >
                     1
                   </div>
-                </div>
-                <div
+                </div> */}
+                {/* <div
                   style={{
                     display: 'flex',
                     flexDirection: 'row',
@@ -259,9 +259,9 @@ const Parentheses: FunctionComponent = () => {
                     }}
                   >
                     8
-                  </div>
-                </div>
-                <div
+                  </div> */}
+                {/* </div> */}
+                {/* <div
                   style={{
                     display: 'flex',
                     flexDirection: 'row',
@@ -289,8 +289,8 @@ const Parentheses: FunctionComponent = () => {
                   >
                     10
                   </div>
-                </div>
-                <div
+                </div> */}
+                {/* <div
                   style={{
                     display: 'flex',
                     flexDirection: 'row',
@@ -318,7 +318,7 @@ const Parentheses: FunctionComponent = () => {
                   >
                     10
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

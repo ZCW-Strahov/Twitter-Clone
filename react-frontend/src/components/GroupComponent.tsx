@@ -87,7 +87,7 @@ const GroupComponent: FunctionComponent = () => {
             color: 'rgba(57, 59, 65, 0.6)',
           }}
         >
-          <GroupComponent1 trendingInDelaware="Trending in Pennsylvania " demoDay="#DemoDay" kTweets="4.7K Echos" />
+          {/* <GroupComponent1 trendingInDelaware="Trending in Pennsylvania " demoDay="#DemoDay" kTweets="4.7K Echos" />
           <GroupComponent1
             trendingInDelaware="Trending in Delaware"
             demoDay="#ZipCode"
@@ -105,10 +105,10 @@ const GroupComponent: FunctionComponent = () => {
             propMinWidth="103px"
             propMinWidth1="55px"
             propMinWidth2="86px"
-          />
+          /> */}
         </div>
       </div>
-      <div
+      {/* <div
         style={{
           position: 'relative',
           fontSize: '18px',
@@ -120,7 +120,7 @@ const GroupComponent: FunctionComponent = () => {
         }}
       >
         Show more
-      </div>
+      </div> */}
     </div>
   );
 };

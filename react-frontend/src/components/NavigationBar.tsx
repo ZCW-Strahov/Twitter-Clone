@@ -9,13 +9,13 @@ const NavigationBar: FunctionComponent = () => {
           Home
         </b>
       </a>
-      <a href="/explore" className="self-stretch rounded-31xl overflow-hidden flex flex-row items-start justify-start p-[13px] gap-[20px]">
+      {/* <a href="/explore" className="self-stretch rounded-31xl overflow-hidden flex flex-row items-start justify-start p-[13px] gap-[20px]">
         <img className="h-6 w-6 relative overflow-hidden shrink-0" alt="Explore Icon" src="/iconsexplore.svg" />
         <b className="relative inline-block min-w-[66px]" style={{ color: 'white' }}>
           Explore
         </b>
-      </a>
-      <a
+      </a> */}
+      {/* <a
         href="/notifications"
         className="self-stretch rounded-31xl overflow-hidden flex flex-row items-start justify-start p-[13px] gap-[20px]"
       >
@@ -23,14 +23,14 @@ const NavigationBar: FunctionComponent = () => {
         <b className="relative inline-block min-w-[111px]" style={{ color: 'white' }}>
           Notifications
         </b>
-      </a>
-      <a href="/messages" className="self-stretch rounded-31xl overflow-hidden flex flex-row items-start justify-start p-[13px] gap-[20px]">
+      </a> */}
+      {/* <a href="/messages" className="self-stretch rounded-31xl overflow-hidden flex flex-row items-start justify-start p-[13px] gap-[20px]">
         <img className="h-6 w-6 relative overflow-hidden shrink-0" alt="Messages Icon" src="/iconsmessages.svg" />
         <b className="relative inline-block min-w-[83px]" style={{ color: 'white' }}>
           Messages
         </b>
-      </a>
-      <a
+      </a> */}
+      {/* <a
         href="/bookmarks"
         className="self-stretch rounded-31xl overflow-hidden flex flex-row items-start justify-start p-[13px] gap-[20px]"
       >
@@ -38,7 +38,7 @@ const NavigationBar: FunctionComponent = () => {
         <b className="relative inline-block min-w-[97px]" style={{ color: 'white' }}>
           Bookmarks
         </b>
-      </a>
+      </a> */}
 
       <a href="/profile" className="self-stretch rounded-31xl overflow-hidden flex flex-row items-start justify-start p-[13px] gap-[20px]">
         <img className="h-6 w-6 relative overflow-hidden shrink-0" loading="lazy" alt="Profile Icon" src="/iconsprofile.svg" />
@@ -46,12 +46,12 @@ const NavigationBar: FunctionComponent = () => {
           Profile
         </b>
       </a>
-      <a href="/more" className="self-stretch rounded-31xl overflow-hidden flex flex-row items-start justify-start p-[13px] gap-[20px]">
+      {/* <a href="/more" className="self-stretch rounded-31xl overflow-hidden flex flex-row items-start justify-start p-[13px] gap-[20px]">
         <img className="h-6 w-6 relative overflow-hidden shrink-0" loading="lazy" alt="More Icon" src="/iconsmore.svg" />
         <b className="relative inline-block min-w-[47px]" style={{ color: 'white' }}>
           More
         </b>
-      </a>
+      </a> */}
     </div>
   );
 };

@@ -14,8 +14,8 @@ const TrendingLists: FunctionComponent = () => {
           </div>
         </div>
       </div>
-      <TrendingSection subtitle="Trending in Delaware" tag="#DEMODAY" count="2,066 Tweets" />
-      <TrendingSection
+      {/* <TrendingSection subtitle="Trending in Delaware" tag="#DEMODAY" count="2,066 Tweets" /> */}
+      {/* <TrendingSection
         subtitle="Trending in California"
         tag="#JHipster"
         count="1,292 Tweets"
@@ -23,8 +23,8 @@ const TrendingLists: FunctionComponent = () => {
         propMinWidth="123px"
         propMinWidth1="66px"
         propDisplay1="inline-block"
-      />
-      <TrendingSection
+      /> */}
+      {/* <TrendingSection
         subtitle="Trending in Pennsylvania "
         tag="#ZipCodeWilmington"
         count="2,066 Tweets"
@@ -32,8 +32,8 @@ const TrendingLists: FunctionComponent = () => {
         propMinWidth="unset"
         propMinWidth1="unset"
         propDisplay1="unset"
-      />
-      <TrendingSection
+      /> */}
+      {/* <TrendingSection
         subtitle="Trending in Maryland"
         tag="#Hackathon"
         count="5,219 Tweets"
@@ -41,10 +41,10 @@ const TrendingLists: FunctionComponent = () => {
         propMinWidth="121px"
         propMinWidth1="83px"
         propDisplay1="inline-block"
-      />
+      /> */}
       <div className="self-stretch bg-trends-color overflow-hidden flex flex-row items-start justify-start text-mini text-blue">
         <div className="flex flex-row items-start justify-start p-4">
-          <b className="relative inline-block min-w-[76px]">Show more</b>
+          {/* <b className="relative inline-block min-w-[76px]">Show more</b> */}
         </div>
       </div>
     </div>

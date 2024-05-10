@@ -3,6 +3,7 @@ import TweetCard from '../components/TweetCard';
 import GroupComponent2 from '../components/GroupComponent2';
 import GroupComponent from '../components/GroupComponent';
 import Parentheses from '../components/Parentheses';
+import NavigationBar from '../components/NavigationBar';
 
 const Profile: FunctionComponent = () => {
   return (
@@ -25,6 +26,7 @@ const Profile: FunctionComponent = () => {
         letterSpacing: 'normal',
       }}
     >
+      {/* <NavigationBar /> */}
       <img
         style={{
           width: '2065px',
@@ -185,7 +187,7 @@ const Profile: FunctionComponent = () => {
                         boxSizing: 'border-box',
                       }}
                     >
-                      <img
+                      {/* <img
                         style={{
                           width: '20px',
                           height: '0px',
@@ -195,7 +197,7 @@ const Profile: FunctionComponent = () => {
                         }}
                         alt=""
                         src="/arrow-1.svg"
-                      />
+                      /> */}
                     </div>
                     <div
                       style={{
@@ -291,6 +293,7 @@ const Profile: FunctionComponent = () => {
                               gap: '20px',
                             }}
                           >
+                            {/* Home*/}
                             <img
                               style={{
                                 height: '28px',
@@ -329,120 +332,7 @@ const Profile: FunctionComponent = () => {
                               gap: '20px',
                             }}
                           >
-                            <img
-                              style={{
-                                height: '28px',
-                                width: '28px',
-                                position: 'relative',
-                              }}
-                              alt=""
-                              src="/explore.svg"
-                            />
-                            <div
-                              style={{
-                                display: 'flex',
-                                flexDirection: 'column',
-                                alignItems: 'flex-start',
-                                justifyContent: 'flex-start',
-                                padding: '3.5px 0px 0px',
-                              }}
-                            >
-                              <div
-                                style={{
-                                  position: 'relative',
-                                  display: 'inline-block',
-                                  minWidth: '60px',
-                                }}
-                              >
-                                Explore
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            style={{
-                              display: 'flex',
-                              flexDirection: 'row',
-                              alignItems: 'flex-start',
-                              justifyContent: 'flex-start',
-                              gap: '20px',
-                            }}
-                          >
-                            <img
-                              style={{
-                                height: '28px',
-                                width: '28px',
-                                position: 'relative',
-                              }}
-                              alt=""
-                              src="/notification.svg"
-                            />
-                            <div
-                              style={{
-                                display: 'flex',
-                                flexDirection: 'column',
-                                alignItems: 'flex-start',
-                                justifyContent: 'flex-start',
-                                padding: '3.5px 0px 0px',
-                              }}
-                            >
-                              <div
-                                style={{
-                                  position: 'relative',
-                                  display: 'inline-block',
-                                  minWidth: '103px',
-                                }}
-                              >
-                                Notifications
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            style={{
-                              display: 'flex',
-                              flexDirection: 'row',
-                              alignItems: 'flex-start',
-                              justifyContent: 'flex-start',
-                              gap: '20px',
-                            }}
-                          >
-                            <img
-                              style={{
-                                height: '28px',
-                                width: '28px',
-                                position: 'relative',
-                              }}
-                              alt=""
-                              src="/messages.svg"
-                            />
-                            <div
-                              style={{
-                                display: 'flex',
-                                flexDirection: 'column',
-                                alignItems: 'flex-start',
-                                justifyContent: 'flex-start',
-                                padding: '3.5px 0px 0px',
-                              }}
-                            >
-                              <div
-                                style={{
-                                  position: 'relative',
-                                  display: 'inline-block',
-                                  minWidth: '83px',
-                                }}
-                              >
-                                Messages
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            style={{
-                              display: 'flex',
-                              flexDirection: 'row',
-                              alignItems: 'flex-start',
-                              justifyContent: 'flex-start',
-                              gap: '20px',
-                            }}
-                          >
+                            {/* Profile*/}
                             <img
                               style={{
                                 height: '28px',
@@ -481,15 +371,55 @@ const Profile: FunctionComponent = () => {
                               gap: '20px',
                             }}
                           >
-                            <img
+                            <button
+                              style={{
+                                cursor: 'pointer',
+                                border: 'none',
+                                padding: '15px 89px 22px',
+                                backgroundColor: '#f21d1d',
+                                alignSelf: 'stretch',
+                                borderRadius: '27.5px',
+                                display: 'flex',
+                                flexDirection: 'row',
+                                alignItems: 'flex-start',
+                                justifyContent: 'center',
+                              }}
+                            >
+                              <div
+                                style={{
+                                  height: '55px',
+                                  width: '230px',
+                                  position: 'relative',
+                                  borderRadius: '27.5px',
+                                  backgroundColor: '#f21d1d',
+                                  display: 'none',
+                                }}
+                              />
+                              <div
+                                style={{
+                                  position: 'relative',
+                                  fontSize: '18px',
+                                  lineHeight: '18px',
+                                  fontFamily: 'Roboto',
+                                  color: '#fff',
+                                  textAlign: 'left',
+                                  display: 'inline-block',
+                                  minWidth: '39px',
+                                  zIndex: '1',
+                                }}
+                              >
+                                Echo
+                              </div>
+                            </button>
+                            {/* <img
                               style={{
                                 height: '28px',
                                 width: '28px',
                                 position: 'relative',
                               }}
                               alt=""
-                              src="/more.svg"
-                            />
+                              src="/explore.svg"
+                            /> */}
                             <div
                               style={{
                                 display: 'flex',
@@ -499,7 +429,121 @@ const Profile: FunctionComponent = () => {
                                 padding: '3.5px 0px 0px',
                               }}
                             >
-                              <div
+                              {/* <div
+                                style={{
+                                  position: 'relative',
+                                  display: 'inline-block',
+                                  minWidth: '60px',
+                                }}
+                              >
+                                Explore
+                              </div> */}
+                            </div>
+                          </div>
+                          <div
+                            style={{
+                              display: 'flex',
+                              flexDirection: 'row',
+                              alignItems: 'flex-start',
+                              justifyContent: 'flex-start',
+                              gap: '20px',
+                            }}
+                          >
+                            {/* <img
+                              style={{
+                                height: '28px',
+                                width: '28px',
+                                position: 'relative',
+                              }}
+                              alt=""
+                              src="/notification.svg"
+                            /> */}
+                            <div
+                              style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'flex-start',
+                                justifyContent: 'flex-start',
+                                padding: '3.5px 0px 0px',
+                              }}
+                            >
+                              {/* <div
+                                style={{
+                                  position: 'relative',
+                                  display: 'inline-block',
+                                  minWidth: '103px',
+                                }}
+                              >
+                                Notifications
+                              </div> */}
+                            </div>
+                          </div>
+                          <div
+                            style={{
+                              display: 'flex',
+                              flexDirection: 'row',
+                              alignItems: 'flex-start',
+                              justifyContent: 'flex-start',
+                              gap: '20px',
+                            }}
+                          >
+                            {/* <img
+                              style={{
+                                height: '28px',
+                                width: '28px',
+                                position: 'relative',
+                              }}
+                              alt=""
+                              src="/messages.svg"
+                            /> */}
+                            <div
+                              style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'flex-start',
+                                justifyContent: 'flex-start',
+                                padding: '3.5px 0px 0px',
+                              }}
+                            >
+                              {/* <div
+                                style={{
+                                  position: 'relative',
+                                  display: 'inline-block',
+                                  minWidth: '83px',
+                                }}
+                              >
+                                Messages
+                              </div> */}
+                            </div>
+                          </div>
+                          <div
+                            style={{
+                              display: 'flex',
+                              flexDirection: 'row',
+                              alignItems: 'flex-start',
+                              justifyContent: 'flex-start',
+                              gap: '20px',
+                            }}
+                          >
+                            {/* <img
+                              style={{
+                                height: '28px',
+                                width: '28px',
+                                position: 'relative',
+                              }}
+                              alt=""
+                              src="/more.svg"
+                            /> */}
+                            <div
+                              style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'flex-start',
+                                justifyContent: 'flex-start',
+                                padding: '3.5px 0px 0px',
+                              }}
+                            >
+                              {/* <div
                                 style={{
                                   position: 'relative',
                                   display: 'inline-block',
@@ -507,51 +551,11 @@ const Profile: FunctionComponent = () => {
                                 }}
                               >
                                 More
-                              </div>
+                              </div> */}
                             </div>
                           </div>
                         </div>
                       </div>
-                      <button
-                        style={{
-                          cursor: 'pointer',
-                          border: 'none',
-                          padding: '15px 89px 22px',
-                          backgroundColor: '#f21d1d',
-                          alignSelf: 'stretch',
-                          borderRadius: '27.5px',
-                          display: 'flex',
-                          flexDirection: 'row',
-                          alignItems: 'flex-start',
-                          justifyContent: 'center',
-                        }}
-                      >
-                        <div
-                          style={{
-                            height: '55px',
-                            width: '230px',
-                            position: 'relative',
-                            borderRadius: '27.5px',
-                            backgroundColor: '#f21d1d',
-                            display: 'none',
-                          }}
-                        />
-                        <div
-                          style={{
-                            position: 'relative',
-                            fontSize: '18px',
-                            lineHeight: '18px',
-                            fontFamily: 'Roboto',
-                            color: '#fff',
-                            textAlign: 'left',
-                            display: 'inline-block',
-                            minWidth: '39px',
-                            zIndex: '1',
-                          }}
-                        >
-                          Echo
-                        </div>
-                      </button>
                     </div>
                   </div>
                   <div
@@ -1310,7 +1314,7 @@ const Profile: FunctionComponent = () => {
                 minHeight: '178px',
               }}
             >
-              <img
+              {/* <img
                 style={{
                   height: '88px',
                   width: '123px',
@@ -1321,8 +1325,8 @@ const Profile: FunctionComponent = () => {
                 loading="lazy"
                 alt=""
                 src="/rectangle-15@2x.png"
-              />
-              <img
+              /> */}
+              {/* <img
                 style={{
                   height: '88px',
                   width: '123px',
@@ -1332,8 +1336,8 @@ const Profile: FunctionComponent = () => {
                 loading="lazy"
                 alt=""
                 src="/rectangle-16@2x.png"
-              />
-              <img
+              /> */}
+              {/* <img
                 style={{
                   height: '88px',
                   width: '123px',
@@ -1344,8 +1348,8 @@ const Profile: FunctionComponent = () => {
                 loading="lazy"
                 alt=""
                 src="/rectangle-17@2x.png"
-              />
-              <img
+              /> */}
+              {/* <img
                 style={{
                   height: '88px',
                   width: '123px',
@@ -1356,8 +1360,8 @@ const Profile: FunctionComponent = () => {
                 loading="lazy"
                 alt=""
                 src="/rectangle-15-1@2x.png"
-              />
-              <img
+              /> */}
+              {/* <img
                 style={{
                   height: '88px',
                   width: '123px',
@@ -1367,8 +1371,8 @@ const Profile: FunctionComponent = () => {
                 loading="lazy"
                 alt=""
                 src="/rectangle-16-1@2x.png"
-              />
-              <img
+              /> */}
+              {/* <img
                 style={{
                   height: '88px',
                   width: '123px',
@@ -1379,7 +1383,7 @@ const Profile: FunctionComponent = () => {
                 loading="lazy"
                 alt=""
                 src="/rectangle-17-1@2x.png"
-              />
+              /> */}
             </div>
           </div>
           <GroupComponent2 />

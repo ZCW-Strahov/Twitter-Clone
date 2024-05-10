@@ -44,10 +44,10 @@ const GroupComponent2: FunctionComponent = () => {
           gap: '25px',
         }}
       >
-        <Component multiplication="/ellipse-5@2x.png" asia="Asia" asianBurton="@AsianBurton" />
-        <Component multiplication="/ellipse-5-1@2x.png" asia="Dan" asianBurton="@DanMoffett" propMinWidth="105px" />
+        {/* <Component multiplication="/ellipse-5@2x.png" asia="Asia" asianBurton="@AsianBurton" />
+        <Component multiplication="/ellipse-5-1@2x.png" asia="Dan" asianBurton="@DanMoffett" propMinWidth="105px" /> */}
       </div>
-      <div
+      {/* <div
         style={{
           position: 'relative',
           lineHeight: '100%',
@@ -58,7 +58,7 @@ const GroupComponent2: FunctionComponent = () => {
         }}
       >
         Show more
-      </div>
+      </div> */}
     </div>
   );
 };

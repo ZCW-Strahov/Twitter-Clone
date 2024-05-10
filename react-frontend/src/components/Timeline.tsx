@@ -624,13 +624,13 @@ const YourComponent: React.FC = () => {
     <div className="twitter-page-container">
       <div className="user-profile-container">
         {/* User profile */}
-        <img src="/image.png" alt="User Picture" className="user-profile-picture" />
+        <img src="image.png" alt="User Picture" className="user-profile-picture" />
       </div>
 
       <div className="self-stretch bg-black overflow-hidden shrink-0 flex flex-col items-start justify-start pt-1 px-0 pb-0 box-border gap-[15px] [debug_commit:1de1738] max-w-full">
-        {/* <div className="flex flex-row items-start justify-start py-0 px-4"> */}
-        {/* <div className="flex flex-row items-end justify-start gap-[12px]"> */}
-        {/* <img
+        <div className="flex flex-row items-start justify-start py-0 px-4">
+          <div className="flex flex-row items-end justify-start gap-[12px]">
+            <img
               style={{
                 height: '50px',
                 width: '50px',
@@ -641,14 +641,14 @@ const YourComponent: React.FC = () => {
               loading="lazy"
               alt=""
               src="/ellipse-3@2x.png"
-            /> */}
-        {/* <div className="flex flex-col items-start justify-end pt-0 px-0 pb-2">
+            />
+            <div className="flex flex-col items-start justify-end pt-0 px-0 pb-2">
               <div className="flex flex-row items-start justify-start py-0 pr-3.5 pl-0">
                 <div className="relative mq450:text-base">What’s happening?</div>
               </div>
-            </div> */}
-        {/* </div> */}
-        {/* </div> */}
+            </div>
+          </div>
+        </div>
         <div className="twitter-container">
           <div className="twitter-input-container">
             {/* Feed input and button */}

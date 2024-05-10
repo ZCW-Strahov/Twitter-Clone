@@ -27,7 +27,7 @@ const Profile: FunctionComponent = () => {
       }}
     >
       {/* <NavigationBar /> */}
-      <img
+      {/* <img
         style={{
           width: '2065px',
           position: 'relative',
@@ -39,8 +39,8 @@ const Profile: FunctionComponent = () => {
         }}
         alt=""
         src="/screen-shot-20210817-at-2057-1@2x.png"
-      />
-      <div
+      /> */}
+      {/* <div
         style={{
           width: '5px',
           height: '59px',
@@ -54,7 +54,7 @@ const Profile: FunctionComponent = () => {
           transformOrigin: '0 0',
           zIndex: '1',
         }}
-      />
+      /> */}
       <section
         style={{
           width: '1595px',
@@ -838,7 +838,7 @@ const Profile: FunctionComponent = () => {
                                     minWidth: '102px',
                                   }}
                                 >
-                                  <span>{`67 `}</span>
+                                  {/* <span>{`67 `}</span>
                                   <span style={{ color: 'rgba(0, 0, 0, 0.6)' }}>Following</span>
                                 </div>
                                 <div
@@ -847,9 +847,9 @@ const Profile: FunctionComponent = () => {
                                     display: 'inline-block',
                                     minWidth: '103px',
                                   }}
-                                >
-                                  <span>{`47 `}</span>
-                                  <span style={{ color: 'rgba(0, 0, 0, 0.6)' }}>Followers</span>
+                                > */}
+                                  {/* <span>{`47 `}</span>
+                                  <span style={{ color: 'rgba(0, 0, 0, 0.6)' }}>Followers</span> */}
                                 </div>
                               </div>
                             </div>
@@ -964,8 +964,8 @@ const Profile: FunctionComponent = () => {
                           >
                             Tweets
                           </div>
-                          <div style={{ position: 'relative' }}>{`Tweets & replies`}</div>
-                          <div
+                          {/* <div style={{ position: 'relative' }}>{`Tweets & replies`}</div> */}
+                          {/* <div
                             style={{
                               position: 'relative',
                               display: 'inline-block',
@@ -973,8 +973,8 @@ const Profile: FunctionComponent = () => {
                             }}
                           >
                             Media
-                          </div>
-                          <div
+                          </div> */}
+                          {/* <div
                             style={{
                               position: 'relative',
                               display: 'inline-block',
@@ -982,7 +982,7 @@ const Profile: FunctionComponent = () => {
                             }}
                           >
                             Likes
-                          </div>
+                          </div> */}
                         </div>
                       </div>
                       <div
@@ -1033,7 +1033,7 @@ const Profile: FunctionComponent = () => {
                       gap: '15px',
                     }}
                   >
-                    <img
+                    {/* <img
                       style={{
                         height: '20px',
                         width: '20px',
@@ -1044,7 +1044,7 @@ const Profile: FunctionComponent = () => {
                       }}
                       alt=""
                       src="/pin.svg"
-                    />
+                    /> */}
                     <div
                       style={{
                         display: 'flex',
@@ -1054,7 +1054,7 @@ const Profile: FunctionComponent = () => {
                         padding: '2px 0px 0px',
                       }}
                     >
-                      <div
+                      {/* <div
                         style={{
                           position: 'relative',
                           display: 'inline-block',
@@ -1062,7 +1062,7 @@ const Profile: FunctionComponent = () => {
                         }}
                       >
                         Pinned Tweet
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>
@@ -1126,7 +1126,7 @@ const Profile: FunctionComponent = () => {
                             gap: '7px',
                           }}
                         >
-                          <div
+                          {/* <div
                             style={{
                               position: 'relative',
                               display: 'inline-block',
@@ -1134,7 +1134,7 @@ const Profile: FunctionComponent = () => {
                             }}
                           >
                             Danny
-                          </div>
+                          </div> */}
                           <div
                             style={{
                               position: 'relative',

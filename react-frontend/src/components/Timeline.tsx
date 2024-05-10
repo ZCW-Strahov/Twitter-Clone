@@ -30,10 +30,16 @@ const Timeline: FunctionComponent = () => {
         <div className="flex flex-row items-start justify-start py-0 px-4">
           <div className="flex flex-row items-end justify-start gap-[12px]">
             <img
-              className="h-12 w-12 relative rounded-21xl overflow-hidden shrink-0 object-cover"
+              style={{
+                height: '50px',
+                width: '50px',
+                position: 'relative',
+                borderRadius: '50%',
+                objectFit: 'cover',
+              }}
               loading="lazy"
               alt=""
-              src="/profilephoto-1@2x.png"
+              src="/ellipse-3@2x.png"
             />
             <div className="flex flex-col items-start justify-end pt-0 px-0 pb-2">
               <div className="flex flex-row items-start justify-start py-0 pr-3.5 pl-0">

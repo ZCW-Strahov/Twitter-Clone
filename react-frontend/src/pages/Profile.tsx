@@ -312,15 +312,18 @@ const Profile: FunctionComponent = () => {
                                 padding: '3.5px 0px 0px',
                               }}
                             >
-                              <div
-                                style={{
-                                  position: 'relative',
-                                  display: 'inline-block',
-                                  minWidth: '49px',
-                                }}
-                              >
-                                Home
-                              </div>
+                              <a href="/homepage">
+                                <div
+                                  style={{
+                                    position: 'relative',
+                                    display: 'inline-block',
+                                    minWidth: '52px',
+                                    cursor: 'pointer', // Add cursor style to indicate it's clickable
+                                  }}
+                                >
+                                  Home
+                                </div>
+                              </a>
                             </div>
                           </div>
                           <div
@@ -351,15 +354,18 @@ const Profile: FunctionComponent = () => {
                                 padding: '3.5px 0px 0px',
                               }}
                             >
-                              <div
-                                style={{
-                                  position: 'relative',
-                                  display: 'inline-block',
-                                  minWidth: '52px',
-                                }}
-                              >
-                                Profile
-                              </div>
+                              <a href="/profile">
+                                <div
+                                  style={{
+                                    position: 'relative',
+                                    display: 'inline-block',
+                                    minWidth: '52px',
+                                    cursor: 'pointer', // Add cursor style to indicate it's clickable
+                                  }}
+                                >
+                                  Profile
+                                </div>
+                              </a>
                             </div>
                           </div>
                           <div

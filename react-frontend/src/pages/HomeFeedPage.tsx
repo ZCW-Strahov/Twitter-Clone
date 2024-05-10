@@ -33,33 +33,33 @@ const HomeFeedPage: FunctionComponent = () => {
           <div className="flex flex-row items-start justify-start py-0 pr-4 pl-0 gap-[1px] mq450:flex-wrap">
             <div className="flex flex-col items-start justify-start">
               <div className="flex flex-row items-start justify-start py-0.5 pr-3 pl-0">
-                <div className="relative font-light inline-block min-w-[93px]">Terms of Service</div>
+                {/* <div className="relative font-light inline-block min-w-[93px]">Terms of Service</div> */}
               </div>
               <div className="flex flex-row items-start justify-start gap-[3px]">
                 <div className="flex flex-row items-start justify-start py-0.5 pr-3 pl-0">
-                  <div className="relative font-light inline-block min-w-[40px]">Imprint</div>
+                  {/* <div className="relative font-light inline-block min-w-[40px]">Imprint</div> */}
                 </div>
                 <div className="flex flex-row items-start justify-start py-0.5 pr-3 pl-0">
-                  <div className="relative font-light inline-block min-w-[46px]">Ads info</div>
+                  {/* <div className="relative font-light inline-block min-w-[46px]">Ads info</div> */}
                 </div>
               </div>
             </div>
             <div className="flex flex-col items-start justify-start">
               <div className="flex flex-row items-start justify-start gap-[7px]">
                 <div className="flex flex-row items-start justify-start py-0.5 pr-3 pl-0">
-                  <div className="relative font-light inline-block min-w-[77px]">Privacy Policy</div>
+                  {/* <div className="relative font-light inline-block min-w-[77px]">Privacy Policy</div> */}
                 </div>
                 <div className="flex flex-row items-start justify-start py-0.5 pr-3 pl-0">
-                  <div className="relative font-light inline-block min-w-[76px]">Cookie Policy</div>
+                  {/* <div className="relative font-light inline-block min-w-[76px]">Cookie Policy</div> */}
                 </div>
               </div>
               <div className="flex flex-row items-start justify-start py-0 pr-0 pl-[3px]">
                 <div className="flex flex-row items-start justify-start gap-[3px]">
                   <div className="flex flex-row items-start justify-start py-0.5 pr-3 pl-0">
-                    <div className="relative font-light inline-block min-w-[43px]">More ...</div>
+                    {/* <div className="relative font-light inline-block min-w-[43px]">More ...</div> */}
                   </div>
                   <div className="flex flex-row items-start justify-start py-0.5 pr-[25px] pl-0">
-                    <div className="relative font-light inline-block min-w-[102px]">© 2024 Echo, Inc.</div>
+                    {/* <div className="relative font-light inline-block min-w-[102px]">© 2024 Echo, Inc.</div> */}
                   </div>
                 </div>
               </div>

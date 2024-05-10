@@ -519,6 +519,7 @@ import LikeButton from './LikeButton';
 import React, { useState } from 'react';
 import './Timeline.css'; // Import the CSS file
 
+// Define the Post interface
 interface Post {
   id: number;
   text: string;
@@ -621,8 +622,13 @@ const YourComponent: React.FC = () => {
 
   return (
     <div className="twitter-page-container">
+      <div className="user-profile-container">
+        {/* User profile */}
+        <img src="image.png" alt="User Picture" className="user-profile-picture" />
+      </div>
       <div className="twitter-container">
         <div className="twitter-input-container">
+          {/* Feed input and button */}
           <input
             type="text"
             value={feedInputText}
@@ -649,6 +655,8 @@ const YourComponent: React.FC = () => {
           <div className="feed-scroll-wrapper">
             {posts.map(post => (
               <div key={post.id} className="twitter-post">
+                {/* User picture for each post */}
+                <img src="user.jpg" alt="User Picture" className="user-profile-picture" />
                 {post.text && <p>{post.text}</p>}
                 {post.image && <img src={post.image} alt="Posted Image" className="twitter-image" />}
                 <div className="twitter-actions">

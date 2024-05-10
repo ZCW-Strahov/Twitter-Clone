@@ -57,7 +57,7 @@
 }
 
 .twitter-feed-container {
-  height: 500px; /* Set your desired height */
+  height: 600px; /* Set your desired height */
   overflow-y: auto; /* Enable scrolling when content overflows */
 }
 

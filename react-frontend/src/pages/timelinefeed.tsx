@@ -307,7 +307,7 @@ const PaginatedTweets: React.FC = () => {
 
   return (
     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-      <div style={{ width: '50%' }}>
+      <div style={{ width: '55%' }}>
         <div className="tweet-container">
           <h2>Tweets</h2>
           <div style={{ maxHeight: '500px', overflowY: 'scroll' }}>

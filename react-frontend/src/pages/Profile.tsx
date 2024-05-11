@@ -4,6 +4,7 @@ import GroupComponent2 from '../components/GroupComponent2';
 import GroupComponent from '../components/GroupComponent';
 import Parentheses from '../components/Parentheses';
 import NavigationBar from '../components/NavigationBar';
+import PaginatedTweets from '../pages/timelinefeed';
 
 const Profile: FunctionComponent = () => {
   return (
@@ -27,7 +28,7 @@ const Profile: FunctionComponent = () => {
       }}
     >
       {/* <NavigationBar /> */}
-      <img
+      {/* <img
         style={{
           width: '2065px',
           position: 'relative',
@@ -39,8 +40,8 @@ const Profile: FunctionComponent = () => {
         }}
         alt=""
         src="/screen-shot-20210817-at-2057-1@2x.png"
-      />
-      <div
+      /> */}
+      {/* <div
         style={{
           width: '5px',
           height: '59px',
@@ -54,7 +55,7 @@ const Profile: FunctionComponent = () => {
           transformOrigin: '0 0',
           zIndex: '1',
         }}
-      />
+      /> */}
       <section
         style={{
           width: '1595px',
@@ -838,7 +839,7 @@ const Profile: FunctionComponent = () => {
                                     minWidth: '102px',
                                   }}
                                 >
-                                  <span>{`67 `}</span>
+                                  {/* <span>{`67 `}</span>
                                   <span style={{ color: 'rgba(0, 0, 0, 0.6)' }}>Following</span>
                                 </div>
                                 <div
@@ -847,9 +848,9 @@ const Profile: FunctionComponent = () => {
                                     display: 'inline-block',
                                     minWidth: '103px',
                                   }}
-                                >
-                                  <span>{`47 `}</span>
-                                  <span style={{ color: 'rgba(0, 0, 0, 0.6)' }}>Followers</span>
+                                > */}
+                                  {/* <span>{`47 `}</span>
+                                  <span style={{ color: 'rgba(0, 0, 0, 0.6)' }}>Followers</span> */}
                                 </div>
                               </div>
                             </div>
@@ -955,7 +956,7 @@ const Profile: FunctionComponent = () => {
                             gap: '20px',
                           }}
                         >
-                          <div
+                          {/* <div
                             style={{
                               position: 'relative',
                               display: 'inline-block',
@@ -963,9 +964,9 @@ const Profile: FunctionComponent = () => {
                             }}
                           >
                             Tweets
-                          </div>
-                          <div style={{ position: 'relative' }}>{`Tweets & replies`}</div>
-                          <div
+                          </div> */}
+                          {/* <div style={{ position: 'relative' }}>{`Tweets & replies`}</div> */}
+                          {/* <div
                             style={{
                               position: 'relative',
                               display: 'inline-block',
@@ -973,8 +974,8 @@ const Profile: FunctionComponent = () => {
                             }}
                           >
                             Media
-                          </div>
-                          <div
+                          </div> */}
+                          {/* <div
                             style={{
                               position: 'relative',
                               display: 'inline-block',
@@ -982,9 +983,15 @@ const Profile: FunctionComponent = () => {
                             }}
                           >
                             Likes
-                          </div>
+                          </div> */}
                         </div>
                       </div>
+
+                      {/*All code must go here for profile tweets*/}
+                      <div style={{ position: 'absolute', left: '17.3%', top: '33%', width: '80%', margin: '0 auto' }}>
+                        <PaginatedTweets />
+                      </div>
+
                       <div
                         style={{
                           width: '1px',
@@ -1033,7 +1040,7 @@ const Profile: FunctionComponent = () => {
                       gap: '15px',
                     }}
                   >
-                    <img
+                    {/* <img
                       style={{
                         height: '20px',
                         width: '20px',
@@ -1044,7 +1051,7 @@ const Profile: FunctionComponent = () => {
                       }}
                       alt=""
                       src="/pin.svg"
-                    />
+                    /> */}
                     <div
                       style={{
                         display: 'flex',
@@ -1054,7 +1061,7 @@ const Profile: FunctionComponent = () => {
                         padding: '2px 0px 0px',
                       }}
                     >
-                      <div
+                      {/* <div
                         style={{
                           position: 'relative',
                           display: 'inline-block',
@@ -1062,7 +1069,7 @@ const Profile: FunctionComponent = () => {
                         }}
                       >
                         Pinned Tweet
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>
@@ -1096,7 +1103,7 @@ const Profile: FunctionComponent = () => {
                         gap: '10px',
                       }}
                     >
-                      <img
+                      {/* <img
                         style={{
                           height: '50px',
                           width: '50px',
@@ -1107,7 +1114,7 @@ const Profile: FunctionComponent = () => {
                         loading="lazy"
                         alt=""
                         src="/ellipse-3@2x.png"
-                      />
+                      /> */}
                       <div
                         style={{
                           display: 'flex',
@@ -1126,7 +1133,8 @@ const Profile: FunctionComponent = () => {
                             gap: '7px',
                           }}
                         >
-                          <div
+                          {/* icone user*/}
+                          {/* <div
                             style={{
                               position: 'relative',
                               display: 'inline-block',
@@ -1134,7 +1142,7 @@ const Profile: FunctionComponent = () => {
                             }}
                           >
                             Danny
-                          </div>
+                          </div> */}
                           <div
                             style={{
                               position: 'relative',
@@ -1144,7 +1152,7 @@ const Profile: FunctionComponent = () => {
                             }}
                           >
                             {/*here*/}
-                            @DannyCao
+                            {/* @DannyCao */}
                           </div>
                         </div>
                       </div>
@@ -1170,7 +1178,7 @@ const Profile: FunctionComponent = () => {
                         justifyContent: 'flex-start',
                       }}
                     >
-                      <img
+                      {/* <img
                         style={{
                           width: '17px',
                           height: '4px',
@@ -1179,7 +1187,7 @@ const Profile: FunctionComponent = () => {
                         loading="lazy"
                         alt=""
                         src="/vector.svg"
-                      />
+                      /> */}
                     </div>
                     <div
                       style={{
@@ -1191,32 +1199,7 @@ const Profile: FunctionComponent = () => {
                         minWidth: '591px',
                         maxWidth: '100%',
                       }}
-                    >
-                      <TweetCard
-                        may1=" · May 1"
-                        dudeICantWaitToGoFISHING="Dude I can’t wait to go FISHING!!"
-                        retweet="/retweet.svg"
-                        prop="1"
-                        like="/like.svg"
-                        prop1="8"
-                        showDiv
-                      />
-                      <TweetCard
-                        may1=" · Apr 17"
-                        dudeICantWaitToGoFISHING="Hello, World! Hello, World! Hello, World! Hello, World! Hello, World! Hello, World! Hello, World! "
-                        retweet="/retweet-1.svg"
-                        prop="5"
-                        like="/like-fill.svg"
-                        prop1="9"
-                        showDiv={false}
-                        propWidth="558px"
-                        propMinWidth="unset"
-                        propWidth1="15px"
-                        propColor="#0cb345"
-                        propOverflow="hidden"
-                        propColor1="#ef1c5c"
-                      />
-                    </div>
+                    ></div>
                   </div>
                 </div>
               </div>

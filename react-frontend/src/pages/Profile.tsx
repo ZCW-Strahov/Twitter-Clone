@@ -160,7 +160,7 @@ const Profile: FunctionComponent = () => {
                       flexDirection: 'row',
                       alignItems: 'flex-end',
                       justifyContent: 'flex-start',
-                      padding: '22px 31px 17px',
+                      padding: '1px 31px 17px',
                       boxSizing: 'border-box',
                       gap: '40px',
                       maxWidth: '100%',
@@ -206,10 +206,9 @@ const Profile: FunctionComponent = () => {
                         flexDirection: 'column',
                         alignItems: 'flex-start',
                         justifyContent: 'flex-start',
-                        gap: '6px',
                       }}
                     >
-                      <div
+                      {/* <div
                         style={{
                           position: 'relative',
                           display: 'inline-block',
@@ -218,8 +217,8 @@ const Profile: FunctionComponent = () => {
                         }}
                       >
                         Danny
-                      </div>
-                      <div
+                      </div> */}
+                      {/* <div
                         style={{
                           position: 'relative',
                           fontSize: '16px',
@@ -230,7 +229,7 @@ const Profile: FunctionComponent = () => {
                         }}
                       >
                         1,070 Posts
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>
@@ -939,7 +938,7 @@ const Profile: FunctionComponent = () => {
                           flexDirection: 'row',
                           alignItems: 'flex-start',
                           justifyContent: 'flex-start',
-                          padding: '0px 50px',
+                          padding: '0px 5px',
                           boxSizing: 'border-box',
                           maxWidth: '100%',
                         }}
@@ -988,7 +987,7 @@ const Profile: FunctionComponent = () => {
                       </div>
 
                       {/*All code must go here for profile tweets*/}
-                      <div style={{ position: 'absolute', left: '17.3%', top: '33%', width: '80%', margin: '0 auto' }}>
+                      <div style={{ position: 'absolute', left: '17.3%', top: '33%', width: '80%', margin: '30px 150px' }}>
                         <PaginatedTweets />
                       </div>
 

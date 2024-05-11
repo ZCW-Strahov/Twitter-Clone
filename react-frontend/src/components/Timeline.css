@@ -6,18 +6,19 @@
   padding: 20px;
   margin: 20px auto; /* Center the container horizontally */
   max-width: 100%; /* Allow the container to take up the full width of the viewport */
-  width: 550px; /* Set a maximum width to prevent it from becoming too wide */
+  width: 575px; /* Set a maximum width to prevent it from becoming too wide */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Input field */
 .twitter-input {
-  width: calc(100% - 70px); /* Adjust the width according to the button size */
+  width: calc(100% - 100px); /* Adjust the width according to the button size */
   padding: 10px;
   border: none;
   border-radius: 20px;
   background-color: white;
   margin-right: 10px;
+  height: 70px;
 }
 
 /* Echo button */
@@ -45,6 +46,7 @@
   word-break: break-word; /* Allow long words to break */
   white-space: pre-wrap; /* Allow line breaks */
   display: contents;
+  border-radius: 5px;
 }
 
 /* CSS for uploaded picture */
@@ -67,4 +69,13 @@ body {
   display: auto;
   position: fixed;
   overflow-y: scroll;
+}
+
+.twitter-button {
+  margin: -40px 500px 15px;
+}
+
+.picture-icon {
+  margin: 50px 5px;
+  font-size: 35px;
 }

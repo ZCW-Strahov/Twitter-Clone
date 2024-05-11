@@ -624,103 +624,79 @@ const YourComponent: React.FC = () => {
     <div className="twitter-page-container">
       <div className="user-profile-container">
         {/* User profile */}
-        <img src="/image.png" alt="User Picture" className="user-profile-picture" />
+        <img src="image.png" alt="User Picture" className="user-profile-picture" />
       </div>
-
-      <div className="self-stretch bg-black overflow-hidden shrink-0 flex flex-col items-start justify-start pt-1 px-0 pb-0 box-border gap-[15px] [debug_commit:1de1738] max-w-full">
-        {/* <div className="flex flex-row items-start justify-start py-0 px-4"> */}
-        {/* <div className="flex flex-row items-end justify-start gap-[12px]"> */}
-        {/* <img
-              style={{
-                height: '50px',
-                width: '50px',
-                position: 'relative',
-                borderRadius: '50%',
-                objectFit: 'cover',
-              }}
-              loading="lazy"
-              alt=""
-              src="/ellipse-3@2x.png"
-            /> */}
-        {/* <div className="flex flex-col items-start justify-end pt-0 px-0 pb-2">
-              <div className="flex flex-row items-start justify-start py-0 pr-3.5 pl-0">
-                <div className="relative mq450:text-base">What’s happening?</div>
-              </div>
-            </div> */}
-        {/* </div> */}
-        {/* </div> */}
-        <div className="twitter-container">
-          <div className="twitter-input-container">
-            {/* Feed input and button */}
-            <input
-              type="text"
-              value={feedInputText}
-              onChange={handleFeedInputChange}
-              placeholder="Type your message here"
-              className="twitter-input"
-            />
-            <label htmlFor="image-upload" className="picture-icon">
-              📷
-            </label>
-            <input
-              type="file"
-              accept="image/*"
-              onChange={handleImageChange}
-              className="twitter-image-input"
-              id="image-upload"
-              style={{ display: 'none' }}
-            />
-            <button onClick={handlePost} className="twitter-button">
-              Echo
-            </button>
-          </div>
-          <div className="twitter-feed-container">
-            <div className="feed-scroll-wrapper">
-              {posts.map(post => (
-                <div key={post.id} className="twitter-post">
-                  {/* User picture for each post */}
-                  <img src="user.jpg" alt="User Picture" className="user-profile-picture" />
-                  {post.text && <p>{post.text}</p>}
-                  {post.image && <img src={post.image} alt="Posted Image" className="twitter-image" />}
-                  <div className="twitter-actions">
-                    <button onClick={() => handleLike(post.id)} className="twitter-like-button">
-                      <span role="img" aria-label="heart">
-                        {post.liked ? '❤️' : '🤍'} Like ({post.likes})
-                      </span>
-                    </button>
-                    <button onClick={() => handleComment(post.id)} className="twitter-comment-button">
-                      Comment ({post.comments.length})
-                    </button>
-                    <button onClick={() => handleDeletePost(post.id)} className="twitter-delete-button">
-                      Delete
-                    </button>
-                    {post.isCommenting && (
-                      <div>
-                        <div className="comment-context">
-                          {/* Display existing comments */}
-                          {post.comments.map((comment, index) => (
-                            <div key={index}>
-                              <p>{comment}</p>
-                              {/* Button to delete comment */}
-                              <button onClick={() => handleDeleteComment(post.id, index)}>Delete Comment</button>
-                            </div>
-                          ))}
-                        </div>
-                        {/* Input field for adding new comment */}
-                        <input
-                          type="text"
-                          placeholder="Add your comment"
-                          value={commentInputText} // Use commentInputText state for comment input
-                          onChange={handleCommentInputChange} // Use handleCommentInputChange for comment input change
-                        />
-                        {/* Button to add the new comment */}
-                        <button onClick={() => handleAddComment(post.id, commentInputText)}>Add</button>
+      <div className="twitter-container">
+        <div className="twitter-input-container">
+          {/* Feed input and button */}
+          <input
+            type="text"
+            value={feedInputText}
+            onChange={handleFeedInputChange}
+            placeholder="Type your message here"
+            className="twitter-input"
+          />
+          <label htmlFor="image-upload" className="picture-icon">
+            📷
+          </label>
+          <input
+            type="file"
+            accept="image/*"
+            onChange={handleImageChange}
+            className="twitter-image-input"
+            id="image-upload"
+            style={{ display: 'none' }}
+          />
+          <button onClick={handlePost} className="twitter-button">
+            Echo
+          </button>
+        </div>
+        <div className="twitter-feed-container">
+          <div className="feed-scroll-wrapper">
+            {posts.map(post => (
+              <div key={post.id} className="twitter-post">
+                {/* User picture for each post */}
+                <img src="user.jpg" alt="User Picture" className="user-profile-picture" />
+                {post.text && <p>{post.text}</p>}
+                {post.image && <img src={post.image} alt="Posted Image" className="twitter-image" />}
+                <div className="twitter-actions">
+                  <button onClick={() => handleLike(post.id)} className="twitter-like-button">
+                    <span role="img" aria-label="heart">
+                      {post.liked ? '❤️' : '🤍'} Like ({post.likes})
+                    </span>
+                  </button>
+                  <button onClick={() => handleComment(post.id)} className="twitter-comment-button">
+                    Comment ({post.comments.length})
+                  </button>
+                  <button onClick={() => handleDeletePost(post.id)} className="twitter-delete-button">
+                    Delete
+                  </button>
+                  {post.isCommenting && (
+                    <div>
+                      <div className="comment-context">
+                        {/* Display existing comments */}
+                        {post.comments.map((comment, index) => (
+                          <div key={index}>
+                            <p>{comment}</p>
+                            {/* Button to delete comment */}
+                            <button onClick={() => handleDeleteComment(post.id, index)}>Delete Comment</button>
+                          </div>
+                        ))}
                       </div>
-                    )}
-                  </div>
+                      {/* Input field for adding new comment */}
+                      <input
+                        type="text"
+                        placeholder="Add your comment"
+                        value={commentInputText} // Use commentInputText state for comment input
+                        onChange={handleCommentInputChange} // Use handleCommentInputChange for comment input change
+                      />
+                      {/* Button to add the new comment */}
+                      <button onClick={() => handleAddComment(post.id, commentInputText)}>Add</button>
+                    </div>
+                  )}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

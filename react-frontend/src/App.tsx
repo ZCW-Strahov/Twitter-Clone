@@ -5,6 +5,7 @@ import Login from './asan/Login/Login';
 import Signup from './asan/Signup/Signup';
 import EchoLandingPage from './pages/EchoLandingPage';
 import Profile from './pages/Profile';
+import Temp from './pages/ProfileNew';
 
 function App() {
   const action = useNavigationType();
@@ -47,6 +48,7 @@ function App() {
       <Route path="/signup" element={<Signup />} />
       <Route path="/" element={<EchoLandingPage />} />
       <Route path="/profile" element={<Profile />} />
+      <Route path="/temp" element={<Temp />} />
     </Routes>
   );
 }

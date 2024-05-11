@@ -3,7 +3,7 @@ import TweetCard from '../components/TweetCard';
 import GroupComponent2 from '../components/GroupComponent2';
 import GroupComponent from '../components/GroupComponent';
 import Parentheses from '../components/Parentheses';
-import NavigationBar from '../components/NavigationBar';
+
 import PaginatedTweets from '../pages/timelinefeed';
 
 const Profile: FunctionComponent = () => {
@@ -21,41 +21,12 @@ const Profile: FunctionComponent = () => {
         flexDirection: 'column',
         alignItems: 'flex-start',
         justifyContent: 'flex-start',
-        padding: '0px 155px 208px',
+        padding: '0px 155px',
         gap: '4px',
         lineHeight: 'normal',
         letterSpacing: 'normal',
       }}
     >
-      {/* <NavigationBar /> */}
-      {/* <img
-        style={{
-          width: '2065px',
-          position: 'relative',
-          maxHeight: '100%',
-          objectFit: 'cover',
-          display: 'none',
-          maxWidth: '100%',
-          zIndex: '0',
-        }}
-        alt=""
-        src="/screen-shot-20210817-at-2057-1@2x.png"
-      /> */}
-      {/* <div
-        style={{
-          width: '5px',
-          height: '59px',
-          position: 'absolute',
-          margin: '0',
-          top: '706px',
-          left: '489px',
-          borderRadius: '4px',
-          backgroundColor: '#1da1f2',
-          transform: ' rotate(-90deg)',
-          transformOrigin: '0 0',
-          zIndex: '1',
-        }}
-      /> */}
       <section
         style={{
           width: '1595px',
@@ -64,7 +35,7 @@ const Profile: FunctionComponent = () => {
           flexWrap: 'wrap',
           alignItems: 'flex-end',
           justifyContent: 'flex-start',
-          gap: '28px',
+          gap: '1px',
           maxWidth: '100%',
           textAlign: 'left',
           fontSize: '20px',
@@ -117,7 +88,7 @@ const Profile: FunctionComponent = () => {
               >
                 <div
                   style={{
-                    width: '1178px',
+                    width: '1px',
                     display: 'flex',
                     flexDirection: 'row',
                     alignItems: 'flex-end',
@@ -187,19 +158,7 @@ const Profile: FunctionComponent = () => {
                         padding: '0px 0px 23px',
                         boxSizing: 'border-box',
                       }}
-                    >
-                      {/* <img
-                        style={{
-                          width: '20px',
-                          height: '0px',
-                          position: 'relative',
-                          objectFit: 'contain',
-                          zIndex: '1',
-                        }}
-                        alt=""
-                        src="/arrow-1.svg"
-                      /> */}
-                    </div>
+                    ></div>
                     <div
                       style={{
                         display: 'flex',
@@ -207,30 +166,7 @@ const Profile: FunctionComponent = () => {
                         alignItems: 'flex-start',
                         justifyContent: 'flex-start',
                       }}
-                    >
-                      {/* <div
-                        style={{
-                          position: 'relative',
-                          display: 'inline-block',
-                          minWidth: '56px',
-                          zIndex: '1',
-                        }}
-                      >
-                        Danny
-                      </div> */}
-                      {/* <div
-                        style={{
-                          position: 'relative',
-                          fontSize: '16px',
-                          color: 'rgba(0, 0, 0, 0.6)',
-                          display: 'inline-block',
-                          minWidth: '84px',
-                          zIndex: '1',
-                        }}
-                      >
-                        1,070 Posts
-                      </div> */}
-                    </div>
+                    ></div>
                   </div>
                 </div>
                 <div
@@ -417,15 +353,7 @@ const Profile: FunctionComponent = () => {
                                 Echo
                               </div>
                             </button>
-                            {/* <img
-                              style={{
-                                height: '28px',
-                                width: '28px',
-                                position: 'relative',
-                              }}
-                              alt=""
-                              src="/explore.svg"
-                            /> */}
+
                             <div
                               style={{
                                 display: 'flex',
@@ -434,17 +362,7 @@ const Profile: FunctionComponent = () => {
                                 justifyContent: 'flex-start',
                                 padding: '3.5px 0px 0px',
                               }}
-                            >
-                              {/* <div
-                                style={{
-                                  position: 'relative',
-                                  display: 'inline-block',
-                                  minWidth: '60px',
-                                }}
-                              >
-                                Explore
-                              </div> */}
-                            </div>
+                            ></div>
                           </div>
                           <div
                             style={{
@@ -455,15 +373,6 @@ const Profile: FunctionComponent = () => {
                               gap: '20px',
                             }}
                           >
-                            {/* <img
-                              style={{
-                                height: '28px',
-                                width: '28px',
-                                position: 'relative',
-                              }}
-                              alt=""
-                              src="/notification.svg"
-                            /> */}
                             <div
                               style={{
                                 display: 'flex',
@@ -472,17 +381,7 @@ const Profile: FunctionComponent = () => {
                                 justifyContent: 'flex-start',
                                 padding: '3.5px 0px 0px',
                               }}
-                            >
-                              {/* <div
-                                style={{
-                                  position: 'relative',
-                                  display: 'inline-block',
-                                  minWidth: '103px',
-                                }}
-                              >
-                                Notifications
-                              </div> */}
-                            </div>
+                            ></div>
                           </div>
                           <div
                             style={{
@@ -493,15 +392,6 @@ const Profile: FunctionComponent = () => {
                               gap: '20px',
                             }}
                           >
-                            {/* <img
-                              style={{
-                                height: '28px',
-                                width: '28px',
-                                position: 'relative',
-                              }}
-                              alt=""
-                              src="/messages.svg"
-                            /> */}
                             <div
                               style={{
                                 display: 'flex',
@@ -510,17 +400,7 @@ const Profile: FunctionComponent = () => {
                                 justifyContent: 'flex-start',
                                 padding: '3.5px 0px 0px',
                               }}
-                            >
-                              {/* <div
-                                style={{
-                                  position: 'relative',
-                                  display: 'inline-block',
-                                  minWidth: '83px',
-                                }}
-                              >
-                                Messages
-                              </div> */}
-                            </div>
+                            ></div>
                           </div>
                           <div
                             style={{
@@ -531,15 +411,6 @@ const Profile: FunctionComponent = () => {
                               gap: '20px',
                             }}
                           >
-                            {/* <img
-                              style={{
-                                height: '28px',
-                                width: '28px',
-                                position: 'relative',
-                              }}
-                              alt=""
-                              src="/more.svg"
-                            /> */}
                             <div
                               style={{
                                 display: 'flex',
@@ -548,17 +419,7 @@ const Profile: FunctionComponent = () => {
                                 justifyContent: 'flex-start',
                                 padding: '3.5px 0px 0px',
                               }}
-                            >
-                              {/* <div
-                                style={{
-                                  position: 'relative',
-                                  display: 'inline-block',
-                                  minWidth: '42px',
-                                }}
-                              >
-                                More
-                              </div> */}
-                            </div>
+                            ></div>
                           </div>
                         </div>
                       </div>
@@ -588,7 +449,7 @@ const Profile: FunctionComponent = () => {
                     >
                       <img
                         style={{
-                          height: '280px',
+                          height: '200px',
                           flex: '1',
                           position: 'relative',
                           maxWidth: '100%',
@@ -616,7 +477,7 @@ const Profile: FunctionComponent = () => {
                       />
                       <div
                         style={{
-                          height: '989px',
+                          height: '600px',
                           width: '1px',
                           position: 'absolute',
                           margin: '0',
@@ -719,7 +580,7 @@ const Profile: FunctionComponent = () => {
                             >
                               Danny
                             </div>
-                            <div
+                            {/* <div
                               style={{
                                 position: 'relative',
                                 fontSize: '16px',
@@ -729,9 +590,9 @@ const Profile: FunctionComponent = () => {
                               }}
                             >
                               @DannyCao
-                            </div>
+                            </div> */}
                           </div>
-                          <div style={{ position: 'relative' }}>Student Developer @ ZCW</div>
+                          {/* <div style={{ position: 'relative' }}>Student Developer @ ZCW</div> */}
                           <div
                             style={{
                               alignSelf: 'stretch',
@@ -772,7 +633,7 @@ const Profile: FunctionComponent = () => {
                                     gap: '5px',
                                   }}
                                 >
-                                  <img
+                                  {/* <img
                                     style={{
                                       height: '24px',
                                       width: '24px',
@@ -793,7 +654,7 @@ const Profile: FunctionComponent = () => {
                                     }}
                                   >
                                     Wilmington, DE
-                                  </div>
+                                  </div> */}
                                 </div>
                                 <div
                                   style={{
@@ -805,7 +666,7 @@ const Profile: FunctionComponent = () => {
                                     color: '#f21d1d',
                                   }}
                                 >
-                                  <img
+                                  {/* <img
                                     style={{
                                       height: '24px',
                                       width: '24px',
@@ -818,7 +679,7 @@ const Profile: FunctionComponent = () => {
                                     alt=""
                                     src="/frame-1.svg"
                                   />
-                                  <div style={{ position: 'relative' }}>github.com/ZCW-Strahov</div>
+                                  <div style={{ position: 'relative' }}>github.com/ZCW-Strahov</div> */}
                                 </div>
                               </div>
                               <div
@@ -837,20 +698,7 @@ const Profile: FunctionComponent = () => {
                                     display: 'inline-block',
                                     minWidth: '102px',
                                   }}
-                                >
-                                  {/* <span>{`67 `}</span>
-                                  <span style={{ color: 'rgba(0, 0, 0, 0.6)' }}>Following</span>
-                                </div>
-                                <div
-                                  style={{
-                                    position: 'relative',
-                                    display: 'inline-block',
-                                    minWidth: '103px',
-                                  }}
-                                > */}
-                                  {/* <span>{`47 `}</span>
-                                  <span style={{ color: 'rgba(0, 0, 0, 0.6)' }}>Followers</span> */}
-                                </div>
+                                ></div>
                               </div>
                             </div>
                             <div
@@ -876,7 +724,7 @@ const Profile: FunctionComponent = () => {
                                   minWidth: '144px',
                                 }}
                               >
-                                <img
+                                {/* <img
                                   style={{
                                     height: '24px',
                                     width: '24px',
@@ -889,7 +737,7 @@ const Profile: FunctionComponent = () => {
                                   alt=""
                                   src="/frame-2.svg"
                                 />
-                                <div style={{ position: 'relative' }}>Born September 9, 1997</div>
+                                <div style={{ position: 'relative' }}>Born September 9, 1997</div> */}
                               </div>
                               <div
                                 style={{
@@ -900,7 +748,7 @@ const Profile: FunctionComponent = () => {
                                   gap: '5px',
                                 }}
                               >
-                                <img
+                                {/* <img
                                   style={{
                                     height: '24px',
                                     width: '24px',
@@ -912,7 +760,7 @@ const Profile: FunctionComponent = () => {
                                   alt=""
                                   src="/frame-3.svg"
                                 />
-                                <div style={{ position: 'relative' }}>Joined May 2023</div>
+                                <div style={{ position: 'relative' }}>Joined May 2023</div> */}
                               </div>
                             </div>
                           </div>
@@ -954,42 +802,13 @@ const Profile: FunctionComponent = () => {
                             maxWidth: '100%',
                             gap: '20px',
                           }}
-                        >
-                          {/* <div
-                            style={{
-                              position: 'relative',
-                              display: 'inline-block',
-                              minWidth: '59px',
-                            }}
-                          >
-                            Tweets
-                          </div> */}
-                          {/* <div style={{ position: 'relative' }}>{`Tweets & replies`}</div> */}
-                          {/* <div
-                            style={{
-                              position: 'relative',
-                              display: 'inline-block',
-                              minWidth: '50px',
-                            }}
-                          >
-                            Media
-                          </div> */}
-                          {/* <div
-                            style={{
-                              position: 'relative',
-                              display: 'inline-block',
-                              minWidth: '42px',
-                            }}
-                          >
-                            Likes
-                          </div> */}
-                        </div>
+                        ></div>
                       </div>
 
                       {/*All code must go here for profile tweets*/}
-                      <div style={{ position: 'absolute', left: '17.3%', top: '33%', width: '80%', margin: '30px 150px' }}>
+                      {/* <div style={{ position: 'absolute', left: '17.3%', top: '33%', width: '80%', margin: '30px 150px' }}>
                         <PaginatedTweets />
-                      </div>
+                      </div> */}
 
                       <div
                         style={{
@@ -1039,18 +858,6 @@ const Profile: FunctionComponent = () => {
                       gap: '15px',
                     }}
                   >
-                    {/* <img
-                      style={{
-                        height: '20px',
-                        width: '20px',
-                        position: 'relative',
-                        overflow: 'hidden',
-                        flexShrink: '0',
-                        minHeight: '20px',
-                      }}
-                      alt=""
-                      src="/pin.svg"
-                    /> */}
                     <div
                       style={{
                         display: 'flex',
@@ -1059,17 +866,7 @@ const Profile: FunctionComponent = () => {
                         justifyContent: 'flex-start',
                         padding: '2px 0px 0px',
                       }}
-                    >
-                      {/* <div
-                        style={{
-                          position: 'relative',
-                          display: 'inline-block',
-                          minWidth: '92px',
-                        }}
-                      >
-                        Pinned Tweet
-                      </div> */}
-                    </div>
+                    ></div>
                   </div>
                 </div>
                 <div
@@ -1102,18 +899,6 @@ const Profile: FunctionComponent = () => {
                         gap: '10px',
                       }}
                     >
-                      {/* <img
-                        style={{
-                          height: '50px',
-                          width: '50px',
-                          position: 'relative',
-                          borderRadius: '50%',
-                          objectFit: 'cover',
-                        }}
-                        loading="lazy"
-                        alt=""
-                        src="/ellipse-3@2x.png"
-                      /> */}
                       <div
                         style={{
                           display: 'flex',
@@ -1132,16 +917,6 @@ const Profile: FunctionComponent = () => {
                             gap: '7px',
                           }}
                         >
-                          {/* icone user*/}
-                          {/* <div
-                            style={{
-                              position: 'relative',
-                              display: 'inline-block',
-                              minWidth: '45px',
-                            }}
-                          >
-                            Danny
-                          </div> */}
                           <div
                             style={{
                               position: 'relative',
@@ -1176,18 +951,7 @@ const Profile: FunctionComponent = () => {
                         alignItems: 'flex-start',
                         justifyContent: 'flex-start',
                       }}
-                    >
-                      {/* <img
-                        style={{
-                          width: '17px',
-                          height: '4px',
-                          position: 'relative',
-                        }}
-                        loading="lazy"
-                        alt=""
-                        src="/vector.svg"
-                      /> */}
-                    </div>
+                    ></div>
                     <div
                       style={{
                         flex: '1',
@@ -1236,7 +1000,7 @@ const Profile: FunctionComponent = () => {
               maxWidth: '100%',
             }}
           >
-            <div
+            {/* <div
               style={{
                 alignSelf: 'stretch',
                 borderRadius: '31px',
@@ -1291,7 +1055,7 @@ const Profile: FunctionComponent = () => {
                 placeholder="Search Echo"
                 type="text"
               />
-            </div>
+            </div> */}
             <div
               style={{
                 alignSelf: 'stretch',
@@ -1302,78 +1066,7 @@ const Profile: FunctionComponent = () => {
                 justifyContent: 'flex-start',
                 minHeight: '178px',
               }}
-            >
-              {/* <img
-                style={{
-                  height: '88px',
-                  width: '123px',
-                  position: 'relative',
-                  borderRadius: '10px 0px 0px 0px',
-                  objectFit: 'cover',
-                }}
-                loading="lazy"
-                alt=""
-                src="/rectangle-15@2x.png"
-              /> */}
-              {/* <img
-                style={{
-                  height: '88px',
-                  width: '123px',
-                  position: 'relative',
-                  objectFit: 'contain',
-                }}
-                loading="lazy"
-                alt=""
-                src="/rectangle-16@2x.png"
-              /> */}
-              {/* <img
-                style={{
-                  height: '88px',
-                  width: '123px',
-                  position: 'relative',
-                  borderRadius: '0px 10px 0px 0px',
-                  objectFit: 'cover',
-                }}
-                loading="lazy"
-                alt=""
-                src="/rectangle-17@2x.png"
-              /> */}
-              {/* <img
-                style={{
-                  height: '88px',
-                  width: '123px',
-                  position: 'relative',
-                  borderRadius: '0px 0px 0px 10px',
-                  objectFit: 'cover',
-                }}
-                loading="lazy"
-                alt=""
-                src="/rectangle-15-1@2x.png"
-              /> */}
-              {/* <img
-                style={{
-                  height: '88px',
-                  width: '123px',
-                  position: 'relative',
-                  objectFit: 'cover',
-                }}
-                loading="lazy"
-                alt=""
-                src="/rectangle-16-1@2x.png"
-              /> */}
-              {/* <img
-                style={{
-                  height: '88px',
-                  width: '123px',
-                  position: 'relative',
-                  borderRadius: '0px 0px 10px 0px',
-                  objectFit: 'cover',
-                }}
-                loading="lazy"
-                alt=""
-                src="/rectangle-17-1@2x.png"
-              /> */}
-            </div>
+            ></div>
           </div>
           <GroupComponent2 />
           <GroupComponent />

@@ -33,7 +33,7 @@ const GroupComponent2: FunctionComponent = () => {
           maxWidth: '100%',
         }}
       />
-      <div style={{ position: 'relative', fontSize: '24px', zIndex: '1' }}>You might like</div>
+      {/* <div style={{ position: 'relative', fontSize: '24px', zIndex: '1' }}>You might like</div> */}
       <div
         style={{
           alignSelf: 'stretch',

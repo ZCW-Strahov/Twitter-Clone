@@ -53,7 +53,7 @@ const GroupComponent: FunctionComponent = () => {
             gap: '20px',
           }}
         >
-          <div style={{ position: 'relative', zIndex: '1' }}>Trends for you</div>
+          {/* <div style={{ position: 'relative', zIndex: '1' }}>Trends for you</div> */}
           <div
             style={{
               display: 'flex',
@@ -63,7 +63,7 @@ const GroupComponent: FunctionComponent = () => {
               padding: '4px 0px 0px',
             }}
           >
-            <img
+            {/* <img
               style={{
                 width: '24px',
                 height: '24px',
@@ -72,7 +72,7 @@ const GroupComponent: FunctionComponent = () => {
               }}
               alt=""
               src="/settings.svg"
-            />
+            /> */}
           </div>
         </div>
         <div

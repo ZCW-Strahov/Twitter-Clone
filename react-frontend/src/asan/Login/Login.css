@@ -84,4 +84,15 @@
 .btn-primary:hover {
   background-color: #0056b3;
   border-color: #0056b3;
+
+  background-color: rgba(19, 19, 19, 0.42);
+  border-color: rgba(19, 19, 19, 0.42);
+}
+.login-image {
+  width: 100px;
+  height: 100px;
+  background-image: url('../../../public/giflogo.gif');
+  background-size: cover;
+  background-position: center;
+  margin: 20px auto;
 }

@@ -3,8 +3,8 @@ import axios from 'axios';
 
 interface TweetData {
   content: string;
-  picture: string;
-  pictureContentType: string;
+  picture?: string; // Make picture optional
+  pictureContentType?: string; // Make pictureContentType optional
   createdOn: string;
   userProfile: {
     id: string;
@@ -24,20 +24,20 @@ const TweetForm: React.FC = () => {
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
+    const tweetData: TweetData = {
+      content: content,
+      createdOn: new Date().toISOString(),
+      userProfile: {
+        id: '1500', // Static user ID as per your requirement
+      },
+    };
+
     if (image) {
       const reader = new FileReader();
       reader.onloadend = async () => {
         const base64String = reader.result as string;
-        const tweetData: TweetData = {
-          content: content,
-          picture: base64String.split(',')[1], // remove the prefix from the base64 string
-          pictureContentType: 'image/jpeg',
-          createdOn: new Date().toISOString(),
-          userProfile: {
-            id: '1500', // Static user ID as per your requirement
-          },
-        };
-
+        tweetData.picture = base64String.split(',')[1]; // remove the prefix from the base64 string
+        tweetData.pictureContentType = 'image/jpeg';
         try {
           await axios.post('http://localhost:8080/api/tweets', tweetData);
           // Reset the state to clear the form fields
@@ -46,13 +46,24 @@ const TweetForm: React.FC = () => {
           if (fileInputRef.current) {
             fileInputRef.current.value = ''; // This is necessary to clear the file input
           }
-          alert('Tweet posted successfully!');
+          // alert('Tweet posted successfully!');
         } catch (error) {
           console.error('Error posting tweet:', error);
           alert('Failed to post tweet.');
         }
       };
       reader.readAsDataURL(image);
+    } else {
+      // No image selected, post tweet without image
+      try {
+        await axios.post('http://localhost:8080/api/tweets', tweetData);
+        // Reset the state to clear the form fields
+        setContent('');
+        // alert('Tweet posted successfully!');
+      } catch (error) {
+        console.error('Error posting tweet:', error);
+        alert('Failed to post tweet.');
+      }
     }
   };
 
@@ -84,10 +95,13 @@ const TweetForm: React.FC = () => {
             border: '1px solid #ccc',
             borderRadius: '10px',
             resize: 'none',
+            color: '#ccc', // color of the placeholder text
+            fontSize: '16px', // size of the placeholder text
+            fontFamily: 'Arial, sans-serif', // font family of the placeholder text
           }}
           value={content}
           onChange={e => setContent(e.target.value)}
-          placeholder="What's happening?"
+          placeholder="What's happening?" // placeholder text
         />
         <div
           style={{ backgroundColor: 'black', display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '10px' }}

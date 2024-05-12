@@ -568,6 +568,7 @@ const YourComponent: React.FC = () => {
       setPosts([newPost, ...posts]); // Add new post to the beginning of the array
       setFeedInputText('');
       setImageFile(null);
+      window.location.reload(); // Reload the page
     }
   };
 

@@ -36,7 +36,7 @@ const Timeline: React.FC = () => {
       });
 
       if (response.ok) {
-        console.log('Tweet posted successfully!');
+        // console.log('Tweet posted successfully!');
         setText('');
         setImage(null);
       } else {

@@ -63,7 +63,7 @@
 //   // Function to handle tweet deletion
 //   const handleDeleteTweet = async (tweetId: number) => {
 //     try {
-//       const response = await fetch(`${TWEETS_API}/${tweetId}`, {
+//       const response = await fetch(`${TWEE4TS_API}/${tweetId}`, {
 //         method: 'DELETE',
 //       });
 //       if (!response.ok) {
@@ -235,7 +235,7 @@ interface Comment {
   content: string;
 }
 
-const PAGE_SIZE = 4; // Number of tweets per page
+const PAGE_SIZE = 1000; // Number of tweets per page
 const TWEETS_API = 'http://localhost:8080/api/tweets';
 
 // Function to fetch paginated tweets (only fetches the first page)
@@ -301,6 +301,11 @@ const PaginatedTweets: React.FC = () => {
     // You can update the UI to display the comment here
   };
 
+  // Function to reload the page
+  const handleReloadPage = () => {
+    window.location.reload();
+  };
+
   // Loading or empty state messages
   if (loading) return <p>Loading tweets...</p>;
   if (!tweets || tweets.length === 0) return <p>No tweets available</p>;
@@ -308,10 +313,11 @@ const PaginatedTweets: React.FC = () => {
   return (
     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
       <div style={{ width: '55%' }}>
-        <div className="tweet-container">
+        <div className="tweet-container" onClick={handleReloadPage}>
           <h2>Tweets</h2>
           <div style={{ maxHeight: '500px', overflowY: 'scroll' }}>
-            {tweets.map(tweet => (
+            {/* Reverse the order of tweets before mapping */}
+            {tweets.reverse().map(tweet => (
               <TweetComponent
                 key={tweet.id}
                 tweet={tweet}

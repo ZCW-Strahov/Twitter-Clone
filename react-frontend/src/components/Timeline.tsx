@@ -518,6 +518,8 @@ import LikeButton from './LikeButton';
 
 import React, { useState } from 'react';
 import './Timeline.css'; // Import the CSS file
+import PostTweets from '../pages/postTweets';
+import PaginatedTweets from '../pages/timelinefeed';
 
 // Define the Post interface
 interface Post {
@@ -566,6 +568,7 @@ const YourComponent: React.FC = () => {
       setPosts([newPost, ...posts]); // Add new post to the beginning of the array
       setFeedInputText('');
       setImageFile(null);
+      window.location.reload(); // Reload the page
     }
   };
 
@@ -621,88 +624,50 @@ const YourComponent: React.FC = () => {
   };
 
   return (
-    <div className="twitter-page-container">
-      <div className="user-profile-container">
-        {/* User profile */}
-        <img src="image.png" alt="User Picture" className="user-profile-picture" />
-      </div>
-
-      <div className="self-stretch bg-black overflow-hidden shrink-0 flex flex-col items-start justify-start pt-1 px-0 pb-0 box-border gap-[15px] [debug_commit:1de1738] max-w-full">
-        <div className="twitter-container">
-          <div className="twitter-input-container">
-            {/* Feed input and button */}
-            <input
-              type="text"
-              value={feedInputText}
-              onChange={handleFeedInputChange}
-              placeholder="Type your message here"
-              className="twitter-input"
-            />
-            {/* Image upload input and label */}
-            <label htmlFor="image-upload" className="picture-icon">
-              📷
-            </label>
-            <input
-              type="file"
-              accept="image/*"
-              onChange={handleImageChange}
-              className="twitter-image-input"
-              id="image-upload"
-              style={{ display: 'none' }}
-            />
-            <button onClick={handlePost} className="twitter-button">
-              Echo
-            </button>
-          </div>
-          <div className="twitter-feed-container">
-            <div className="feed-scroll-wrapper">
-              {posts.map(post => (
-                <div key={post.id} className="twitter-post">
-                  {/* User picture for each post */}
-                  <img src="user.jpg" alt="User Picture" className="user-profile-picture" />
-                  {post.text && <p>{post.text}</p>}
-                  {post.image && <img src={post.image} alt="Posted Image" className="twitter-image" />}
-                  <div className="twitter-actions">
-                    <button onClick={() => handleLike(post.id)} className="twitter-like-button">
-                      <span role="img" aria-label="heart">
-                        {post.liked ? '❤️' : '🤍'} Like ({post.likes})
-                      </span>
-                    </button>
-                    <button onClick={() => handleComment(post.id)} className="twitter-comment-button">
-                      Comment ({post.comments.length})
-                    </button>
-                    <button onClick={() => handleDeletePost(post.id)} className="twitter-delete-button">
-                      Delete
-                    </button>
-                    {post.isCommenting && (
-                      <div>
-                        <div className="comment-context">
-                          {/* Display existing comments */}
-                          {post.comments.map((comment, index) => (
-                            <div key={index}>
-                              <p>{comment}</p>
-                              {/* Button to delete comment */}
-                              <button onClick={() => handleDeleteComment(post.id, index)}>Delete</button>
-                            </div>
-                          ))}
-                        </div>
-                        {/* Input field for adding new comment */}
-                        <input
-                          type="text"
-                          placeholder="Add your comment"
-                          value={commentInputText} // Use commentInputText state for comment input
-                          onChange={handleCommentInputChange} // Use handleCommentInputChange for comment input change
-                        />
-                        {/* Button to add the new comment */}
-                        <button onClick={() => handleAddComment(post.id, commentInputText)}>Add</button>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
+    <div>
+      <div
+        style={{
+          position: 'absolute',
+          left: '31.7%', // You can adjust this value for the initial position
+          top: '-37%',
+          width: '30.5%', // Width remains unchanged
+          height: '59%', // Adjust height as needed to crop the bottom part
+          overflow: 'hidden', // Ensures that any content extending past this div's height is not shown
+          backgroundColor: 'black', // Changes the background color of the div to black
+        }}
+      >
+        <div
+          style={{
+            marginLeft: '-50%', // Set negative margin to half of the width to crop from the left
+            width: 'calc(100% + 27.7%)', // Dynamically calculate the width to include both sides
+            height: '100%', // Height set to 100% to fill the parent container
+            backgroundColor: 'inherit', // Inherit the background color of the parent div
+          }}
+        >
+          <div
+            style={{
+              marginLeft: '27.7%', // Set positive margin to offset the cropping from the left
+              width: '100%', // Width set to 100% to fill the parent container
+              height: '100%', // Height set to 100% to fill the parent container
+              backgroundColor: 'inherit', // Inherit the background color of the parent div
+            }}
+          >
+            <PostTweets /> {/* Assuming PostTweets is the component to be displayed */}
           </div>
         </div>
+      </div>
+
+      <div
+        style={{
+          position: 'absolute',
+          left: '31.8%',
+          top: '22.4%',
+          width: '55.5%',
+          transform: 'scaleY(1.3)', // Scale vertically to make it 20% taller
+          transformOrigin: 'top', // Ensure scaling happens from the top
+        }}
+      >
+        <PaginatedTweets /> {/* Call the PaginatedTweets component */}
       </div>
     </div>
   );

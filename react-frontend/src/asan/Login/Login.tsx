@@ -58,7 +58,6 @@ function Login() {
       })
       .catch(error => {
         console.error('Login problem:', error);
-        alert('Failed to login. Please try again.');
       });
   };
 

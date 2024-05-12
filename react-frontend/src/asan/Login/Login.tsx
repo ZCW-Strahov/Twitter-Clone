@@ -62,27 +62,22 @@ function Login() {
       });
   };
 
+  // REMINDER !!! NEED TO FIX AND ROUTE TO SIGN UP BUTTON PAGE BELOW
   return (
     <div className="login template d-flex justify-content-center align-items-center 100-w 100-vh bg-primary">
       <div className="40-w p-5 rounded bg-white">
         <form>
           <h3 className="text-center">Log in to Echo</h3>
+          <div className="login-image"></div>
           <div className="mb-2">
             <label htmlFor="username">Username</label>
-            <input
-              type="email"
-              placeholder="Enter Username"
-              className="form-control"
-              value={username}
-              onChange={handleUsernameChange}
-              required={true}
-            />
+            <input type="email" placeholder="" className="form-control" value={username} onChange={handleUsernameChange} required={true} />
           </div>
           <div className="mb-2">
             <label htmlFor="password">Password</label>
             <input
               type="password"
-              placeholder="Enter Password"
+              placeholder=""
               className="form-control"
               value={password}
               onChange={handlePasswordChange}
@@ -97,13 +92,13 @@ function Login() {
           </div>
           <div className="d-grid">
             <button className="btn btn-primary" onClick={handleLogin} disabled={!username || !password}>
-              Log in
+              Log In
             </button>
           </div>
           <p className="text-right">
-            Forgot <a href="/">Password?</a>
+            Don't have an account?
             <Link to="/signup" className="ms-2">
-              Sign up to Echo
+              Sign up
             </Link>
           </p>
         </form>

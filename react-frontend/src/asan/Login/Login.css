@@ -126,7 +126,7 @@
 .login-image {
   width: 100px;
   height: 100px;
-  background-image: url('/Users/danny/Projects/Twitter-Clone/react-frontend/public/giflogo.gif');
+  background-image: url('../../../public/giflogo.gif');
   background-size: cover;
   background-position: center;
   margin: 20px auto;

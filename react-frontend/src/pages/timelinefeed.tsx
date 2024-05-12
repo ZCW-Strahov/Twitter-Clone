@@ -63,7 +63,7 @@
 //   // Function to handle tweet deletion
 //   const handleDeleteTweet = async (tweetId: number) => {
 //     try {
-//       const response = await fetch(`${TWEETS_API}/${tweetId}`, {
+//       const response = await fetch(`${TWEE4TS_API}/${tweetId}`, {
 //         method: 'DELETE',
 //       });
 //       if (!response.ok) {
@@ -235,7 +235,7 @@ interface Comment {
   content: string;
 }
 
-const PAGE_SIZE = 4; // Number of tweets per page
+const PAGE_SIZE = 1000; // Number of tweets per page
 const TWEETS_API = 'http://localhost:8080/api/tweets';
 
 // Function to fetch paginated tweets (only fetches the first page)

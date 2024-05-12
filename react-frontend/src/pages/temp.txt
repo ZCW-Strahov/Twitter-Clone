@@ -1,0 +1,71 @@
+import React, { useState } from 'react';
+import axios from 'axios';
+
+interface TweetData {
+  content: string;
+  picture: string;
+  pictureContentType: string;
+  createdOn: string;
+  hashtag: string;
+}
+
+const TweetForm: React.FC = () => {
+  const [content, setContent] = useState<string>("");
+  const [image, setImage] = useState<File | null>(null);
+  const [hashtag, setHashtag] = useState<string>("");
+
+  const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (event.target.files && event.target.files[0]) {
+      setImage(event.target.files[0]);
+    }
+  };
+
+  const handleSubmit = async (event: React.FormEvent) => {
+    event.preventDefault();
+    if (image) {
+      const reader = new FileReader();
+      reader.onloadend = async () => {
+        const base64String = reader.result as string;
+        const tweetData: TweetData = {
+          content: content,
+          picture: base64String.split(',')[1],  // remove the prefix from the base64 string
+          pictureContentType: 'image/jpeg',
+          createdOn: new Date().toISOString(),
+          hashtag: hashtag
+        };
+
+        try {
+          await axios.post('http://localhost:8080/api/tweets', tweetData);
+          alert('Tweet posted successfully!');
+        } catch (error) {
+          console.error('Error posting tweet:', error);
+          alert('Failed to post tweet.');
+        }
+      };
+      reader.readAsDataURL(image);
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <label>
+        Content:
+        <input type="text" value={content} onChange={(e) => setContent(e.target.value)} placeholder="Enter tweet content" />
+      </label>
+      <br />
+      <label>
+        Hashtag:
+        <input type="text" value={hashtag} onChange={(e) => setHashtag(e.target.value)} placeholder="#hashtag" />
+      </label>
+      <br />
+      <label>
+        Upload Image:
+        <input type="file" accept="image/*" onChange={handleImageChange} />
+      </label>
+      <br />
+      <button type="submit">Post Tweet</button>
+    </form>
+  );
+};
+
+export default TweetForm;

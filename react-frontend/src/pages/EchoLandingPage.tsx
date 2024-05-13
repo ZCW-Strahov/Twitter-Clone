@@ -97,7 +97,7 @@ const EchoLandingPage = () => {
     background: '#131313',
     color: '#ddd',
     scrollbarColor: '#666',
-    buttonColor: 'rgba(255,255,255,0.47)',
+    buttonColor: 'rgb(255,0,0)',
     buttonHoverColor: '#ff0000',
     neonColor: 'rgba(255,255,255,0.37)', // Neon green for the glow effect
   };

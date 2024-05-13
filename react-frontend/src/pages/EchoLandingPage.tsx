@@ -37,7 +37,6 @@ const Container = styled.div`
   position: relative;
   overflow: hidden;
   width: 100vw;
-  background-image: url('/Users/danny/Projects/Twitter-Clone/react-frontend/public/echobackground.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -97,7 +96,7 @@ const EchoLandingPage = () => {
     background: '#131313',
     color: '#ddd',
     scrollbarColor: '#666',
-    buttonColor: 'rgba(255,255,255,0.47)',
+    buttonColor: 'rgb(255,0,0)',
     buttonHoverColor: '#ff0000',
     neonColor: 'rgba(255,255,255,0.37)', // Neon green for the glow effect
   };

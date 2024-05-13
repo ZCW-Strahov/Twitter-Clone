@@ -302,9 +302,6 @@ const PaginatedTweets: React.FC = () => {
   };
 
   // Function to reload the page
-  const handleReloadPage = () => {
-    window.location.reload();
-  };
 
   // Loading or empty state messages
   if (loading) return <p>Loading tweets...</p>;
@@ -313,8 +310,14 @@ const PaginatedTweets: React.FC = () => {
   return (
     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
       <div style={{ width: '55%' }}>
-        <div className="tweet-container" onClick={handleReloadPage}>
+        <div className="tweet-container">
           <h2>Tweets</h2>
+          <button
+            onClick={() => window.location.reload()}
+            style={{ backgroundColor: 'transparent', color: 'transparent', position: 'absolute', left: '5px', top: '18px', margin: '10px' }}
+          >
+            sadsa
+          </button>
           <div style={{ maxHeight: '500px', overflowY: 'scroll' }}>
             {/* Reverse the order of tweets before mapping */}
             {tweets.reverse().map(tweet => (
@@ -371,7 +374,7 @@ const TweetComponent: React.FC<{ tweet: Tweet; onDelete: () => void; onComment: 
       <p className="tweet-content">{tweet.content}</p>
       {pictureUrl ? (
         <div className="tweet-pic">
-          <img src={pictureUrl} alt={`Tweet pic ${tweet.id}`} />
+          <img src={pictureUrl} alt={`Tweet pic ${tweet.id}`} style={{ width: '200px', height: 'auto' }} />
         </div>
       ) : (
         <p>No pictures available</p>

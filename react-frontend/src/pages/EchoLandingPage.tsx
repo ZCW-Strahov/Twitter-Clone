@@ -37,7 +37,6 @@ const Container = styled.div`
   position: relative;
   overflow: hidden;
   width: 100vw;
-  background-image: url('/Users/danny/Projects/Twitter-Clone/react-frontend/public/echobackground.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

@@ -1,10 +1,10 @@
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { motion } from 'framer-motion';
 import { Canvas } from '@react-three/fiber';
-import { useNavigate } from 'react-router-dom';
 import { OrbitControls, Stars } from '@react-three/drei';
 import Particles from 'react-tsparticles';
-import React, { useState } from 'react';
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import './EchoLandingPage.css';
 
 // Global styles
@@ -13,6 +13,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Roboto', sans-serif;
     background-color: ${props => props.theme.background};
     color: ${props => props.theme.color};
+    overflow: hidden;
     transition: all 0.25s linear;
   }
 
@@ -21,12 +22,12 @@ const GlobalStyles = createGlobalStyle`
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: ${props => props.theme.color};
+    background-color: ${props => props.theme.scrollbarColor};
     border-radius: 10px;
   }
 `;
 
-// Container component
+// Dynamic Background Container
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -36,89 +37,80 @@ const Container = styled.div`
   position: relative;
   overflow: hidden;
   width: 100vw;
-  background-image: url('/Users/danny/Projects/Twitter-Clone/react-frontend/src/asan/Assets/echobackgroundpicturelogin.jpg'); // Update with your image path
   background-size: cover;
-  background-position: center; // Center the background image
+  background-position: center;
   background-attachment: fixed;
-`;
-
-// Button component
-const Button = styled(motion.button)`
-  padding: 10px 20px;
-  width: 300px;
-  background-color: #131313; // Set the background color to red
-  border: none;
-  color: white;
-  border-radius: 20px;
-  cursor: pointer;
-  margin-bottom: 10px;
-  z-index: 10;
-  position: relative;
-  overflow: hidden;
-
-  &:hover {
-    background-color: #ff0000; // Darken the button on hover
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
   }
 `;
 
-// Title and Subtitle using theme color
+// Stylish Button with smooth transition
+const Button = styled(motion.button)`
+  padding: 15px 30px;
+  width: 250px;
+  background-color: ${props => props.theme.buttonColor};
+  border: none;
+  color: white;
+  font-size: 21px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 15px;
+  backdrop-filter: blur(10px);
+  &:hover {
+    background-color: ${props => props.theme.buttonHoverColor};
+  }
+`;
+
+// Elegant Typography with neon glow
 const Title = styled(motion.h1)`
-  font-size: 92px;
+  font-size: 72px;
+  font-weight: bold;
+  color: ${props => props.theme.color};
+  text-shadow:
+    0 0 8px ${props => props.theme.neonColor},
+    0 0 20px ${props => props.theme.neonColor},
+    0 0 30px ${props => props.theme.neonColor};
   z-index: 10;
 `;
 
 const Subtitle = styled(motion.p)`
-  font-size: 40px;
+  font-size: 32px;
+  color: ${props => props.theme.color};
   z-index: 10;
 `;
 
-// EchoLandingPage component
+// EchoLandingPage Component
 const EchoLandingPage = () => {
   const navigate = useNavigate();
-  const [darkMode, setDarkMode] = useState(false);
 
-  const handleLoginClick = () => {
-    navigate('/login');
+  // Define a dark theme with neon color
+  const darkTheme = {
+    background: '#131313',
+    color: '#ddd',
+    scrollbarColor: '#666',
+    buttonColor: 'rgb(255,0,0)',
+    buttonHoverColor: '#ff0000',
+    neonColor: 'rgba(255,255,255,0.37)', // Neon green for the glow effect
   };
-
-  const handleSignUpClick = () => {
-    navigate('/signup');
-  };
-
-  const toggleTheme = () => {
-    setDarkMode(!darkMode);
-  };
-
-  const StyledImage = styled.img`
-    max-width: 100%;
-    height: auto;
-    margin: 20px 0;
-  `;
-
-  const theme = darkMode
-    ? {
-        background: '#131313',
-        color: '#ddd',
-        toggleBorder: '#131313',
-        gradient: 'linear-gradient(#091236, #1E215D)',
-      }
-    : {
-        background: '#fff',
-        color: '#131313',
-        toggleBorder: '#FFF',
-        gradient: 'linear-gradient(#39598A, #79D7ED)',
-      };
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={darkTheme}>
       <GlobalStyles />
       <Container>
         <Particles
           id="tsparticles"
           options={{
-            background: { color: { value: theme.background } },
+            background: { color: { value: darkTheme.background } },
             interactivity: { events: { onHover: { enable: true, mode: 'repulse' } } },
-            particles: { color: { value: theme.color }, links: { color: theme.color } },
+            particles: { color: { value: darkTheme.color }, links: { color: darkTheme.color } },
           }}
         />
         <Canvas>
@@ -126,23 +118,18 @@ const EchoLandingPage = () => {
           <ambientLight intensity={0.5} />
           <Stars />
         </Canvas>
-        <button onClick={toggleTheme} style={{ position: 'absolute', top: 20, right: 20, zIndex: 10 }}>
-          Toggle Theme
-        </button>
-        <Title style={{ color: theme.color }}>Happening now</Title>
-        <div className="home-image"></div>
-        <Subtitle style={{ color: theme.color }}>Join Echo today.</Subtitle>
+        <Title>
+          Join, Connect, Echo: Your Social Hub Awaits.
+          <div className="sound-image"></div>
+        </Title>
         <form style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '20px' }}>
-          <Button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={handleLoginClick}>
+          <Button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => navigate('/login')}>
             Log In
           </Button>
-          <Button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={handleSignUpClick}>
+          <Button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => navigate('/signup')}>
             Sign Up
           </Button>
         </form>
-        <Button onClick={() => navigate('/homepage')} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-          Continue As Guest
-        </Button>
       </Container>
     </ThemeProvider>
   );

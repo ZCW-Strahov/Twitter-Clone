@@ -100,6 +100,11 @@ function Login() {
               Sign up
             </Link>
           </p>
+          <p className="text-right">
+            <Link to="/homepage" className="ms-2">
+              Continue As Guest
+            </Link>
+          </p>
         </form>
       </div>
     </div>

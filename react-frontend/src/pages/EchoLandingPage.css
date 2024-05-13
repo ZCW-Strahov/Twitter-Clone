@@ -1,8 +1,8 @@
-.home-image {
-  width: 100px;
-  height: 100px;
-  background-image: url('../../public/giflogo.gif');
+.sound-image {
+  width: 200px;
+  height: 200px;
+  background-image: url('../../public/sound.gif');
   background-size: cover;
   background-position: center;
-  margin: 20px auto;
+  margin: 1px auto;
 }

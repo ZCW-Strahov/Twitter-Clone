@@ -248,6 +248,7 @@ const Profile: FunctionComponent = () => {
                                 alignItems: 'flex-start',
                                 justifyContent: 'flex-start',
                                 padding: '3.5px 0px 0px',
+                                fontFamily: 'Roboto, sans-serif',
                               }}
                             >
                               <a href="/homepage">
@@ -257,6 +258,7 @@ const Profile: FunctionComponent = () => {
                                     display: 'inline-block',
                                     minWidth: '52px',
                                     cursor: 'pointer', // Add cursor style to indicate it's clickable
+                                    fontFamily: 'Roboto, sans-serif',
                                   }}
                                 >
                                   Home
@@ -271,6 +273,7 @@ const Profile: FunctionComponent = () => {
                               alignItems: 'flex-start',
                               justifyContent: 'flex-start',
                               gap: '20px',
+                              fontFamily: 'Roboto, sans-serif',
                             }}
                           >
                             {/* Explore*/}
@@ -280,6 +283,7 @@ const Profile: FunctionComponent = () => {
                                 height: '28px',
                                 width: '28px',
                                 position: 'relative',
+                                fontFamily: 'Roboto, sans-serif',
                               }}
                               alt=""
                               src="/iconsexplore.svg"
@@ -291,6 +295,7 @@ const Profile: FunctionComponent = () => {
                                 alignItems: 'flex-start',
                                 justifyContent: 'flex-start',
                                 padding: '3.5px 0px 0px',
+                                fontFamily: 'Roboto, sans-serif',
                               }}
                             >
                               <a href="/homepage">
@@ -300,6 +305,7 @@ const Profile: FunctionComponent = () => {
                                     display: 'inline-block',
                                     minWidth: '52px',
                                     cursor: 'pointer', // Add cursor style to indicate it's clickable
+                                    fontFamily: 'Roboto, sans-serif',
                                   }}
                                 >
                                   Explore
@@ -420,6 +426,7 @@ const Profile: FunctionComponent = () => {
                                 alignItems: 'flex-start',
                                 justifyContent: 'flex-start',
                                 padding: '3.5px 0px 0px',
+                                fontFamily: 'Roboto, sans-serif',
                               }}
                             >
                               <a href="/homepage">

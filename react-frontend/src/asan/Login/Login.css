@@ -31,7 +31,7 @@
   margin-bottom: 20px;
   font-size: 64px;
   font-weight: 500;
-  color: black;
+  color: rgba(7, 181, 244, 0.94);
   text-align: center;
   font-family: 'Roboto', sans-serif;
 }
@@ -81,7 +81,7 @@
   margin-bottom: 10px;
   border: none;
   border-radius: 12px;
-  background-color: #ff3b30;
+  background-color: #07b5f4;
   color: #ffffff;
   font-size: 20px;
   cursor: pointer;
@@ -90,7 +90,7 @@
 }
 
 .login .text-right {
-  color: #030303;
+  color: rgba(19, 19, 19, 0.42);
   font-size: 20px;
   font-weight: 500;
   line-height: 30px;
@@ -100,7 +100,7 @@
 }
 
 .login .text-right a {
-  color: #030303;
+  color: #07b5f4;
   font-size: 20px;
   font-weight: 500;
   line-height: 30px;

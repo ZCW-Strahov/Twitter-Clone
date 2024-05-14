@@ -104,8 +104,8 @@ const TweetForm: React.FC = () => {
             borderRadius: '10px',
             resize: 'none',
             color: '#ccc',
-            fontSize: '16px',
-            fontFamily: 'Arial, sans-serif',
+            fontSize: '21px',
+            fontFamily: 'Roboto, sans-serif',
           }}
           value={content}
           onChange={e => setContent(e.target.value)}
@@ -120,7 +120,7 @@ const TweetForm: React.FC = () => {
             type="button" // Change this to a regular button to control the speech recognition
             onClick={toggleListening}
             style={{
-              backgroundColor: isListening ? '#FF6347' : '#1DA1F2',
+              backgroundColor: isListening ? '#07b5f4' : 'rgba(7,181,244,0.94)',
               color: 'white',
               border: 'none',
               padding: '10px 20px',
@@ -128,12 +128,12 @@ const TweetForm: React.FC = () => {
               cursor: 'pointer',
             }}
           >
-            {isListening ? 'Stop Listening' : 'Start Listening'}
+            {isListening ? 'Stop Echo Voice' : 'Start Echo Voice'}
           </button>
           <button
             type="submit"
             style={{
-              backgroundColor: '#1DA1F2',
+              backgroundColor: '#07b5f4',
               color: 'white',
               border: 'none',
               padding: '10px 20px',
@@ -141,7 +141,7 @@ const TweetForm: React.FC = () => {
               cursor: 'pointer',
             }}
           >
-            Tweet
+            Echo
           </button>
         </div>
       </form>

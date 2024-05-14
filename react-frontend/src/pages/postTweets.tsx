@@ -50,6 +50,7 @@ const TweetForm: React.FC = () => {
         try {
           await axios.post('http://localhost:8080/api/tweets', tweetData);
           resetForm();
+          window.location.reload(); // Refreshes page
         } catch (error) {
           console.error('Error posting tweet:', error);
           alert('Failed to post tweet.');
@@ -60,6 +61,7 @@ const TweetForm: React.FC = () => {
       try {
         await axios.post('http://localhost:8080/api/tweets', tweetData);
         resetForm();
+        window.location.reload(); // Refreshes page
       } catch (error) {
         console.error('Error posting tweet:', error);
         alert('Failed to post tweet.');

@@ -56,7 +56,7 @@ spring:
     cache: false
 
 server:
-  port: 8080
+  port: 8315
 
 # ===================================================================
 # JHipster specific properties

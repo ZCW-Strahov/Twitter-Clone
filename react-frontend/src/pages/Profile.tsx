@@ -40,7 +40,7 @@ const Profile: FunctionComponent = () => {
           maxWidth: '100%',
           textAlign: 'left',
           fontSize: '20px',
-          color: '#000',
+          color: 'rgb(19,19,19)',
           fontFamily: 'Roboto',
         }}
       >
@@ -450,15 +450,15 @@ const Profile: FunctionComponent = () => {
                     >
                       <img
                         style={{
-                          height: '200px',
+                          height: '230px',
                           flex: '1',
                           position: 'relative',
                           maxWidth: '100%',
                           overflow: 'hidden',
-                          objectFit: 'cover',
+                          objectFit: 'fill',
                         }}
                         alt=""
-                        src="/rectangle-13@2x.png"
+                        src="/standard.gif"
                       />
                       <img
                         style={{
@@ -478,13 +478,13 @@ const Profile: FunctionComponent = () => {
                       />
                       <div
                         style={{
-                          height: '600px',
+                          height: '800px',
                           width: '1px',
                           position: 'absolute',
                           margin: '0',
-                          bottom: '-622px',
+                          bottom: '-722px',
                           left: '0px',
-                          backgroundColor: '#c4c4c4',
+                          backgroundColor: 'rgba(19,19,19,0.18)',
                           zIndex: '2',
                         }}
                       />
@@ -540,7 +540,7 @@ const Profile: FunctionComponent = () => {
                                 position: 'relative',
                                 fontSize: '18px',
                                 fontFamily: 'Roboto',
-                                color: '#000',
+                                color: '#131313',
                                 textAlign: 'left',
                                 display: 'inline-block',
                                 minWidth: '86px',
@@ -580,8 +580,7 @@ const Profile: FunctionComponent = () => {
                                 minWidth: '67px',
                               }}
                             >
-                              Danny Cao
-                              <p> Student Developer @ ZCW</p>
+                              Danny Cao Student Developer @ ZCW
                             </div>
                             {/* <div
                               style={{
@@ -605,7 +604,7 @@ const Profile: FunctionComponent = () => {
                               justifyContent: 'flex-start',
                               gap: '28px',
                               maxWidth: '100%',
-                              color: 'rgba(0, 0, 0, 0.6)',
+                              color: 'rgb(19,19,19)',
                             }}
                           >
                             <div
@@ -666,7 +665,7 @@ const Profile: FunctionComponent = () => {
                                     alignItems: 'flex-start',
                                     justifyContent: 'flex-start',
                                     gap: '5px',
-                                    color: '#f21d1d',
+                                    color: '#07b5f4',
                                   }}
                                 >
                                   {/* <img
@@ -692,7 +691,7 @@ const Profile: FunctionComponent = () => {
                                   alignItems: 'flex-start',
                                   justifyContent: 'flex-start',
                                   gap: '31px',
-                                  color: '#000',
+                                  color: '#131313',
                                 }}
                               >
                                 <div
@@ -797,13 +796,13 @@ const Profile: FunctionComponent = () => {
                         <div
                           style={{
                             flex: '1',
-                            backgroundColor: '#fff',
+                            backgroundColor: 'rgb(19,19,19)',
                             display: 'flex',
                             flexDirection: 'row',
                             alignItems: 'flex-start',
                             justifyContent: 'space-between',
                             maxWidth: '100%',
-                            gap: '20px',
+                            gap: '5px',
                           }}
                         ></div>
                       </div>
@@ -818,7 +817,7 @@ const Profile: FunctionComponent = () => {
                           width: '1px',
                           height: '909px',
                           position: 'relative',
-                          backgroundColor: '#c4c4c4',
+                          backgroundColor: 'rgb(255,255,255)',
                           transform: ' rotate(-90deg)',
                           flexShrink: '0',
                         }}
@@ -837,7 +836,7 @@ const Profile: FunctionComponent = () => {
                   gap: '6px',
                   maxWidth: '100%',
                   fontSize: '16px',
-                  color: '#536471',
+                  color: '#131313',
                 }}
               >
                 <div
@@ -881,7 +880,7 @@ const Profile: FunctionComponent = () => {
                     justifyContent: 'space-between',
                     maxWidth: '100%',
                     gap: '20px',
-                    color: '#000',
+                    color: 'rgb(19,19,19)',
                   }}
                 >
                   <div
@@ -923,7 +922,7 @@ const Profile: FunctionComponent = () => {
                           <div
                             style={{
                               position: 'relative',
-                              color: 'rgba(0, 0, 0, 0.6)',
+                              color: 'rgb(19,19,19)',
                               display: 'inline-block',
                               minWidth: '86px',
                             }}
@@ -975,7 +974,7 @@ const Profile: FunctionComponent = () => {
                 height: '989px',
                 width: '1px',
                 position: 'relative',
-                backgroundColor: '#c4c4c4',
+                backgroundColor: '#ffffff',
                 zIndex: '2',
               }}
             />

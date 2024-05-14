@@ -86,8 +86,8 @@ const TweetForm: React.FC = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        height: '100vh',
-        backgroundColor: '#f0f2f5',
+        height: '104vh',
+        backgroundColor: '#000000',
       }}
     >
       <form
@@ -103,7 +103,7 @@ const TweetForm: React.FC = () => {
             border: '1px solid #ccc',
             borderRadius: '10px',
             resize: 'none',
-            color: '#ccc',
+            color: 'rgba(255,255,255,0.75)',
             fontSize: '21px',
             fontFamily: 'Roboto, sans-serif',
           }}

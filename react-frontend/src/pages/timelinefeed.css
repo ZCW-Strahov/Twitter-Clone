@@ -77,7 +77,7 @@
 .tweet-date {
   font-size: 0.75rem;
   color: #777;
-  text-align: right;
+  text-align: left;
   padding: 8px 12px;
   border-top: 1px solid #eee; /* Adds a subtle line above the date if you like */
 }

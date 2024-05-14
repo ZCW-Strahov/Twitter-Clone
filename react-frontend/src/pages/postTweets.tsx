@@ -126,6 +126,8 @@ const TweetForm: React.FC = () => {
               padding: '10px 20px',
               borderRadius: '20px',
               cursor: 'pointer',
+              fontFamily: 'Roboto, sans-serif',
+              fontSize: '16px',
             }}
           >
             {isListening ? 'Stop Echo Voice' : 'Start Echo Voice'}
@@ -139,6 +141,8 @@ const TweetForm: React.FC = () => {
               padding: '10px 20px',
               borderRadius: '20px',
               cursor: 'pointer',
+              fontFamily: 'Roboto, sans-serif',
+              fontSize: '16px',
             }}
           >
             Echo

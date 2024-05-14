@@ -318,7 +318,7 @@ const Profile: FunctionComponent = () => {
                                 cursor: 'pointer',
                                 border: 'none',
                                 padding: '15px 89px 22px',
-                                backgroundColor: '#f21d1d',
+                                backgroundColor: 'rgba(7,181,244,0.94)',
                                 alignSelf: 'stretch',
                                 borderRadius: '27.5px',
                                 display: 'flex',
@@ -333,7 +333,7 @@ const Profile: FunctionComponent = () => {
                                   width: '230px',
                                   position: 'relative',
                                   borderRadius: '27.5px',
-                                  backgroundColor: '#f21d1d',
+                                  backgroundColor: '#07b5f4',
                                   display: 'none',
                                 }}
                               />

@@ -24,4 +24,4 @@ RUN mvn -X clean package -Pprod -DskipTests
 EXPOSE 8080
 
 # Run the application
-CMD ["java", "-jar", "target/your-jhipster-app-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "target/Twitter-Clone-Dan-SNAPSHOT.jar"]

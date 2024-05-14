@@ -21,7 +21,7 @@ interface Comment {
 }
 
 const PAGE_SIZE = 1000; // Static variable for number of tweets fetched per page
-const TWEETS_API = 'http://localhost:8080/api/tweets'; // API URL for fetching tweets
+const TWEETS_API = 'http://localhost:8315/api/tweets'; // API URL for fetching tweets
 
 // Asynchronous function to fetch a page of tweets
 const fetchTweetsPage = async (): Promise<Tweet[] | null> => {

@@ -236,7 +236,7 @@ interface Comment {
 }
 
 const PAGE_SIZE = 1000; // Number of tweets per page
-const TWEETS_API = 'http://localhost:8080/api/tweets';
+const TWEETS_API = 'http://localhost:8315/api/tweets';
 
 // Function to fetch paginated tweets (only fetches the first page)
 const fetchTweetsPage = async (): Promise<Tweet[] | null> => {

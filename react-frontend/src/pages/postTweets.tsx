@@ -48,7 +48,7 @@ const TweetForm: React.FC = () => {
         tweetData.picture = base64String.split(',')[1];
         tweetData.pictureContentType = 'image/jpeg';
         try {
-          await axios.post('http://localhost:8080/api/tweets', tweetData);
+          await axios.post('http://localhost:8315/api/tweets', tweetData);
           resetForm();
           window.location.reload(); // Refreshes page
         } catch (error) {
@@ -59,7 +59,7 @@ const TweetForm: React.FC = () => {
       reader.readAsDataURL(image);
     } else {
       try {
-        await axios.post('http://localhost:8080/api/tweets', tweetData);
+        await axios.post('http://localhost:8315/api/tweets', tweetData);
         resetForm();
         window.location.reload(); // Refreshes page
       } catch (error) {

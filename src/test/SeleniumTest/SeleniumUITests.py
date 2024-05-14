@@ -24,7 +24,7 @@ class MyTestCase(unittest.TestCase):
 
     def setUp(self):
         # This method runs before each test method
-        self.driver.get("http://localhost:3000")  # Navigate to a start page or reset state
+        self.driver.get("http://localhost:8314")  # Navigate to a start page or reset state
 
     def test_login(self):
         error_count: int = 0

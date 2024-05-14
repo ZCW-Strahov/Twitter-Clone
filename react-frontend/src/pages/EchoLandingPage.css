@@ -6,3 +6,12 @@
   background-position: center;
   margin: 1px auto;
 }
+
+.feed-image {
+  width: 50px;
+  height: 40px;
+  background-image: url('../../public/sound.gif');
+  background-size: cover;
+  background-position: center;
+  margin-left: 50px;
+}

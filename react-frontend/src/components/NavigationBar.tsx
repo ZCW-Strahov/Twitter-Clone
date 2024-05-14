@@ -1,8 +1,9 @@
-import { FunctionComponent } from 'react';
+import React, { FunctionComponent } from 'react';
 
 const NavigationBar: FunctionComponent = () => {
   return (
     <div className="self-stretch flex flex-col items-start justify-start gap-[12px] text-left text-lgi text-text font-lato">
+      <div className="feed-image"></div>
       <a href="/homepage" className="rounded-31xl overflow-hidden flex flex-row items-start justify-start p-[13px] gap-[20px]">
         <img className="h-6 w-6 relative overflow-hidden shrink-0" loading="lazy" alt="Home Icon" src="/iconshomefill.svg" />
         <b className="relative inline-block min-w-[52px]" style={{ color: 'white', fontFamily: 'Roboto, sans-serif' }}>

@@ -46,9 +46,7 @@ const FollowLsts: FunctionComponent = () => {
         />
       }
       <div className="self-stretch bg-trends-color overflow-hidden flex flex-row items-start justify-start text-blue">
-        <div className="flex flex-row items-start justify-start p-4">
-          {<b className="relative inline-block min-w-[100px]">Show more</b>}
-        </div>
+        <div className="flex flex-row items-start justify-start p-4"></div>
       </div>
     </div>
   );

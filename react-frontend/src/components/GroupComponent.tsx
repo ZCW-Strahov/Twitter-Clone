@@ -53,7 +53,7 @@ const GroupComponent: FunctionComponent = () => {
             gap: '20px',
           }}
         >
-          {/* <div style={{ position: 'relative', zIndex: '1' }}>Trends for you</div> */}
+          {<div style={{ position: 'relative', zIndex: '1' }}>Trends for you</div>}
           <div
             style={{
               display: 'flex',
@@ -63,16 +63,18 @@ const GroupComponent: FunctionComponent = () => {
               padding: '4px 0px 0px',
             }}
           >
-            {/* <img
-              style={{
-                width: '24px',
-                height: '24px',
-                position: 'relative',
-                zIndex: '1',
-              }}
-              alt=""
-              src="/settings.svg"
-            /> */}
+            {
+              <img
+                style={{
+                  width: '24px',
+                  height: '24px',
+                  position: 'relative',
+                  zIndex: '1',
+                }}
+                alt=""
+                src="/settings.svg"
+              />
+            }
           </div>
         </div>
         <div
@@ -87,7 +89,7 @@ const GroupComponent: FunctionComponent = () => {
             color: 'rgba(57, 59, 65, 0.6)',
           }}
         >
-          {/* <GroupComponent1 trendingInDelaware="Trending in Pennsylvania " demoDay="#DemoDay" kTweets="4.7K Echos" />
+          <GroupComponent1 trendingInDelaware="Trending in Pennsylvania " demoDay="#DemoDay" kTweets="4.7K Echos" />
           <GroupComponent1
             trendingInDelaware="Trending in Delaware"
             demoDay="#ZipCode"
@@ -98,29 +100,31 @@ const GroupComponent: FunctionComponent = () => {
             propMinWidth2="77px"
           />
           <GroupComponent1
-            trendingInDelaware="Trending in US"
+            trendingInDelaware="Trending in California"
             demoDay="#Java"
             kTweets="90.2K Echos"
             propDisplay="inline-block"
             propMinWidth="103px"
             propMinWidth1="55px"
             propMinWidth2="86px"
-          /> */}
+          />
         </div>
       </div>
-      {/* <div
-        style={{
-          position: 'relative',
-          fontSize: '18px',
-          lineHeight: '100%',
-          color: '#f21d1d',
-          display: 'inline-block',
-          minWidth: '91px',
-          zIndex: '1',
-        }}
-      >
-        Show more
-      </div> */}
+      {
+        <div
+          style={{
+            position: 'relative',
+            fontSize: '18px',
+            lineHeight: '100%',
+            color: '#07b5f4',
+            display: 'inline-block',
+            minWidth: '91px',
+            zIndex: '1',
+          }}
+        >
+          Show more
+        </div>
+      }
     </div>
   );
 };

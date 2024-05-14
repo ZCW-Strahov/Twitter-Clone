@@ -3,6 +3,7 @@ import TweetCard from '../components/TweetCard';
 import GroupComponent2 from '../components/GroupComponent2';
 import GroupComponent from '../components/GroupComponent';
 import Parentheses from '../components/Parentheses';
+import './Profile.css'; // Assuming CSS is externalized
 
 import PaginatedTweets from '../pages/timelinefeed';
 
@@ -556,7 +557,7 @@ const Profile: FunctionComponent = () => {
                             flexDirection: 'column',
                             alignItems: 'flex-start',
                             justifyContent: 'flex-start',
-                            gap: '19px',
+                            gap: '20px',
                             maxWidth: '100%',
                           }}
                         >
@@ -566,8 +567,9 @@ const Profile: FunctionComponent = () => {
                               flexDirection: 'column',
                               alignItems: 'flex-start',
                               justifyContent: 'flex-start',
-                              gap: '8px',
-                              fontSize: '24px',
+                              gap: '10px',
+                              fontSize: '16px',
+                              fontFamily: 'Roboto',
                             }}
                           >
                             <div
@@ -578,7 +580,8 @@ const Profile: FunctionComponent = () => {
                                 minWidth: '67px',
                               }}
                             >
-                              Danny
+                              Danny Cao
+                              <p> Student Developer @ ZCW</p>
                             </div>
                             {/* <div
                               style={{

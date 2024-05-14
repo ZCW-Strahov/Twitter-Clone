@@ -31,14 +31,14 @@
 }
 
 .user-link {
-  font-size: 21px;
+  font-size: 32px;
   color: #1da1f2;
   text-decoration: none;
   font-weight: bold;
 }
 
 .tweet-content {
-  font-size: 16px;
+  font-size: 21px;
   color: #14171a;
   margin-top: 10px;
 }
@@ -75,7 +75,7 @@
 }
 
 .tweet-date {
-  font-size: 0.75rem;
+  font-size: 1rem;
   color: #777;
   text-align: left;
   padding: 8px 12px;

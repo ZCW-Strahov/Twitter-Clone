@@ -231,6 +231,7 @@ const Profile: FunctionComponent = () => {
                             }}
                           >
                             {/* Home*/}
+
                             <img
                               style={{
                                 height: '28px',
@@ -238,7 +239,7 @@ const Profile: FunctionComponent = () => {
                                 position: 'relative',
                               }}
                               alt=""
-                              src="/home-outline.svg"
+                              src="/iconshomefill.svg"
                             />
                             <div
                               style={{
@@ -272,7 +273,8 @@ const Profile: FunctionComponent = () => {
                               gap: '20px',
                             }}
                           >
-                            {/* Profile*/}
+                            {/* Explore*/}
+
                             <img
                               style={{
                                 height: '28px',
@@ -280,7 +282,177 @@ const Profile: FunctionComponent = () => {
                                 position: 'relative',
                               }}
                               alt=""
-                              src="/profile-fill.svg"
+                              src="/iconsexplore.svg"
+                            />
+                            <div
+                              style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'flex-start',
+                                justifyContent: 'flex-start',
+                                padding: '3.5px 0px 0px',
+                              }}
+                            >
+                              <a href="/homepage">
+                                <div
+                                  style={{
+                                    position: 'relative',
+                                    display: 'inline-block',
+                                    minWidth: '52px',
+                                    cursor: 'pointer', // Add cursor style to indicate it's clickable
+                                  }}
+                                >
+                                  Explore
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                          <div
+                            style={{
+                              display: 'flex',
+                              flexDirection: 'row',
+                              alignItems: 'flex-start',
+                              justifyContent: 'flex-start',
+                              gap: '20px',
+                            }}
+                          >
+                            {/* Notifications*/}
+
+                            <img
+                              style={{
+                                height: '28px',
+                                width: '28px',
+                                position: 'relative',
+                              }}
+                              alt=""
+                              src="/iconsnotifications.svg"
+                            />
+                            <div
+                              style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'flex-start',
+                                justifyContent: 'flex-start',
+                                padding: '3.5px 0px 0px',
+                              }}
+                            >
+                              <a href="/homepage">
+                                <div
+                                  style={{
+                                    position: 'relative',
+                                    display: 'inline-block',
+                                    minWidth: '52px',
+                                    cursor: 'pointer', // Add cursor style to indicate it's clickable
+                                  }}
+                                >
+                                  Notifications
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                          <div
+                            style={{
+                              display: 'flex',
+                              flexDirection: 'row',
+                              alignItems: 'flex-start',
+                              justifyContent: 'flex-start',
+                              gap: '20px',
+                            }}
+                          >
+                            {/* Message*/}
+
+                            <img
+                              style={{
+                                height: '28px',
+                                width: '28px',
+                                position: 'relative',
+                              }}
+                              alt=""
+                              src="/iconsmessages.svg"
+                            />
+                            <div
+                              style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'flex-start',
+                                justifyContent: 'flex-start',
+                                padding: '3.5px 0px 0px',
+                              }}
+                            >
+                              <a href="/homepage">
+                                <div
+                                  style={{
+                                    position: 'relative',
+                                    display: 'inline-block',
+                                    minWidth: '52px',
+                                    cursor: 'pointer', // Add cursor style to indicate it's clickable
+                                  }}
+                                >
+                                  Message
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                          <div
+                            style={{
+                              display: 'flex',
+                              flexDirection: 'row',
+                              alignItems: 'flex-start',
+                              justifyContent: 'flex-start',
+                              gap: '20px',
+                            }}
+                          >
+                            {/* Bookmark*/}
+
+                            <img
+                              style={{
+                                height: '28px',
+                                width: '28px',
+                                position: 'relative',
+                              }}
+                              alt=""
+                              src="/iconsbookmarks.svg"
+                            />
+                            <div
+                              style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'flex-start',
+                                justifyContent: 'flex-start',
+                                padding: '3.5px 0px 0px',
+                              }}
+                            >
+                              <a href="/homepage">
+                                <div
+                                  style={{
+                                    position: 'relative',
+                                    display: 'inline-block',
+                                    minWidth: '52px',
+                                    cursor: 'pointer', // Add cursor style to indicate it's clickable
+                                  }}
+                                >
+                                  Bookmark
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                          <div
+                            style={{
+                              display: 'flex',
+                              flexDirection: 'row',
+                              alignItems: 'flex-start',
+                              justifyContent: 'flex-start',
+                              gap: '20px',
+                            }}
+                          >
+                            <img
+                              style={{
+                                height: '28px',
+                                width: '28px',
+                                position: 'relative',
+                              }}
+                              alt=""
+                              src="/iconsbookmarks.svg"
                             />
                             <div
                               style={{
@@ -314,6 +486,49 @@ const Profile: FunctionComponent = () => {
                               gap: '20px',
                             }}
                           >
+                            {/* Profile*/}
+                            <img
+                              style={{
+                                height: '28px',
+                                width: '28px',
+                                position: 'relative',
+                              }}
+                              alt=""
+                              src="/iconsprofile.svg"
+                            />
+                            <div
+                              style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'flex-start',
+                                justifyContent: 'flex-start',
+                                padding: '3.5px 0px 0px',
+                              }}
+                            >
+                              <a href="/profile">
+                                <div
+                                  style={{
+                                    position: 'relative',
+                                    display: 'inline-block',
+                                    minWidth: '52px',
+                                    cursor: 'pointer', // Add cursor style to indicate it's clickable
+                                  }}
+                                >
+                                  More
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div
+                            style={{
+                              display: 'flex',
+                              flexDirection: 'row',
+                              alignItems: 'flex-start',
+                              justifyContent: 'flex-start',
+                              gap: '20px',
+                            }}
+                          >
                             <button
                               style={{
                                 cursor: 'pointer',
@@ -338,6 +553,7 @@ const Profile: FunctionComponent = () => {
                                   display: 'none',
                                 }}
                               />
+
                               <div
                                 style={{
                                   position: 'relative',

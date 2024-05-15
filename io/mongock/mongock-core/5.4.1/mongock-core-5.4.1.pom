@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <groupId>io.mongock</groupId>
+    <artifactId>mongock</artifactId>
+    <version>5.4.1</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>mongock-core</artifactId>
+  <packaging>pom</packaging>
+  <name>Mongock core</name>
+  <description>Migration runner classes base for</description>
+  <url>https://github.com/mongock/mongock</url>
+  
+  <modules>
+    <module>mongock-api</module>
+    <module>mongock-driver</module>
+    <module>mongock-runner</module>
+    <module>mongock-utils</module>
+    <module>mongock-decorator-util</module>
+    <module>mongock-test-util</module>
+    <module>mongock-core-bom</module>
+  </modules>
+
+</project>

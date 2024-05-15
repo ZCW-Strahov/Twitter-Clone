@@ -11,15 +11,15 @@ services:
       - SPRING_LIQUIBASE_URL=jdbc:mysql://mysql:3306/twitterclone?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&createDatabaseIfNotExist=true
     ports:
       - 127.0.0.1:8315:8315
-    healthcheck:
-      test:
-        - CMD
-        - curl
-        - -f
-        - http://localhost:8315/management/health
-      interval: 5s
-      timeout: 5s
-      retries: 40
+    #    healthcheck:
+    #      test:
+    #        - CMD
+    #        - curl
+    #        - -f
+    #        - http://localhost:8315/management/health
+    #      interval: 5s
+    #      timeout: 5s
+    #      retries: 40
     depends_on:
       mysql:
         condition: service_healthy

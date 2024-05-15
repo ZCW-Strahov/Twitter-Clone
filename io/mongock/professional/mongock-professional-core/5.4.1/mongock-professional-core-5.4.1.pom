@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>io.mongock.professional</groupId>
+        <artifactId>mongock-professional</artifactId>
+        <version>5.4.1</version>
+    </parent>
+    
+    <name>Mongock professional core</name>
+    <description>Mongock professional core</description>
+    <url>https://github.com/mongock/mongock-professional-core</url>
+    
+    <modules>
+        <module>mongock-api</module>
+        <module>mongock-runner-common</module>
+        <module>mongock-standalone</module>
+        <module>mongock-springboot</module>
+        <module>mongock-professional-core-bom</module>
+    </modules>
+
+    <artifactId>mongock-professional-core</artifactId>
+    <packaging>pom</packaging>
+
+</project>

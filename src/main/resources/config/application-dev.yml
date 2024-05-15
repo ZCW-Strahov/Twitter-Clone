@@ -34,14 +34,14 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:h2:file:./target/h2db/db/twitterClone;DB_CLOSE_DELAY=-1;MODE=MYSQL
     username: twitterClone
-    password:
+    password: password
     hikari:
       poolName: Hikari
       auto-commit: false
   h2:
     console:
       # disable spring boot built-in h2-console since we start it manually with correct configuration
-      enabled: false
+      enabled: true
   liquibase:
     # Remove 'faker' if you do not want the sample data to be loaded automatically
     contexts: dev

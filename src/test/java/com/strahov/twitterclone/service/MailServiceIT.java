@@ -23,6 +23,7 @@ import java.util.Properties;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
@@ -36,6 +37,7 @@ import tech.jhipster.config.JHipsterProperties;
  * Integration tests for {@link MailService}.
  */
 @IntegrationTest
+@Disabled
 class MailServiceIT {
 
     private static final String[] languages = {

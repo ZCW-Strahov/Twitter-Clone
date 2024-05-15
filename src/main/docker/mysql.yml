@@ -1,21 +1,19 @@
-# This configuration is intended for development purpose, it's **your** responsibility to harden it for production
-name: twitterclone
+version: '3.7'
 services:
   mysql:
     image: mysql:8.3.0
     volumes:
       - ./config/mysql:/etc/mysql/conf.d
-    #   - ~/volumes/jhipster/twitterClone/mysql/:/var/lib/mysql/
+      # Uncomment the following line if you want to persist MySQL data on your host machine
+      # - ~/volumes/jhipster/twitterClone/mysql/:/var/lib/mysql/
     environment:
-      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_ROOT_PASSWORD=password
       - MYSQL_DATABASE=twitterclone
-    # If you want to expose these ports outside your dev PC,
-    # remove the "127.0.0.1:" prefix
     ports:
       - 127.0.0.1:3306:3306
     command: mysqld --lower_case_table_names=1 --skip-ssl --character_set_server=utf8mb4 --explicit_defaults_for_timestamp
     healthcheck:
-      test: ['CMD', 'mysql', '-e', 'SHOW DATABASES;']
-      interval: 5s
+      test: ['CMD', 'mysqladmin', 'ping', '-h', 'localhost', '-p$password']
+      interval: 10s
       timeout: 5s
-      retries: 10
+      retries: 5

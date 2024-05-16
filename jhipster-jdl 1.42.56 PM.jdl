@@ -1,0 +1,45 @@
+
+entity UserProfile {
+fname String,
+lname String,
+handle String,
+following String,
+followers String
+}
+
+entity Tweet {
+content TextBlob required,
+picture ImageBlob,
+createdOn Instant,
+hashtag String
+}
+
+entity HashTag {
+description String
+}
+
+entity Mention {
+content TextBlob,
+picture ImageBlob
+}
+
+relationship OneToOne {
+//One user can have one userProfile
+UserProfile{user(login)} to User with builtInEntity
+}
+relationship ManyToOne {
+//One userProfile have have many tweets
+Tweet{UserProfile(name)} to UserProfile with builtInEntity
+}
+
+relationship ManyToMany {
+//Many tweets can have many hashtags
+//Many tweets can have many mentions
+//Many mentions can have many hashtags
+HashTag{tweet(content)} to Tweet{hashtag(description)},
+Mention{tweet(content)} to Tweet{mention(content)},
+HashTag{mention(content)} to Mention{hashtag(content)}
+}
+
+//shows how tweets and mentions will be displayed, continuous scrolling
+paginate Tweet, Mention with infinite-scroll

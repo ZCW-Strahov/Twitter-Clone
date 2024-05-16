@@ -1,5 +1,5 @@
-# This configuration is intended for development purpose, it's **your** responsibility to harden it for production
-name: twitterclone
+version: '3.8'
+
 services:
   app:
     image: twitterclone
@@ -24,3 +24,12 @@ services:
       service: mysql
     environment:
       - MYSQL_ROOT_PASSWORD=password
+  frontend:
+    build:
+      context: ../../../react-frontend
+      dockerfile: Dockerfile
+    platform: linux/amd64 # Add this line if needed
+    ports:
+      - 127.0.0.1:8314:80
+    depends_on:
+      - app

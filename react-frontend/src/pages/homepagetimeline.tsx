@@ -30,7 +30,7 @@ const Timeline: React.FC = () => {
     formData.append('hashtag', 'BBBBBBBBBB');
 
     try {
-      const response = await fetch('http://localhost:8080/api/tweets', {
+      const response = await fetch('http://localhost:8315/api/tweets', {
         method: 'POST',
         body: formData,
       });

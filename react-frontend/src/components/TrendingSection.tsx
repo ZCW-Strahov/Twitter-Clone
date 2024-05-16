@@ -1,15 +1,16 @@
-import { FunctionComponent, useMemo, type CSSProperties } from 'react';
+import React, { FunctionComponent, useMemo, type CSSProperties } from 'react';
 
 export type TrendingSectionType = {
   subtitle?: string;
   tag?: string;
   count?: string;
-
   /** Style props */
   propDisplay?: CSSProperties['display'];
   propMinWidth?: CSSProperties['minWidth'];
   propMinWidth1?: CSSProperties['minWidth'];
   propDisplay1?: CSSProperties['display'];
+  style?: React.CSSProperties;
+  fontStyle?: React.CSSProperties;
 };
 
 const TrendingSection: FunctionComponent<TrendingSectionType> = ({
@@ -20,6 +21,7 @@ const TrendingSection: FunctionComponent<TrendingSectionType> = ({
   propMinWidth,
   propMinWidth1,
   propDisplay1,
+  style,
 }) => {
   const subtitleStyle: CSSProperties = useMemo(() => {
     return {
@@ -35,6 +37,7 @@ const TrendingSection: FunctionComponent<TrendingSectionType> = ({
     };
   }, [propMinWidth1, propDisplay1]);
 
+  const fontStyle: CSSProperties = { fontFamily: 'Roboto, sans-serif' }; // Define the style object for the font
   return (
     <div className="self-stretch bg-trends-color overflow-hidden flex flex-row flex-wrap items-start justify-start [row-gap:20px] text-left text-smi text-gray font-lato">
       <div className="flex-1 flex flex-col items-start justify-start py-3 px-4 box-border gap-[4px] min-w-[200px]">

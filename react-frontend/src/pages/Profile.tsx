@@ -3,6 +3,7 @@ import TweetCard from '../components/TweetCard';
 import GroupComponent2 from '../components/GroupComponent2';
 import GroupComponent from '../components/GroupComponent';
 import Parentheses from '../components/Parentheses';
+import './Profile.css'; // Assuming CSS is externalized
 
 import PaginatedTweets from '../pages/timelinefeed';
 
@@ -39,7 +40,7 @@ const Profile: FunctionComponent = () => {
           maxWidth: '100%',
           textAlign: 'left',
           fontSize: '20px',
-          color: '#000',
+          color: 'rgb(19,19,19)',
           fontFamily: 'Roboto',
         }}
       >
@@ -230,6 +231,7 @@ const Profile: FunctionComponent = () => {
                             }}
                           >
                             {/* Home*/}
+
                             <img
                               style={{
                                 height: '28px',
@@ -237,7 +239,99 @@ const Profile: FunctionComponent = () => {
                                 position: 'relative',
                               }}
                               alt=""
-                              src="/home-outline.svg"
+                              src="/iconshomefill.svg"
+                            />
+                            <div
+                              style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'flex-start',
+                                justifyContent: 'flex-start',
+                                padding: '3.5px 0px 0px',
+                                fontFamily: 'Roboto, sans-serif',
+                              }}
+                            >
+                              <a href="/homepage">
+                                <div
+                                  style={{
+                                    position: 'relative',
+                                    display: 'inline-block',
+                                    minWidth: '52px',
+                                    cursor: 'pointer', // Add cursor style to indicate it's clickable
+                                    fontFamily: 'Roboto, sans-serif',
+                                  }}
+                                >
+                                  Home
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                          <div
+                            style={{
+                              display: 'flex',
+                              flexDirection: 'row',
+                              alignItems: 'flex-start',
+                              justifyContent: 'flex-start',
+                              gap: '20px',
+                              fontFamily: 'Roboto, sans-serif',
+                            }}
+                          >
+                            {/* Explore*/}
+
+                            <img
+                              style={{
+                                height: '28px',
+                                width: '28px',
+                                position: 'relative',
+                                fontFamily: 'Roboto, sans-serif',
+                              }}
+                              alt=""
+                              src="/iconsexplore.svg"
+                            />
+                            <div
+                              style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'flex-start',
+                                justifyContent: 'flex-start',
+                                padding: '3.5px 0px 0px',
+                                fontFamily: 'Roboto, sans-serif',
+                              }}
+                            >
+                              <a href="/homepage">
+                                <div
+                                  style={{
+                                    position: 'relative',
+                                    display: 'inline-block',
+                                    minWidth: '52px',
+                                    cursor: 'pointer', // Add cursor style to indicate it's clickable
+                                    fontFamily: 'Roboto, sans-serif',
+                                  }}
+                                >
+                                  Explore
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                          <div
+                            style={{
+                              display: 'flex',
+                              flexDirection: 'row',
+                              alignItems: 'flex-start',
+                              justifyContent: 'flex-start',
+                              gap: '20px',
+                            }}
+                          >
+                            {/* Notifications*/}
+
+                            <img
+                              style={{
+                                height: '28px',
+                                width: '28px',
+                                position: 'relative',
+                              }}
+                              alt=""
+                              src="/iconsnotifications.svg"
                             />
                             <div
                               style={{
@@ -257,7 +351,7 @@ const Profile: FunctionComponent = () => {
                                     cursor: 'pointer', // Add cursor style to indicate it's clickable
                                   }}
                                 >
-                                  Home
+                                  Notifications
                                 </div>
                               </a>
                             </div>
@@ -271,7 +365,8 @@ const Profile: FunctionComponent = () => {
                               gap: '20px',
                             }}
                           >
-                            {/* Profile*/}
+                            {/* Message*/}
+
                             <img
                               style={{
                                 height: '28px',
@@ -279,7 +374,92 @@ const Profile: FunctionComponent = () => {
                                 position: 'relative',
                               }}
                               alt=""
-                              src="/profile-fill.svg"
+                              src="/iconsmessages.svg"
+                            />
+                            <div
+                              style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'flex-start',
+                                justifyContent: 'flex-start',
+                                padding: '3.5px 0px 0px',
+                              }}
+                            >
+                              <a href="/homepage">
+                                <div
+                                  style={{
+                                    position: 'relative',
+                                    display: 'inline-block',
+                                    minWidth: '52px',
+                                    cursor: 'pointer', // Add cursor style to indicate it's clickable
+                                  }}
+                                >
+                                  Message
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                          <div
+                            style={{
+                              display: 'flex',
+                              flexDirection: 'row',
+                              alignItems: 'flex-start',
+                              justifyContent: 'flex-start',
+                              gap: '20px',
+                            }}
+                          >
+                            {/* Bookmark*/}
+
+                            <img
+                              style={{
+                                height: '28px',
+                                width: '28px',
+                                position: 'relative',
+                              }}
+                              alt=""
+                              src="/iconsbookmarks.svg"
+                            />
+                            <div
+                              style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'flex-start',
+                                justifyContent: 'flex-start',
+                                padding: '3.5px 0px 0px',
+                                fontFamily: 'Roboto, sans-serif',
+                              }}
+                            >
+                              <a href="/homepage">
+                                <div
+                                  style={{
+                                    position: 'relative',
+                                    display: 'inline-block',
+                                    minWidth: '52px',
+                                    cursor: 'pointer', // Add cursor style to indicate it's clickable
+                                  }}
+                                >
+                                  Bookmark
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                          <div
+                            style={{
+                              display: 'flex',
+                              flexDirection: 'row',
+                              alignItems: 'flex-start',
+                              justifyContent: 'flex-start',
+                              gap: '20px',
+                            }}
+                          >
+                            <img
+                              style={{
+                                height: '28px',
+                                width: '28px',
+                                position: 'relative',
+                              }}
+                              alt=""
+                              src="/iconsbookmarks.svg"
                             />
                             <div
                               style={{
@@ -313,12 +493,55 @@ const Profile: FunctionComponent = () => {
                               gap: '20px',
                             }}
                           >
+                            {/* Profile*/}
+                            <img
+                              style={{
+                                height: '28px',
+                                width: '28px',
+                                position: 'relative',
+                              }}
+                              alt=""
+                              src="/iconsprofile.svg"
+                            />
+                            <div
+                              style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'flex-start',
+                                justifyContent: 'flex-start',
+                                padding: '3.5px 0px 0px',
+                              }}
+                            >
+                              <a href="/profile">
+                                <div
+                                  style={{
+                                    position: 'relative',
+                                    display: 'inline-block',
+                                    minWidth: '52px',
+                                    cursor: 'pointer', // Add cursor style to indicate it's clickable
+                                  }}
+                                >
+                                  More
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div
+                            style={{
+                              display: 'flex',
+                              flexDirection: 'row',
+                              alignItems: 'flex-start',
+                              justifyContent: 'flex-start',
+                              gap: '20px',
+                            }}
+                          >
                             <button
                               style={{
                                 cursor: 'pointer',
                                 border: 'none',
                                 padding: '15px 89px 22px',
-                                backgroundColor: '#f21d1d',
+                                backgroundColor: 'rgba(7,181,244,0.94)',
                                 alignSelf: 'stretch',
                                 borderRadius: '27.5px',
                                 display: 'flex',
@@ -333,10 +556,11 @@ const Profile: FunctionComponent = () => {
                                   width: '230px',
                                   position: 'relative',
                                   borderRadius: '27.5px',
-                                  backgroundColor: '#f21d1d',
+                                  backgroundColor: '#07b5f4',
                                   display: 'none',
                                 }}
                               />
+
                               <div
                                 style={{
                                   position: 'relative',
@@ -449,15 +673,15 @@ const Profile: FunctionComponent = () => {
                     >
                       <img
                         style={{
-                          height: '200px',
+                          height: '230px',
                           flex: '1',
                           position: 'relative',
                           maxWidth: '100%',
                           overflow: 'hidden',
-                          objectFit: 'cover',
+                          objectFit: 'fill',
                         }}
                         alt=""
-                        src="/rectangle-13@2x.png"
+                        src="/standard.gif"
                       />
                       <img
                         style={{
@@ -477,13 +701,13 @@ const Profile: FunctionComponent = () => {
                       />
                       <div
                         style={{
-                          height: '600px',
+                          height: '800px',
                           width: '1px',
                           position: 'absolute',
                           margin: '0',
-                          bottom: '-622px',
+                          bottom: '-722px',
                           left: '0px',
-                          backgroundColor: '#c4c4c4',
+                          backgroundColor: 'rgba(19,19,19,0.18)',
                           zIndex: '2',
                         }}
                       />
@@ -539,7 +763,7 @@ const Profile: FunctionComponent = () => {
                                 position: 'relative',
                                 fontSize: '18px',
                                 fontFamily: 'Roboto',
-                                color: '#000',
+                                color: '#131313',
                                 textAlign: 'left',
                                 display: 'inline-block',
                                 minWidth: '86px',
@@ -556,7 +780,7 @@ const Profile: FunctionComponent = () => {
                             flexDirection: 'column',
                             alignItems: 'flex-start',
                             justifyContent: 'flex-start',
-                            gap: '19px',
+                            gap: '20px',
                             maxWidth: '100%',
                           }}
                         >
@@ -566,8 +790,9 @@ const Profile: FunctionComponent = () => {
                               flexDirection: 'column',
                               alignItems: 'flex-start',
                               justifyContent: 'flex-start',
-                              gap: '8px',
-                              fontSize: '24px',
+                              gap: '10px',
+                              fontSize: '16px',
+                              fontFamily: 'Roboto',
                             }}
                           >
                             <div
@@ -578,7 +803,7 @@ const Profile: FunctionComponent = () => {
                                 minWidth: '67px',
                               }}
                             >
-                              Danny
+                              Danny Cao Student Developer @ ZCW
                             </div>
                             {/* <div
                               style={{
@@ -602,7 +827,7 @@ const Profile: FunctionComponent = () => {
                               justifyContent: 'flex-start',
                               gap: '28px',
                               maxWidth: '100%',
-                              color: 'rgba(0, 0, 0, 0.6)',
+                              color: 'rgb(19,19,19)',
                             }}
                           >
                             <div
@@ -663,7 +888,7 @@ const Profile: FunctionComponent = () => {
                                     alignItems: 'flex-start',
                                     justifyContent: 'flex-start',
                                     gap: '5px',
-                                    color: '#f21d1d',
+                                    color: '#07b5f4',
                                   }}
                                 >
                                   {/* <img
@@ -689,7 +914,7 @@ const Profile: FunctionComponent = () => {
                                   alignItems: 'flex-start',
                                   justifyContent: 'flex-start',
                                   gap: '31px',
-                                  color: '#000',
+                                  color: '#131313',
                                 }}
                               >
                                 <div
@@ -794,13 +1019,13 @@ const Profile: FunctionComponent = () => {
                         <div
                           style={{
                             flex: '1',
-                            backgroundColor: '#fff',
+                            backgroundColor: 'rgb(19,19,19)',
                             display: 'flex',
                             flexDirection: 'row',
                             alignItems: 'flex-start',
                             justifyContent: 'space-between',
                             maxWidth: '100%',
-                            gap: '20px',
+                            gap: '5px',
                           }}
                         ></div>
                       </div>
@@ -815,7 +1040,7 @@ const Profile: FunctionComponent = () => {
                           width: '1px',
                           height: '909px',
                           position: 'relative',
-                          backgroundColor: '#c4c4c4',
+                          backgroundColor: 'rgb(255,255,255)',
                           transform: ' rotate(-90deg)',
                           flexShrink: '0',
                         }}
@@ -834,7 +1059,7 @@ const Profile: FunctionComponent = () => {
                   gap: '6px',
                   maxWidth: '100%',
                   fontSize: '16px',
-                  color: '#536471',
+                  color: '#131313',
                 }}
               >
                 <div
@@ -878,7 +1103,7 @@ const Profile: FunctionComponent = () => {
                     justifyContent: 'space-between',
                     maxWidth: '100%',
                     gap: '20px',
-                    color: '#000',
+                    color: 'rgb(19,19,19)',
                   }}
                 >
                   <div
@@ -920,7 +1145,7 @@ const Profile: FunctionComponent = () => {
                           <div
                             style={{
                               position: 'relative',
-                              color: 'rgba(0, 0, 0, 0.6)',
+                              color: 'rgb(19,19,19)',
                               display: 'inline-block',
                               minWidth: '86px',
                             }}
@@ -972,7 +1197,7 @@ const Profile: FunctionComponent = () => {
                 height: '989px',
                 width: '1px',
                 position: 'relative',
-                backgroundColor: '#c4c4c4',
+                backgroundColor: '#ffffff',
                 zIndex: '2',
               }}
             />

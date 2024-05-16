@@ -21,7 +21,7 @@ WORKDIR /workspace
 RUN mvn -X clean package -Pprod -DskipTests
 
 # Expose port 8080 for the application
-EXPOSE 8080
+EXPOSE 8315
 
 # Run the application
-CMD ["java", "-jar", "target/your-jhipster-app-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "target/Twitter-Clone-Dan-SNAPSHOT.jar"]

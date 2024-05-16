@@ -236,7 +236,7 @@ interface Comment {
 }
 
 const PAGE_SIZE = 1000; // Number of tweets per page
-const TWEETS_API = 'http://localhost:8080/api/tweets';
+const TWEETS_API = 'http://localhost:8315/api/tweets';
 
 // Function to fetch paginated tweets (only fetches the first page)
 const fetchTweetsPage = async (): Promise<Tweet[] | null> => {
@@ -302,9 +302,6 @@ const PaginatedTweets: React.FC = () => {
   };
 
   // Function to reload the page
-  const handleReloadPage = () => {
-    window.location.reload();
-  };
 
   // Loading or empty state messages
   if (loading) return <p>Loading tweets...</p>;
@@ -313,8 +310,14 @@ const PaginatedTweets: React.FC = () => {
   return (
     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
       <div style={{ width: '55%' }}>
-        <div className="tweet-container" onClick={handleReloadPage}>
+        <div className="tweet-container">
           <h2>Tweets</h2>
+          <button
+            onClick={() => window.location.reload()}
+            style={{ backgroundColor: 'transparent', color: 'transparent', position: 'absolute', left: '5px', top: '18px', margin: '10px' }}
+          >
+            secretButton
+          </button>
           <div style={{ maxHeight: '500px', overflowY: 'scroll' }}>
             {/* Reverse the order of tweets before mapping */}
             {tweets.reverse().map(tweet => (
@@ -333,6 +336,18 @@ const PaginatedTweets: React.FC = () => {
   );
 };
 
+const formatDate = (dateString: string) => {
+  const date = new Date(dateString);
+  return date.toLocaleString('en-US', {
+    weekday: 'long', // "Monday"
+    year: 'numeric', // "2023"
+    month: 'long', // "July"
+    day: 'numeric', // "20"
+    hour: '2-digit', // "11 PM"
+    minute: '2-digit', // "30"
+  });
+};
+
 const TweetComponent: React.FC<{ tweet: Tweet; onDelete: () => void; onComment: (comment: string) => void }> = ({
   tweet,
   onDelete,
@@ -342,6 +357,7 @@ const TweetComponent: React.FC<{ tweet: Tweet; onDelete: () => void; onComment: 
   const [comments, setComments] = useState<Comment[]>([]);
 
   const pictureUrl = resolvePictureDataUrl(tweet.picture, tweet.pictureContentType);
+  const formattedDate = formatDate(tweet.createdOn); // Format the date here
 
   const handleCommentChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setCommentText(event.target.value);
@@ -355,31 +371,25 @@ const TweetComponent: React.FC<{ tweet: Tweet; onDelete: () => void; onComment: 
 
   return (
     <div className="tweet-container">
-      <div className="delete-button">
-        <button onClick={onDelete}>Delete</button>
-      </div>
-      <div>
-        <p>
-          <small>
-            {/* Make the user ID clickable and navigate to "/profile" page */}
-            <Link to={tweet.userProfile.id === 1500 ? '/profile' : `/profile/${tweet.userProfile.id}`} className="user-link">
-              {tweet.userProfile.id === 1500 ? 'Danny' : tweet.userProfile.id}
-            </Link>
-          </small>
-        </p>
+      <div className="tweet-header">
+        <Link to={tweet.userProfile.id === 1500 ? '/profile' : `/profile/${tweet.userProfile.id}`} className="user-link">
+          {tweet.userProfile.id === 1500 ? 'Danny' : tweet.userProfile.id}
+        </Link>
+        <button onClick={onDelete} className="delete-button">
+          Delete
+        </button>
       </div>
       <p className="tweet-content">{tweet.content}</p>
-      {pictureUrl ? (
+      {pictureUrl && (
         <div className="tweet-pic">
-          <img src={pictureUrl} alt={`Tweet pic ${tweet.id}`} />
+          <img src={pictureUrl} alt={`Tweet pic ${tweet.id}`} style={{ width: '100%', height: 'auto', borderRadius: '10px' }} />
         </div>
-      ) : (
-        <p>No pictures available</p>
       )}
-      <div className="horizontal-line"></div>
-      <div className="comment-input">
-        <input type="text" value={commentText} onChange={handleCommentChange} placeholder="Write a comment..." />
-        <button onClick={handleSubmitComment}>Comment</button>
+      <div className="comment-section">
+        <input type="text" value={commentText} onChange={handleCommentChange} placeholder="Write a comment..." className="comment-input" />
+        <button onClick={handleSubmitComment} className="comment-button">
+          Comment
+        </button>
       </div>
       {comments.length > 0 && (
         <div className="comments-section">
@@ -391,6 +401,7 @@ const TweetComponent: React.FC<{ tweet: Tweet; onDelete: () => void; onComment: 
           ))}
         </div>
       )}
+      <div className="tweet-date">{formattedDate}</div> {/* Place the date here */}
     </div>
   );
 };

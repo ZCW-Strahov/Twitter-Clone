@@ -5,6 +5,7 @@
   width: 100vw;
   height: 100vh;
   background-color: #f5f8fa; /* Twitter's background color */
+  background-image: url('../Assets/background1.png');
 }
 
 .signup .rounded {
@@ -44,6 +45,7 @@
 .signup .custom-input-label {
   font-size: 14px;
   color: black;
+  font-family: 'Roboto', sans-serif;
 }
 
 .signup .d-grid {
@@ -54,19 +56,22 @@
   width: 100%;
   padding: 10px;
   border-radius: 30px; /* Twitter's button style */
-  background-color: red;
+  background-color: #07b5f4;
   color: #fff;
   border: none;
   cursor: pointer;
+  font-family: 'Roboto', sans-serif;
 }
 
 .signup .text-right {
   margin-top: 20px;
   font-size: 14px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .signup .text-right a {
   margin-left: 5px;
-  color: black;
+  color: #07b5f4;
   text-decoration: none;
+  font-family: 'Roboto', sans-serif;
 }

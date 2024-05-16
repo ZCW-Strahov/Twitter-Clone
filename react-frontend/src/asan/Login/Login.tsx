@@ -28,7 +28,7 @@ function Login() {
   };
 
   const loginLink = (username: string, password: string) => {
-    fetch('http://localhost:8080/api/authenticate', {
+    fetch('http://localhost:8315/api/authenticate', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -98,6 +98,11 @@ function Login() {
             Don't have an account?
             <Link to="/signup" className="ms-2">
               Sign up
+            </Link>
+          </p>
+          <p className="text-right">
+            <Link to="/homepage" className="ms-2">
+              Continue As Guest
             </Link>
           </p>
         </form>

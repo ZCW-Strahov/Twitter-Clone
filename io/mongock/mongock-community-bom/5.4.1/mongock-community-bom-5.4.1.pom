@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <artifactId>mongock</artifactId>
+    <groupId>io.mongock</groupId>
+    <version>5.4.1</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+
+  <name>Mongock main BOM for community distribution</name>
+  <artifactId>mongock-community-bom</artifactId>
+  <packaging>pom</packaging>
+  <description>Mongock for community dependency management</description>
+  <url>https://github.com/mongock/mongock</url>
+
+  <dependencyManagement>
+    <dependencies>
+
+      <!-- Core -->
+      <dependency>
+        <groupId>io.mongock</groupId>
+        <artifactId>mongock-core-bom</artifactId>
+        <version>${project.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
+      <!-- MongoDB -->
+      <dependency>
+        <groupId>io.mongock</groupId>
+        <artifactId>mongock-driver-mongodb-bom</artifactId>
+        <version>${project.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      
+      <!-- DynamoDB community -->
+      <dependency>
+        <groupId>io.mongock</groupId>
+        <artifactId>mongock-driver-dynamodb-bom</artifactId>
+        <version>${project.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
+      <!-- Couchbase community -->
+      <dependency>
+        <groupId>io.mongock</groupId>
+        <artifactId>mongock-driver-couchbase-bom</artifactId>
+        <version>${project.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
+
+      <!-- testing -->
+      <dependency>
+        <groupId>io.mongock</groupId>
+        <artifactId>mongock-test-core</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.mongock</groupId>
+        <artifactId>mongock-standalone-test</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.mongock</groupId>
+        <artifactId>mongock-springboot-test</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.mongock</groupId>
+        <artifactId>mongock-springboot-junit5</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
+    </dependencies>
+  </dependencyManagement>
+
+</project>

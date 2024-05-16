@@ -1,0 +1,174 @@
+import React, { useEffect, useState } from 'react'; // Import React and hooks from react library
+import { Link } from 'react-router-dom'; // Import Link component from react-router-dom for navigation
+
+// Interface definitions for type safety
+interface UserProfile {
+  id: number; // User's unique identifier
+}
+
+interface Tweet {
+  id: number; // Tweet's unique identifier
+  content: string; // Content of the tweet
+  picture: string | null; // Optional picture as a string or null if not present
+  pictureContentType: string | null; // MIME type of the picture, null if no picture
+  createdOn: string; // Date and time tweet was created
+  userProfile: UserProfile; // Associated user profile
+}
+
+interface Comment {
+  id: number; // Comment's unique identifier
+  content: string; // Content of the comment
+}
+
+const PAGE_SIZE = 1000; // Static variable for number of tweets fetched per page
+const TWEETS_API = 'http://localhost:8315/api/tweets'; // API URL for fetching tweets
+
+// Asynchronous function to fetch a page of tweets
+const fetchTweetsPage = async (): Promise<Tweet[] | null> => {
+  try {
+    const response = await fetch(`${TWEETS_API}?page=0&size=${PAGE_SIZE}`); // Fetch tweets using the API
+    if (!response.ok) {
+      console.error(`Error fetching tweets: ${response.status} ${response.statusText}`); // Log an error if response is not OK
+      return null; // Return null if there is an error in the response
+    }
+    const data = await response.json(); // Parse the JSON response into data
+    console.log('Fetched tweets:', data); // Log the fetched data
+    return data; // Return the fetched data
+  } catch (error) {
+    console.error('Error fetching paginated tweets:', error); // Log any error that occurred during the fetch
+    return null; // Return null in case of error
+  }
+};
+
+// Helper function to generate data URLs for pictures
+const resolvePictureDataUrl = (content: string | null, contentType: string | null) =>
+  content && contentType ? `data:${contentType};base64,${content}` : null; // Returns a data URL or null
+
+// Main React functional component for displaying paginated tweets
+const PaginatedTweets: React.FC = () => {
+  const [tweets, setTweets] = useState<Tweet[] | null>(null); // State to hold tweets
+  const [loading, setLoading] = useState<boolean>(true); // State to track loading status
+
+  const fetchTweets = async () => {
+    setLoading(true); // Set loading state to true
+    const data = await fetchTweetsPage(); // Fetch tweets
+    setTweets(data); // Set fetched tweets to state
+    setLoading(false); // Set loading state to false
+  };
+
+  useEffect(() => {
+    fetchTweets(); // Fetch tweets when component mounts
+  }, []);
+
+  // Function to handle tweet deletion
+  const handleDeleteTweet = async (tweetId: number) => {
+    try {
+      const response = await fetch(`${TWEETS_API}/${tweetId}`, { method: 'DELETE' }); // Send DELETE request to API
+      if (!response.ok) {
+        console.error(`Error deleting tweet ${tweetId}: ${response.status} ${response.statusText}`); // Log error if not successful
+      } else {
+        // Update the state to remove the deleted tweet
+        setTweets(prevTweets => prevTweets?.filter(tweet => tweet.id !== tweetId) || null);
+      }
+    } catch (error) {
+      console.error('Error deleting tweet:', error); // Log any errors during deletion
+    }
+  };
+
+  // Function to handle commenting on a tweet
+  const handleCommentOnTweet = async (tweetId: number, comment: string) => {
+    console.log(`Commenting on tweet ${tweetId}: ${comment}`); // Log the comment
+  };
+
+  // Conditional rendering for loading or empty states
+  if (loading) return <p>Loading tweets...</p>; // Display loading message
+  if (!tweets || tweets.length === 0) return <p>No tweets available</p>; // Display message if no tweets are available
+
+  return (
+    <div>
+      <div>
+        <div>
+          <h2>Tweets</h2>
+          <button onClick={() => window.location.reload()}>
+            secretButton
+          </button>
+          <div>
+            {tweets.reverse().map(tweet => (
+              <TweetComponent
+                key={tweet.id}
+                tweet={tweet}
+                onDelete={() => handleDeleteTweet(tweet.id)}
+                onComment={(comment: string) => handleCommentOnTweet(tweet.id, comment)}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+      <div>{/* Placeholder for profile section */}</div>
+    </div>
+  );
+};
+
+// Component for individual tweet display and interaction
+const TweetComponent: React.FC<{ tweet: Tweet; onDelete: () => void; onComment: (comment: string) => void }> = ({
+  tweet,
+  onDelete,
+  onComment,
+}) => {
+  const [commentText, setCommentText] = useState<string>(''); // State to hold comment text
+  const [comments, setComments] = useState<Comment[]>([]); // State to hold comments
+
+  const pictureUrl = resolvePictureDataUrl(tweet.picture, tweet.pictureContentType); // Resolve URL for picture
+
+  const handleCommentChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setCommentText(event.target.value); // Update comment text as user types
+  };
+
+  const handleSubmitComment = () => {
+    onComment(commentText); // Handle comment submission
+    setComments(prevComments => [...prevComments, { id: prevComments.length + 1, content: commentText }]); // Add new comment to state
+    setCommentText(''); // Reset comment input field
+  };
+
+  return (
+    <div>
+      <div>
+        <button onClick={onDelete}>Delete</button> // Button to delete tweet
+      </div>
+      <div>
+        <p>
+          <small>
+            <Link to={tweet.userProfile.id === 1500 ? '/profile' : `/profile/${tweet.userProfile.id}`}>
+              {tweet.userProfile.id === 1500 ? 'Danny' : tweet.userProfile.id}
+            </Link>
+          </small>
+        </p>
+      </div>
+      <p>{tweet.content}</p> // Display the content of the tweet
+      {pictureUrl ? (
+        <div>
+          <img src={pictureUrl} alt={`Tweet pic ${tweet.id}`} /> // Display tweet picture if available
+        </div>
+      ) : (
+        <p>No pictures available</p> // Display message if no picture is available
+      )}
+      <div></div>
+      <div>
+        <input type="text" value={commentText} onChange={handleCommentChange} placeholder="Write a comment..." /> // Input for writing a comment
+        <button onClick={handleSubmitComment}>Comment</button> // Button to submit comment
+      </div>
+      {comments.length > 0 && (
+        <div>
+          <h3>Comments</h3> // Section to display comments
+          {comments.map(comment => (
+            <div key={comment.id}>
+              <p>{comment.content}</p> // Display individual comment
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default PaginatedTweets; // Export the main component

@@ -31,9 +31,10 @@ const GroupComponent2: FunctionComponent = () => {
           backgroundColor: '#f7f9f9',
           display: 'none',
           maxWidth: '100%',
+          fontFamily: 'Roboto',
         }}
       />
-      {/* <div style={{ position: 'relative', fontSize: '24px', zIndex: '1' }}>You might like</div> */}
+      {<div style={{ position: 'relative', fontSize: '24px', zIndex: '1' }}>You might like</div>}
       <div
         style={{
           alignSelf: 'stretch',
@@ -42,23 +43,27 @@ const GroupComponent2: FunctionComponent = () => {
           alignItems: 'flex-start',
           justifyContent: 'flex-start',
           gap: '25px',
+          fontFamily: 'Roboto',
         }}
       >
-        {/* <Component multiplication="/ellipse-5@2x.png" asia="Asia" asianBurton="@AsianBurton" />
-        <Component multiplication="/ellipse-5-1@2x.png" asia="Dan" asianBurton="@DanMoffett" propMinWidth="105px" /> */}
+        <Component multiplication="/ellipse-5@2x.png" asia="Asia" asianBurton="@AsianBurton" />
+        <Component multiplication="/ellipse-5-1@2x.png" asia="Dan" asianBurton="@DanMoffett" propMinWidth="105px" />
       </div>
-      {/* <div
-        style={{
-          position: 'relative',
-          lineHeight: '100%',
-          color: '#f21d1d',
-          display: 'inline-block',
-          minWidth: '86px',
-          zIndex: '1',
-        }}
-      >
-        Show more
-      </div> */}
+      {
+        <div
+          style={{
+            position: 'relative',
+            lineHeight: '100%',
+            color: 'rgba(7,181,244,0.94)',
+            display: 'inline-block',
+            minWidth: '86px',
+            zIndex: '1',
+            fontFamily: 'Roboto',
+          }}
+        >
+          Show more
+        </div>
+      }
     </div>
   );
 };

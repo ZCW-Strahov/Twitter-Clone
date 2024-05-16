@@ -4,7 +4,7 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
 import Particles from 'react-tsparticles';
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './EchoLandingPage.css';
 
 // Global styles
@@ -96,9 +96,9 @@ const EchoLandingPage = () => {
     background: '#131313',
     color: '#ddd',
     scrollbarColor: '#666',
-    buttonColor: 'rgb(255,0,0)',
-    buttonHoverColor: '#ff0000',
-    neonColor: 'rgba(255,255,255,0.37)', // Neon green for the glow effect
+    buttonColor: 'rgb(7,181,244)',
+    buttonHoverColor: 'rgb(19,19,19)',
+    neonColor: 'rgba(7,181,244,0.94)', // Neon green for the glow effect
   };
 
   return (
@@ -119,7 +119,7 @@ const EchoLandingPage = () => {
           <Stars />
         </Canvas>
         <Title>
-          Join, Connect, Echo: Your Social Hub Awaits.
+          "Join the Conversation, Echo Your Voice."
           <div className="sound-image"></div>
         </Title>
         <form style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '20px' }}>

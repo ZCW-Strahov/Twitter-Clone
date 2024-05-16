@@ -34,6 +34,7 @@
     "@types/node": "^16.11.14",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
+    "axios": "^1.6.8",
     "framer-motion": "^11.1.9",
     "locomotive-scroll": "^4.1.4",
     "react": "^18.2.0",

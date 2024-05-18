@@ -2,6 +2,9 @@
 
 This application was generated using JHipster 8.3.0, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v8.3.0](https://www.jhipster.tech/documentation-archive/v8.3.0).
 
+## Screenshots
+![a gif of screenshots from the Echo application](https://github.com/ZCW-Strahov/Twitter-Clone//blob/main/EchoAnimation.gif?raw=true)
+
 ## Project Structure
 
 Node is required for generation and recommended for development. `package.json` is always generated for a better development experience with prettier, commit hooks, scripts and so on.

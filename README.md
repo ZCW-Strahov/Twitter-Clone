@@ -1,4 +1,6 @@
-# twitterClone
+# Twitter Clone
+
+This project is a Twitter Clone application generated using JHipster 8.3.0. It provides a fully functional clone of Twitter, featuring user authentication, tweet creation, and more. The application is built with a modern web stack, including Spring Boot for the backend and React for the frontend. It is designed for ease of development and deployment, with Docker support for containerization and various tools for code quality and continuous integration.
 
 This application was generated using JHipster 8.3.0, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v8.3.0](https://www.jhipster.tech/documentation-archive/v8.3.0).
 

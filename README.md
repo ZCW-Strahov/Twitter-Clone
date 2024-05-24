@@ -5,7 +5,7 @@ This project is a Twitter Clone application generated using JHipster 8.3.0. It p
 This application was generated using JHipster 8.3.0, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v8.3.0](https://www.jhipster.tech/documentation-archive/v8.3.0).
 
 ## Screenshots
-![a gif of screenshots from the Echo application](https://github.com/ZCW-Strahov/Twitter-Clone//blob/main/EchoAnimation.gif?raw=true)
+![a gif of a walkthrough of the Echo application](https://github.com/ZCW-Strahov/Twitter-Clone/blob/main/demoMedia/EchoWalkthrough.gif?raw=true)
 
 ## Project Structure
 

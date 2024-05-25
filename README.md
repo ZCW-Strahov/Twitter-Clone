@@ -1,11 +1,25 @@
-# Twitter Clone
+# Echo - A Twitter Clone <img src="https://user-images.githubusercontent.com/74038190/235294011-b8074c31-9097-4a65-a594-4151b58743a8.gif" width="50">
 
-This project is a Twitter Clone application generated using JHipster 8.3.0. It provides a fully functional clone of Twitter, featuring user authentication, tweet creation, and more. The application is built with a modern web stack, including Spring Boot for the backend and React for the frontend. It is designed for ease of development and deployment, with Docker support for containerization and various tools for code quality and continuous integration.
 
-This application was generated using JHipster 8.3.0, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v8.3.0](https://www.jhipster.tech/documentation-archive/v8.3.0).
+Welcome to Echo, a robust Twitter clone built using JHipster 8.3.0. This application replicates the core functionalities of Twitter, providing a comprehensive platform for microblogging. Echo is crafted with a modern technology stack, featuring Spring Boot for the backend services and React for the frontend interactions, ensuring a responsive and user-friendly experience. It includes a voice recognition feature, allowing users to create posts hands-free. The application supports Docker, facilitating easy development, deployment, and scalability.
 
-## Screenshots
-![a gif of a walkthrough of the Echo application](https://github.com/ZCW-Strahov/Twitter-Clone/blob/main/demoMedia/EchoWalkthrough.gif?raw=true)
+## Features ✨
+For Guest Users:
+- View Recent Echos: Browse the latest posts on our platform without the need to sign in.
+
+For Logged-in Users:
+
+- View Echos: Access and read all posts.
+- Voice Recognition Posting: Utilize our voice-to-text feature to create echos effortlessly.
+- Comment on Echos: Engage with the community by commenting on posts.
+- Delete Echos: Manage your posts by deleting any echos you own.
+- User Profiles: View detailed profiles of other users.
+- Image Uploads: Enhance your echos by adding images.
+- View Trending Echos: Discover the most popular posts that are currently trending.
+- Suggested Profiles: Explore suggested profiles to follow based on your interests and activity.
+
+## Preview 🎬
+<img src="https://github.com/ZCW-Strahov/Twitter-Clone/blob/main/demoMedia/EchoWalkthrough.gif?raw=true" width="800" height="450" />
 
 ## Project Structure
 

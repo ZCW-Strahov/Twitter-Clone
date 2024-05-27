@@ -19,7 +19,7 @@ For Logged-in Users:
 - Suggested Profiles: Explore suggested profiles to follow based on your interests and activity.
 
 ## Preview 🎬
-<img src="https://github.com/ZCW-Strahov/Twitter-Clone/blob/main/demoMedia/EchoWalkthrough.gif?raw=true" width="800" height="450" />
+<img src="https://github.com/ZCW-Strahov/Twitter-Clone/blob/2ab1bab8e9ef5c78f6a1e9b36edfe71cfd0b0ebf/EchoDemo.gif" />
 
 ## Project Structure
 
